@@ -1,0 +1,92 @@
+@mixin flex-inline {
+    display: flex;
+    flex-direction: row;
+}
+
+$font-logo: 1.5rem;
+$text-font: 1rem;
+
+.back{
+    @include flex-inline;
+    align-items: center;
+    justify-content: space-between;
+    // gap: 300px;
+    height: 75px;
+    margin-left: 70px;
+    margin-right: 70px;
+    color: #232323;
+}
+
+.logo{
+    @include flex-inline;
+align-items: center;
+gap: 15px;
+    p{
+        font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: $font-logo;
+line-height: 35px;
+
+background: linear-gradient(180deg, #26A69A 0%, #80CBC4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+border: 0.75px solid #FFFFFF;
+    }
+}
+
+.part2{
+    @include flex-inline;
+    gap: 30px;
+    div{
+        @include flex-inline;
+        p{
+            font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: $text-font;
+line-height: 22px;
+color: #232323;
+        }
+    }
+}
+
+.arrow{
+    width: 20px;
+    height: 20px;
+    color: #232323;
+    // opacity: 0.6;
+}
+
+.part3{
+    @include flex-inline;
+    gap: 15px;
+    align-items: center;
+    p{
+        font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: $text-font;
+line-height: 22px;
+color: #232323;
+    }
+    button{
+        width: 115px;
+border: none;
+        height: 37.5px;
+background: linear-gradient(180deg, rgba(0, 150, 136, 0.75) 0%, rgba(128, 203, 196, 0.75) 100%);
+border-radius: 9.375px;
+p{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: $text-font;
+line-height: 21px;
+
+color: #FFFFFF;
+
+}
+    }
+}
