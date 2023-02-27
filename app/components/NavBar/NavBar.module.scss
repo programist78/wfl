@@ -3,7 +3,7 @@
     flex-direction: row;
 }
 
-$font-logo: 1.5rem;
+$font-logo: 1.75rem;
 $text-font: 1rem;
 
 .back{
@@ -65,9 +65,9 @@ color: #232323;
     gap: 15px;
     align-items: center;
     p{
-        font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
 font-size: $text-font;
 line-height: 22px;
 color: #232323;
@@ -79,9 +79,9 @@ border: none;
 background: linear-gradient(180deg, rgba(0, 150, 136, 0.75) 0%, rgba(128, 203, 196, 0.75) 100%);
 border-radius: 9.375px;
 p{
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
 font-size: $text-font;
 line-height: 21px;
 

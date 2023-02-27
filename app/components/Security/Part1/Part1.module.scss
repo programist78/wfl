@@ -1,0 +1,135 @@
+$title-size: 3.5rem;
+$text-size: 1.5rem;
+$title-color: #232323;
+.back{
+    display: flex;
+    flex-direction: row;
+    height: 750px;
+    width: 1440px;
+    padding-top: 175px;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: flex-start;
+    // justify-content: center;
+}
+
+.part1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 35%;
+    margin-left: 150px;
+    margin-top: -25px;
+}
+// .pre_title{
+//     background-color: red;
+//     width: 570px;
+//     height: 500px;
+//     flex-wrap: wrap;
+//     display: flex;
+// }
+.title{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: $title-size;
+line-height: 59px;
+color: $title-color;
+// height: 115px;
+width: 569px;
+width: 19ch;
+font-family: monospace;
+white-space: nowrap;
+flex-wrap: wrap;
+overflow: hidden;
+border-right: 4px solid rgb(255, 153, 0);
+animation: flashing_border 0.75s step-end, printed_text 4s steps(19);
+}
+.title2{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: $title-size;
+line-height: 59px;
+color: $title-color;
+// height: 115px;
+width: 569px;
+width: 8ch;
+font-family: monospace;
+white-space: nowrap;
+flex-wrap: wrap;
+overflow: hidden;
+border-right: 4px solid rgb(255, 153, 0);
+// animation-delay: 4s;
+animation: flashing_border 0.75s step-end 4s infinite, printed_text2 4s steps(8);
+}
+@keyframes flashing_border {
+    0%{
+        border-color: orange;
+    }
+    25%{
+        border-color: transparent;
+    }
+    75%{
+        border-color: rgb(232, 151, 0);
+    }
+    100%{
+        border-color: transparent;
+        display: none;
+    }
+}
+
+@keyframes printed_text {
+    0%{
+        width: 0;
+    }
+}
+@keyframes printed_text2 {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 0;
+    }
+}
+.text{
+    width: 499px;    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $text-size;
+    line-height: 29px;
+    color: #232323;
+    margin-left: 15px;
+}
+
+.part2{
+    width: 750px;
+    height: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // width: 45%;
+    margin-top: 50px;
+}
+
+.white_lock{
+    width: 750px;
+    height: 656px;
+    position: absolute;
+    margin-top: -300px;
+    z-index: 100 !important;
+}
+
+.black_back{
+    width: 200px;
+height: 200px;
+// position: absolute;
+z-index: 1 !important;
+margin-left: 335px;
+margin-top: 25px;
+background: #1E1F25;
+filter: blur(45.6396px);
+border-radius: 45.6396px;
+}

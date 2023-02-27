@@ -9,6 +9,7 @@ import { appWithTranslation } from 'next-i18next'
 import { ApolloCache } from '@apollo/client/core'
 import type { AppProps } from 'next/app'
 import { Open_Sans } from '@next/font/google'
+
 import RootLayout from 'components/Layout'
 const opensans = Open_Sans({
   weight: ['300', '400', '500', '600', '700'],

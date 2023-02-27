@@ -1,0 +1,23 @@
+$title-size: 3.5rem;
+$text-size: 1.5rem;
+$title-color: #232323;
+.back{
+    display: flex;
+    flex-direction: column;
+    min-height: 1500px;
+    height: auto;
+    width: 1440px;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: center;
+    // justify-content: center;
+}
+
+.title{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: $title-size;
+line-height: $title-size;
+color: $title-color;
+}
