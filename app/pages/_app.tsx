@@ -9,11 +9,12 @@ import { appWithTranslation } from 'next-i18next'
 import { ApolloCache } from '@apollo/client/core'
 import type { AppProps } from 'next/app'
 import { Open_Sans } from '@next/font/google'
+import { Poppins } from '@next/font/google'
 
 import RootLayout from 'components/Layout'
-const opensans = Open_Sans({
+const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin', 'cyrillic'],
+  subsets: ['latin'],
 })
 const createApolloClient = (cache = {}) =>
   new ApolloClient({
@@ -65,7 +66,7 @@ AppProps) => {
                 <>
                     {/* <Head></Head> */}
                     <RootLayout>
-                           <main className={opensans.className}>
+                           <main className={poppins.className}>
                           <Component {...pageProps} />
                              </main>
                              </RootLayout>

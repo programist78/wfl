@@ -4,20 +4,40 @@ $title-color: #232323;
 .back{
     display: flex;
     flex-direction: column;
-    min-height: 1500px;
+    // min-height: 1500px;
     height: auto;
     width: 1440px;
     box-sizing: border-box;
     overflow: hidden;
+    justify-content: flex-start;
     align-items: center;
-    // justify-content: center;
 }
 
-.title{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: $title-size;
-line-height: $title-size;
-color: $title-color;
+.part1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.video{
+    border-radius: 17.5px;
+    padding: 5px;
+    position: relative;
+    animation: for_video 2s ease infinite;
+    background: linear-gradient(to right, #7F6EE9, #009688);
+    background-size: 400% 400%;
+
+}
+
+@keyframes for_video {
+    0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
 }

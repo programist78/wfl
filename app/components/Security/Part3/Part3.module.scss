@@ -1,0 +1,35 @@
+$title-size: 3.5rem;
+
+.back{
+    width: 1440px;
+    height: 1645px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    gap: 50px;
+}
+
+.title{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: $title-size;
+line-height: 105%;
+color: #232323;
+}
+
+.part2{
+    width: 1153px;
+height: 1404.62px;
+background: url(../../../public/back_shield.svg);
+// object-fit: cover;
+background-size: cover;
+opacity: 0.75;
+mix-blend-mode: hard-light;
+// filter: blur(1.70461px);
+// backdrop-filter: blur(0.157227px);
+// /* Note: backdrop-filter has minimal browser support */
+
+// transform: matrix(-1, 0, 0, 1, 0, 0);
+}
