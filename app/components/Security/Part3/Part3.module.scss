@@ -20,16 +20,91 @@ color: #232323;
 }
 
 .part2{
-    width: 1153px;
-height: 1404.62px;
-background: url(../../../public/back_shield.svg);
+    width: 1253px;
+height: 1604.62px;
+background: url(../../../public/back_shield2.png);
 // object-fit: cover;
 background-size: cover;
-opacity: 0.75;
 mix-blend-mode: hard-light;
 // filter: blur(1.70461px);
 // backdrop-filter: blur(0.157227px);
 // /* Note: backdrop-filter has minimal browser support */
 
 // transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.grid_group{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    
+    // background: rgb(0,150,136);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.133) 100%, rgba(255,255,255,1) 100%);
+    // background: rgba(0, 150, 135, 0.303);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+width: 250px;
+border-radius: 12px;
+}
+
+.image_group{
+    background: #232323;
+    -webkit-backdrop-filter: blur(7px);
+backdrop-filter: blur(7px);
+width: 90px;
+height: 90px;
+border-radius: 45px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card_title{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+text-align: center;
+width: 160px;
+color: #232323;
+}
+
+.card_text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+width: 200px;
+color: #000000;
+}
+
+.grid1{
+    margin-top: 60px;
+}
+
+.grid2{
+    display: flex;
+    flex-direction: row;
+    gap: 415px;
+}
+
+.grid3{
+    display: flex;
+    flex-direction: row;
+    gap: 228px;
 }

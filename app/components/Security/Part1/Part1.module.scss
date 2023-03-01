@@ -43,7 +43,7 @@ white-space: nowrap;
 flex-wrap: wrap;
 overflow: hidden;
 border-right: 4px solid rgb(255, 153, 0);
-animation: flashing_border 0.75s step-end, printed_text 4s steps(19);
+animation: flashing_border 0.75s step-end, printed_text 4s 1 steps(19);
 }
 .title2{
     font-family: 'Poppins';
@@ -83,6 +83,12 @@ animation: flashing_border 0.75s step-end 4s infinite, printed_text2 4s steps(8)
     0%{
         width: 0;
     }
+    50%{
+        width: 0;
+    }
+    100%{
+        border-right: none;
+    }
 }
 @keyframes printed_text2 {
     0%{
@@ -91,6 +97,7 @@ animation: flashing_border 0.75s step-end 4s infinite, printed_text2 4s steps(8)
     50%{
         width: 0;
     }
+
 }
 .text{
     width: 499px;    
