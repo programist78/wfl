@@ -23,8 +23,8 @@
 <feGaussianBlur stdDeviation="1.70461" result="effect2_foregroundBlur_140_1834"/>
 </filter>
 <radialGradient id="paint0_radial_140_1834" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(579.1 706.309) rotate(88.7464) scale(928.614 742.559)">
-<stop stop-color="#4DB6AC"/>
-<stop offset="1" stop-color="#006564" stop-opacity="0"/>
+<stop stop-color="#009688" stop-opacity="0.7"/>
+<stop offset="1" stop-color="#009688" stop-opacity="0.1"/>
 </radialGradient>
 </defs>
 </svg>

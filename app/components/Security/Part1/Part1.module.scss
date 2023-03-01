@@ -1,15 +1,16 @@
 $title-size: 3.5rem;
 $text-size: 1.5rem;
-$title-color: #232323;
+$title-color: #0C0D0E;
 .back{
     display: flex;
     flex-direction: row;
-    height: 750px;
+    height: 800px;
     width: 1440px;
-    padding-top: 175px;
+    padding-top: 275px;
     box-sizing: border-box;
     overflow: hidden;
     align-items: flex-start;
+    justify-content: space-between;
     // justify-content: center;
 }
 
@@ -17,6 +18,8 @@ $title-color: #232323;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 810px;
+    // background-color: black;
     margin-left: 50px;
     margin-top: -25px;
 }
@@ -52,7 +55,6 @@ font-size: $title-size;
 line-height: 59px;
 color: $title-color;
 // height: 115px;
-width: 569px;
 width: 26ch;
 font-family: monospace;
 white-space: nowrap;
@@ -98,17 +100,17 @@ animation-delay: 0s;
 }
 .text{
     width: 499px;    
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: $text-size;
     line-height: 29px;
-    color: #232323;
+    color: rgba(12, 13, 14, 0.75);
     margin-left: 15px;
 }
 
 .part2{
-    width: 750px;
+    // width: 750px;
     height: 750px;
     display: flex;
     flex-direction: row;
@@ -119,10 +121,12 @@ animation-delay: 0s;
 }
 
 .white_lock{
-    width: 750px;
+    width: 350px;
     height: auto;
     // position: absolute;
-    margin-top: -200px;
+    margin-top: -100px;
+    margin-right: 50px;
+    float: right;
     z-index: 100 !important;
 }
 

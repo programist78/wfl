@@ -7,9 +7,9 @@ export default function Part3() {
   return (
     <div className={styles.back}>
         <p className={styles.title}>
-        {/* <AnimatedText> */}
+        <AnimatedText>
             Why is it easy with us?     
-            {/* </AnimatedText> */}
+            </AnimatedText>
             </p>
         <div className={styles.part2}>
             <div className={styles.grid_group}>

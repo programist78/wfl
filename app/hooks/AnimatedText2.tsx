@@ -4,13 +4,15 @@ const AnimatedText2 = ({ children }) => {
   const [ref, springs] = useInView(
     () => ({
       from: {
-        opacity: 0.3,
+        opacity: 0,
         x: 0,
+        y: 25
       },
       to: {
         opacity: 1,
         x:0,
-        delay: 100,
+        delay: 250,
+        y: 0
       }
     }),
     {
