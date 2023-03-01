@@ -5,9 +5,9 @@ import styles from './Part4.module.scss'
 export default function Part4() {
   return (
     <div className={styles.back}>
+
            <p className={styles.title}>
         <AnimatedText>Security is important for us</AnimatedText></p>
-
         <div className={styles.part2}>
             <div className={styles.card}>
                 <div className={styles.header}>

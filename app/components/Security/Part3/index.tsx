@@ -2,15 +2,19 @@ import AnimatedText from 'hooks/AnimatedText'
 import Image from 'next/image'
 import styles from './Part3.module.scss'
 
+
 export default function Part3() {
   return (
     <div className={styles.back}>
         <p className={styles.title}>
-        <AnimatedText>Why is it easy with us?     </AnimatedText></p>
+        {/* <AnimatedText> */}
+            Why is it easy with us?     
+            {/* </AnimatedText> */}
+            </p>
         <div className={styles.part2}>
             <div className={styles.grid_group}>
                 <div className={styles.grid1}>
-                    <div className={styles.card}>
+                    <div className={styles.card1}>
                         <div className={styles.image_group}>
                             <Image width={50} height={50} src="/encoding.svg" alt="image"/>
                         </div>

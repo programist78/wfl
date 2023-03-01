@@ -2,7 +2,7 @@ $title-size: 3.5rem;
 
 .back{
     width: 1440px;
-    height: 1645px;
+    height: 1895px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,9 +20,11 @@ color: #232323;
 }
 
 .part2{
-    width: 1253px;
-height: 1604.62px;
-background: url(../../../public/back_shield2.png);
+    width: 1149.54px;
+    height: 1389.5px;
+// backgrond-image: url(../../../public/back_shield2.webp);
+background-image: url(../../../public/back_shield.svg);
+// background: url(../../../public/back_shield2.webp);
 // object-fit: cover;
 background-size: cover;
 mix-blend-mode: hard-light;
@@ -37,6 +39,7 @@ mix-blend-mode: hard-light;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
 }
@@ -52,7 +55,7 @@ mix-blend-mode: hard-light;
     border: 1px solid white;
     
     // background: rgb(0,150,136);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.133) 100%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, rgba(0, 150, 136, 0.3) 50%, rgba(128, 203, 196, 0.8) 100%);
     // background: rgba(0, 150, 135, 0.303);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
@@ -60,6 +63,27 @@ width: 250px;
 border-radius: 12px;
 }
 
+.card1{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 300px;
+    margin-left: -125px;
+    margin-top: -50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    
+    // background: rgb(0,150,136);
+    background: linear-gradient(0deg, rgba(0, 150, 136, 0.3) 50%, rgba(128, 203, 196, 0.8) 100%);
+    // background: rgba(0, 150, 135, 0.303);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+width: 250px;
+border-radius: 12px;
+}
 .image_group{
     background: #232323;
     -webkit-backdrop-filter: blur(7px);

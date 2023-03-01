@@ -17,8 +17,7 @@ $title-color: #232323;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 35%;
-    margin-left: 180px;
+    margin-left: 50px;
     margin-top: -25px;
 }
 // .pre_title{
@@ -27,6 +26,23 @@ $title-color: #232323;
 //     height: 500px;
 //     flex-wrap: wrap;
 //     display: flex;
+// }
+// .title{
+//     font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 700;
+// font-size: $title-size;
+// line-height: 59px;
+// color: $title-color;
+// // height: 115px;
+// width: 569px;
+// width: 19ch;
+// font-family: monospace;
+// white-space: nowrap;
+// flex-wrap: wrap;
+// overflow: hidden;
+// border-right: 4px solid rgb(255, 153, 0);
+// animation: flashing_border 0.75s step-end, printed_text 4s 1 steps(27);
 // }
 .title{
     font-family: 'Poppins';
@@ -37,31 +53,15 @@ line-height: 59px;
 color: $title-color;
 // height: 115px;
 width: 569px;
-width: 19ch;
+width: 26ch;
 font-family: monospace;
 white-space: nowrap;
 flex-wrap: wrap;
 overflow: hidden;
 border-right: 4px solid rgb(255, 153, 0);
-animation: flashing_border 0.75s step-end, printed_text 4s 1 steps(19);
-}
-.title2{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: $title-size;
-line-height: 59px;
-color: $title-color;
-// height: 115px;
-width: 569px;
-width: 8ch;
-font-family: monospace;
-white-space: nowrap;
-flex-wrap: wrap;
-overflow: hidden;
-border-right: 4px solid rgb(255, 153, 0);
-// animation-delay: 4s;
-animation: flashing_border 0.75s step-end 4s infinite, printed_text2 4s steps(8);
+animation-delay: 0s;
+animation: flashing_border 0.75s step-end 4s infinite, printed_text2 4s steps(26);
+animation-delay: 0s;
 }
 @keyframes flashing_border {
     0%{
@@ -94,9 +94,6 @@ animation: flashing_border 0.75s step-end 4s infinite, printed_text2 4s steps(8)
     0%{
         width: 0;
     }
-    50%{
-        width: 0;
-    }
 
 }
 .text{
@@ -123,9 +120,9 @@ animation: flashing_border 0.75s step-end 4s infinite, printed_text2 4s steps(8)
 
 .white_lock{
     width: 750px;
-    height: 656px;
-    position: absolute;
-    margin-top: -300px;
+    height: auto;
+    // position: absolute;
+    margin-top: -200px;
     z-index: 100 !important;
 }
 
