@@ -11,9 +11,9 @@ export default function Security() {
     <div className={styles.back}>
         <Part1 />
     </div>
-    <div className={styles.back}>
+    {/* <div className={styles.back}> */}
         <Part2 />
-    </div>
+    {/* </div> */}
     <div className={styles.back}>
         <Part3 />
     </div>
