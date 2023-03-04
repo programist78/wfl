@@ -24,8 +24,10 @@ width: 884px;
 .preback2{
     width: 100%;
     height: auto;
-        background: rgba(211, 214, 233, 0.75);
+        // background: rgba(211, 214, 233, 0.75);
+        background: #c2c6e3;
         -webkit-backdrop-filter: blur(2.5px);
+        
         backdrop-filter: blur(2.5px);
 }
 .part2{
@@ -44,25 +46,14 @@ width: 884px;
     gap: 75px;
     
     p{
-        font-family: 'Montserrat';
+        font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
 font-size: 32px;
 line-height: 39px;
 color: #0C0D0E;
     }
-    .title_active{
-        height: 65px;background: #626984;
-        border-radius: 5px 5px 5px 5px;
-        width: 514px;
-        display: flex;
-        box-shadow: 0px 0px 0.5px 0.5px #d4af37;
-        justify-content: center;
-        align-items: center;
-        p{
-            color: #D1D4E7;
-        }
-    }
+
     .title{
         height: 65px;
         border-radius: 5px 5px 5px 5px;
@@ -75,13 +66,31 @@ color: #0C0D0E;
         }
     }
 }
-
+.title_active{
+    height: 65px;
+    background: #6269846e;
+    border-radius: 45px 45px 45px 45px;
+    width: 514px;
+    display: flex;
+    position: relative;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid white;
+    // border: 2px solid #d4d137;
+    justify-content: center;
+    z-index: 50;
+    align-items: center;
+    p{
+        z-index: 5;
+        color: #D1D4E7;
+    }
+}
 .texts{
     width: 660px;
     .text_active{
-        font-family: 'Montserrat';
+        font-family: 'Poppins';
 font-style: normal;
-font-weight: 400;
+font-weight: 300;
 font-size: 24px;
 line-height: 29px;
 
@@ -90,4 +99,15 @@ color: rgba(12, 13, 14, 0.75);
     .text{
         display: none;
     }
+}
+
+.active_gold_back{
+width: 550px;
+height: 65px;
+margin-left: -10px;
+position: absolute;
+margin-top: -70px;
+background: radial-gradient(90% 100% at 50% 100%, #1380df 45.15%, #ffffff 97.92%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+filter: blur(25px);
+border-radius: 75px;
 }
