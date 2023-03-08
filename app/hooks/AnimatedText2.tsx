@@ -6,17 +6,19 @@ const AnimatedText2 = ({ children }) => {
       from: {
         opacity: 0,
         x: 0,
-        y: 25
+        y: 25,
+        color: 'blue'
       },
       to: {
         opacity: 1,
         x:0,
         delay: 250,
-        y: 0
+        y: 0,
+        color: "#232325"
       }
     }),
     {
-      once: true
+      // once: true
     }
   )
   return (

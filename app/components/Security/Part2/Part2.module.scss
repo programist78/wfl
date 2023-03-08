@@ -11,6 +11,7 @@ $title-color: #0C0D0E;
     overflow: hidden;
     justify-content: flex-start;
     align-items: center;
+   
 }
 
 .preback{
@@ -19,11 +20,12 @@ $title-color: #0C0D0E;
   padding-bottom: 50px;
   display: flex;
   // background-color: #383E56;
-  background: #6f7692;
-  background: #a1a6c6;
+  background: #a1a6c666;
   // background-color: rgb(93, 101, 135);
   justify-content: center;
   align-items: center;
+  z-index: 100;
+  position: relative;
 }
 
 .part1{
@@ -37,7 +39,7 @@ $title-color: #0C0D0E;
     border-radius: 17.5px;
     padding: 5px;
     position: relative;
-    animation: for_video 2s ease infinite;
+    // animation: for_video 2s ease infinite;
     background: linear-gradient(to right, #7F6EE9, #009688);
     background-size: 400% 400%;
 

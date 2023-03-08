@@ -27,14 +27,17 @@ $text-font: 1rem;
     @include flex-inline;
 align-items: center;
 gap: 15px;
+// color: default;
     p{
         font-family: 'Roboto';
 font-style: normal;
 font-weight: 900;
 font-size: $font-logo;
 line-height: 35px;
+// text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+// background: #009688;
 
-background: linear-gradient(180deg, #26A69A 0%, #80CBC4 100%);
+background: linear-gradient(180deg, #009688 35%, #80CBC4 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
@@ -81,8 +84,9 @@ color: #232323;
         width: 115px;
 border: none;
         height: 37.5px;
-background: linear-gradient(180deg, rgba(0, 150, 136, 0.75) 0%, rgba(128, 203, 196, 0.75) 100%);
-border-radius: 9.375px;
+background: linear-gradient(180deg, #009688, #80CBC4 100%);
+border-radius: 10px;
+border: solid 1px white;
 p{
     font-family: 'Montserrat';
     font-style: normal;

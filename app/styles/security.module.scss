@@ -11,3 +11,25 @@
     align-items: center;
     justify-content: center;
 }
+
+.lines{
+    position: absolute;
+    margin-top: 2550px;
+    // transform: rotate(135deg);
+}
+
+.arrow_custom{
+    position: absolute;
+    margin-top: -150px;
+    margin-right: 1350px;
+    z-index: 5000;
+    // transform: rotate(45deg);
+}
+
+.lines_custom{
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 1140px;
+    z-index: 5000;
+    transform: rotate(7.5deg);
+}

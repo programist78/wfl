@@ -23,13 +23,14 @@ color: #0C0D0E;
     width: 1149.54px;
     height: 1389.5px;
 // backgrond-image: url(../../../public/back_shield2.webp);
-background-image: url(../../../public/back_shield.svg);
+background: url(../../../public/back_shield.svg);
 // background: url(../../../public/back_shield2.webp);
 // object-fit: cover;
 background-size: cover;
 mix-blend-mode: hard-light;
 // filter: blur(1.70461px);
-// backdrop-filter: blur(0.157227px);
+backdrop-filter: blur(2.5px);
+z-index: 100;
 // /* Note: backdrop-filter has minimal browser support */
 
 // transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -41,7 +42,9 @@ mix-blend-mode: hard-light;
     gap: 50px;
     margin-top: 100px;
     justify-content: center;
+    
     align-items: center;
+
 }
 
 .card{
@@ -53,18 +56,20 @@ mix-blend-mode: hard-light;
     align-items: center;
     justify-content: space-between;
     border: 1px solid white;
-    
+
     // background: rgb(0,150,136);
-    background: linear-gradient(0deg, rgba(0, 150, 136, 0.3) 50%, rgba(128, 203, 196, 0.8) 100%);
+    background: linear-gradient(0deg, #009687a7 50%, #80cbc4cc 100%);
     // background: rgba(0, 150, 135, 0.303);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+position: relative;
 width: 250px;
 border-radius: 12px;
 }
 
 .card:hover{
-    background: linear-gradient(0deg,rgba(180, 255, 247, 0.3) 50%, rgba(128, 203, 196, 0.8) 100%);
+    background: linear-gradient(0deg,#b4fff74d 50%, #80cbc4cc 100%);
 }
 
 .card1:hover{
@@ -83,12 +88,12 @@ border-radius: 12px;
     align-items: center;
     justify-content: space-between;
     border: 1px solid white;
-    
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 100;
     // background: rgb(0,150,136);
-    background: linear-gradient(0deg, rgba(0, 150, 136, 0.3) 50%, rgba(128, 203, 196, 0.8) 100%);
-    // background: rgba(0, 150, 135, 0.303);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    background: linear-gradient(0deg, #009687a7 50%, #80cbc4cc 100%);
+        // background: rgba(0, 150, 135, 0.303);
 width: 250px;
 border-radius: 12px;
 }
@@ -102,6 +107,7 @@ border-radius: 45px;
 display: flex;
 justify-content: center;
 align-items: center;
+z-index: 100;
 }
 .card_title{
     font-family: 'Poppins';

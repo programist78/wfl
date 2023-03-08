@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import styles from './Part4.module.scss'
 import AnimatedText2 from 'hooks/AnimatedText2'
+import AnimatedText3 from 'hooks/AnimatedText3'
 
 export default function Part42() {
     const [paragraph, setParagraph] = useState('1')
@@ -18,10 +19,12 @@ export default function Part42() {
                 {(paragraph == "1") &&
                  <>
                     <div>
-                     <div className={styles.title_active}>
+                    <AnimatedText3>
+                    <div className={styles.title_active}>
                     <p >Our philosophy</p>
                     </div>
                     <div className={styles.active_gold_back} />
+                    </AnimatedText3>
                     </div>
                      <div>
                      <p className={styles.title} onClick={() => {setParagraph("2")}}>Security</p>
@@ -40,10 +43,12 @@ export default function Part42() {
                      <p className={styles.title} onClick={() => {setParagraph("1")}}>Our philosophy</p>
                      </div>
                      <div>
+                     <AnimatedText3>
                      <div className={styles.title_active}>
                     <p >Security</p>
                     </div>
                     <div className={styles.active_gold_back} />
+                    </AnimatedText3>
                     </div>
                     
                      <div>
@@ -56,17 +61,19 @@ export default function Part42() {
                      {(paragraph == "3") &&
                  <>
                     
-                     <div>
+                   <div>
                      <p className={styles.title} onClick={() => {setParagraph("1")}}>Our philosophy</p>
                      </div>
                      <div>
                      <p className={styles.title} onClick={() => {setParagraph("2")}}>Security</p>
                      </div>
                      <div>
+                         <AnimatedText3>
                      <div className={styles.title_active}>
                     <p>Our protection</p>
                     </div>
                     <div className={styles.active_gold_back} />
+                    </AnimatedText3>
                     </div>
                      <div>
                      <p className={styles.title} onClick={() => {setParagraph("4")}}>Our approach</p>
@@ -85,10 +92,12 @@ export default function Part42() {
                      <p className={styles.title} onClick={() => {setParagraph("3")}}>Our protection</p>
                      </div>
                      <div>
+                     <AnimatedText3>
                      <div className={styles.title_active}>
                     <p>Our approach</p>
                     </div>
                     <div className={styles.active_gold_back} />
+                    </AnimatedText3>
                     </div>
                      </>}
                 

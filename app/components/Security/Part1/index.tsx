@@ -14,7 +14,9 @@ export default function Part1() {
         {/* <div className={styles.part2}> */}
         {/* <div className={styles.black_back}/> */}
 
-        <Image src="/ps-shield500.png" width={1500} height={1500} alt="lock" className={styles.white_lock}/>
+        {/* <Image src="/ps-shield500.png" width={1500} height={1500} alt="lock" className={styles.white_lock}/> */}
+        <Image src="/gold-shield.png" width={1500} height={1500} alt="lock" className={styles.white_lock}/>
+        <Image src="/back-shield-gold.png" width={500} height={500} alt="lock" className={styles.back_shield_gold}/>
         {/* <Image src="/white-lock.webp" width={750} height={750} alt="lock" className={styles.white_lock}/> */}
         {/* </div> */}
     </div>
