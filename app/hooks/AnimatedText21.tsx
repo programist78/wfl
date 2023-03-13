@@ -1,6 +1,6 @@
 import { useSpring, animated, useInView } from '@react-spring/web';
 import styles from '../styles/animations.module.scss'
-const AnimatedText2 = ({ children }) => {
+const AnimatedText21 = ({ children }) => {
   const [ref, springs] = useInView(
     () => ({
       from: {
@@ -21,10 +21,10 @@ const AnimatedText2 = ({ children }) => {
     }
   )
   return (
-    <animated.div style={springs} ref={ref} className={styles.animation_text}>
+    <animated.div style={springs} ref={ref} className={styles.animation_text2}>
      {children}
     </animated.div>
   );
 };
 
-export default AnimatedText2;
+export default AnimatedText21;

@@ -5,6 +5,7 @@ $title-size: 3.5rem;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    margin-top: 100px;
 }
 .part1{
     width: 1440px;
@@ -107,7 +108,10 @@ height: 65px;
 margin-left: -10px;
 position: absolute;
 margin-top: -70px;
-background: radial-gradient(90% 100% at 50% 100%, #1380df 45.15%, #ffffff 97.92%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+//variant1
+// background: radial-gradient(90% 100% at 50% 100%, #1380df 45.15%, #ffffff 97.92%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+//variant2
+background: radial-gradient(90% 100% at 50% 100%, #6113df 45.15%, #ffffff 97.92%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 filter: blur(25px);
 border-radius: 75px;
 }

@@ -13,7 +13,10 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    //variant1
     background: linear-gradient(180deg, #c2c6e3 70%, #D3D6E9 100%);
+    //variant2
+    background: linear-gradient(180deg, #cbcde2 70%, #D3D6E9 100%);
     // background: linear-gradient(180deg, #D3D6E9 70%, #F9FAFF 100%);
     // background: linear-gradient(180deg, #c2c6e3 70%, #F9FAFF 100%);
     // object-fit: cover;

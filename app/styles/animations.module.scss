@@ -1,0 +1,277 @@
+// $for-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+// $for-font-family: Verdana, Geneva, Tahoma, sans-serif;;
+$for-font-family: Poppins;
+$next-color: #000000;
+.animation_text{
+    width: 100%;
+    height: auto;
+    direction: ltr;
+    animation: text_animate cubic-bezier(0.075, 0.82, 0.165, 1) ;
+    animation-duration: 0.4s;
+    // animation-delay: 0.4s;
+    text-shadow: none;
+    color: #232323;
+    line-height: normal;
+    font-family: Poppins;
+    letter-spacing: 2px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+@keyframes text_animate {
+    0%{
+        direction: rtl;
+        text-transform: lowercase;
+        text-shadow: #000000 2px 2px 2px;
+        width: 110%;
+        // height: 10%;
+        letter-spacing: 4px;
+        overflow: hidden;
+        opacity: 0;
+        letter-spacing: 0px;
+        color: $next-color;
+        font-family: $for-font-family;
+    }
+    10%{
+        // width: 15%;
+        width: 109%;
+        // height: 15%;
+        letter-spacing: 0.2px;
+        opacity: 0.1
+    }
+    20%{
+        // width: 20%;
+        letter-spacing: 0.4px;
+        // height: 20%;
+        width: 108%;
+        opacity: 0.2;
+    }
+    30%{
+        // width: 30%;
+        // height: 30%;
+        letter-spacing: 0.6px;
+        opacity: 0.3;
+        width: 107%;
+    }
+    40%{
+        // width: 40%;
+        width: 106%;
+        // height: 40%;
+        letter-spacing: 0.8px;
+        opacity: 0.4;
+    }
+    50%{
+        direction: rtl;
+        letter-spacing: 1px;
+        text-transform: lowercase;
+        text-shadow: #ffffff 2px 2px 2px;
+        // line-height: 100%;
+        // width: 50%;
+        width: 105%;
+        // height: 50%;
+        color: $next-color;
+        overflow: hidden;
+        opacity: 0.5;
+        font-family: $for-font-family;
+    }
+    60%{
+        direction: rtl;
+        letter-spacing: 1.2px;
+        // text-transform: uppercase;
+        text-shadow: #ffffff 2px 2px 2px;
+        // line-height: 100%;
+        // width: 60%;
+        width: 104%;
+        // height: 60%;
+        color: $next-color;
+        overflow: hidden;
+        opacity: 0.6;
+        font-family: $for-font-family;
+    }
+    70%{
+        // width: 70%;
+        // height: 70%;
+        letter-spacing: 1.4px;
+        opacity: 0.7;
+        width: 103%;
+    }
+    80%{
+        // width: 80%;
+        // height: 80%;
+        letter-spacing: 1.6px;
+        opacity: 0.8;
+        width: 102%;
+    }
+    // 75%{
+    //     direction: rtl;
+    //     // text-transform: uppercase;
+    //     text-shadow: #ffffff 2px 2px 2px;
+    //     // line-height: 100%;
+    //     width: 80%;
+    //     color: $next-color;
+    //     overflow: hidden;
+    //     opacity: 0.5;
+    //     font-family: $for-font-family;
+    // }
+    90%{
+        direction: rtl;
+        // text-transform: uppercase;
+        text-shadow: #ffffff 2px 2px 2px;
+        // color: white;
+        // width: 90%;
+        // height: 90%;
+        width: 101%;
+        letter-spacing: 1.8px;
+        color: $next-color;
+        opacity: 0.9;
+        font-family: $for-font-family;
+    }
+    100%{
+        direction: ltr;
+        // width: 100%;
+        // height: 100%;
+        width: 100%;
+        letter-spacing: 2px;
+        text-transform: none;
+        text-shadow: none;
+        opacity: 1;
+    }
+}
+
+.animation_text2{
+    width: 100%;
+    height: auto;
+    direction: ltr;
+    // animation: text_animate2;
+    // animation: text_animate2 2s 3s ease-in 0s;
+    -webkit-animation: 1.5s linear 0.5s alternate text_animate2;
+    -moz-animation: 1.25s linear 0.5s alternate text_animate2;
+      -o-animation: 1.25s linear 0.5s alternate text_animate2;
+         animation: 1.25s linear 0.5s alternate text_animate2;
+    text-shadow: none;
+    color: #232323;
+    line-height: normal;
+    font-family: Poppins;
+    letter-spacing: 2px;
+    overflow: hidden;
+    opacity: 1;
+}
+@keyframes text_animate2 {
+    0%{
+        direction: rtl;
+        text-transform: lowercase;
+        // text-shadow: #000000 2px 2px 2px;
+        width: 50%;
+        // height: 10%;
+        letter-spacing: 4px;
+        overflow: hidden;
+        opacity: 0;
+        letter-spacing: 0px;
+        color: $next-color;
+        font-family: $for-font-family;
+    }
+    10%{
+        // width: 15%;
+        width: 55%;
+        // height: 15%;
+        letter-spacing: 0.2px;
+        opacity: 0.1
+    }
+    20%{
+        // width: 20%;
+        letter-spacing: 0.4px;
+        // height: 20%;
+        width: 60%;
+        opacity: 0.2;
+    }
+    30%{
+        // width: 30%;
+        // height: 30%;
+        letter-spacing: 0.6px;
+        opacity: 0.3;
+        width: 65%;
+    }
+    40%{
+        // width: 40%;
+        width: 70%;
+        // height: 40%;
+        letter-spacing: 0.8px;
+        opacity: 0.4;
+    }
+    50%{
+        direction: rtl;
+        letter-spacing: 1px;
+        text-transform: lowercase;
+        // text-shadow: #ffffff 2px 2px 2px;
+        // line-height: 100%;
+        // width: 50%;
+        width: 80%;
+        // height: 50%;
+        color: $next-color;
+        overflow: hidden;
+        opacity: 0.5;
+        font-family: $for-font-family;
+    }
+    60%{
+        direction: rtl;
+        letter-spacing: 1.2px;
+        // text-transform: uppercase;
+        // text-shadow: #ffffff 2px 2px 2px;
+        // line-height: 100%;
+        // width: 60%;
+        width: 85%;
+        // height: 60%;
+        color: $next-color;
+        overflow: hidden;
+        opacity: 0.6;
+        font-family: $for-font-family;
+    }
+    70%{
+        // width: 70%;
+        // height: 70%;
+        letter-spacing: 1.4px;
+        opacity: 0.7;
+        width: 90%;
+    }
+    80%{
+        // width: 80%;
+        // height: 80%;
+        letter-spacing: 1.6px;
+        opacity: 0.8;
+        width: 95%;
+    }
+    // 75%{
+    //     direction: rtl;
+    //     // text-transform: uppercase;
+    //     text-shadow: #ffffff 2px 2px 2px;
+    //     // line-height: 100%;
+    //     width: 80%;
+    //     color: $next-color;
+    //     overflow: hidden;
+    //     opacity: 0.5;
+    //     font-family: $for-font-family;
+    // }
+    90%{
+        direction: rtl;
+        // text-transform: uppercase;
+        // text-shadow: #ffffff 2px 2px 2px;
+        // color: white;
+        // width: 90%;
+        // height: 90%;
+        width: 100%;
+        letter-spacing: 1.8px;
+        color: $next-color;
+        opacity: 0.9;
+        font-family: $for-font-family;
+    }
+    100%{
+        direction: ltr;
+        // width: 100%;
+        // height: 100%;
+        width: 100%;
+        letter-spacing: 2px;
+        text-transform: none;
+        text-shadow: none;
+        opacity: 1;
+    }
+}

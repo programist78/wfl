@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './Part1.module.scss'
 import AnimatedText2 from 'hooks/AnimatedText2'
+import AnimatedText21 from 'hooks/AnimatedText21'
 
 export default function Part1() {
   return (
@@ -8,7 +9,7 @@ export default function Part1() {
         <div className={styles.part1}>
             <p className={styles.title}>Superior.Security.Forever.</p>
             {/* <p className={styles.title2}>Forever.</p> */}
-            <p className={styles.text}><AnimatedText2>Our commitment to providing top-notch security on all levels of the platform, means that you can have peace of mind knowing that you are protected against any potential threats.</AnimatedText2>
+            <p className={styles.text}><AnimatedText21>Our commitment to providing top-notch security on all levels of the platform, means that you can have peace of mind knowing that you are protected against any potential threats.</AnimatedText21>
             </p>
         </div>
         {/* <div className={styles.part2}> */}
