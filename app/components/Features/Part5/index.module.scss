@@ -1,0 +1,37 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: column;
+    width: 1600px;
+    height: 900px;
+    gap: 50px;
+}
+
+.title{
+    @include var.small_title;
+    margin-left: 225px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 25px
+}
+
+.text{
+    @include var.dark_text;
+    margin-left: 180px;
+    width: 374px;
+height: 508px;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .phone{
+        position: absolute;
+        margin-right: 200px;
+    }
+}

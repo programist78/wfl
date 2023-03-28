@@ -1,0 +1,12 @@
+@use "../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+}
+
+.title{
+    @include var.feature_title;
+}

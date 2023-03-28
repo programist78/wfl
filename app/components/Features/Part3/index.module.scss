@@ -1,0 +1,49 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 900px;
+    gap: 75px;
+}
+
+.title{
+    @include var.small_title;
+    margin-left: 380px;
+}
+
+.dashboard{
+    transform: rotate(9.46deg);
+    width: 1140px;
+    height: 660px;
+    margin-left: 150px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid #FFFFFF;
+background-color: rgba(135, 0, 255, 0.05);
+border-radius: 30px;
+transform: rotate(-5.71deg);
+padding: 20px;
+img{
+    border-radius: 20px
+}
+}
+
+.text{
+    @include var.dark_text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding: 20px;
+position: absolute;
+width: 686px;
+background: rgba(128, 0, 255, 0.05);
+border: 1px solid #FFFFFF;
+backdrop-filter: blur(7.5px);
+-webkit-backdrop-filter: blur(7.5px);
+border-radius: 20px;
+margin-left: 700px;
+margin-top: -650px;
+}

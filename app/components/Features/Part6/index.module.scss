@@ -1,0 +1,45 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: column;
+    width: 1600px;
+    height: 900px;
+    gap: 25px;
+}
+
+.title{
+    @include var.small_title;
+    margin-left: 180px;
+
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    img{
+        position: absolute;
+        margin-left: 50px;
+    }
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    margin-left: 975px;
+    width: 340px;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    gap: 25px;
+    @include var.dark_text;
+    button{
+        background: #7C12E5;
+box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
+border-radius: 10px;
+width: 200px;
+height: 60px;
+@include var.light-text;
+border: none
+    }
+}

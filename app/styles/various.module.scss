@@ -1,0 +1,43 @@
+$title-color: #0C0D0E;
+$text-color: #383838;
+$text-color-light: #ffffff;
+$smallTitle-color: #232323;
+$title-fontSize: 100px;
+$text-fontSize: 24px;
+$smallTitle-fontSize: 56px;
+
+@mixin feature_title {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: $title-fontSize;
+line-height: 150px;
+color: $title-color;
+}
+
+@mixin small_title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: $smallTitle-fontSize;
+    line-height: 84px;
+    color: $smallTitle-color;
+}
+
+@mixin dark_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $text-fontSize;
+    line-height: 36px;
+    color: $text-color;
+}
+
+@mixin light_text {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: $text-fontSize;
+line-height: 36px;
+color: $text-color-light;
+}

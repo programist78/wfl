@@ -1,0 +1,79 @@
+@use "../../../styles/various.module.scss" as var;
+
+.preback{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.back{
+    display: flex;
+    flex-direction: column;
+    width: 1600px;
+    height: auto;
+    gap: 50px;
+}
+
+.title{
+    @include var.small-title;
+    margin-left: 265px
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.text1{
+    @include var.dark-text;
+    width: 815px;
+    height: 114px;
+    margin-left: 150px
+}
+
+.text2{
+    @include var.dark-text;
+    width: 751px;
+    margin-left: 60px;
+    height: 121px;
+}
+
+.text3{
+    @include var.dark-text;
+    width: 772px;
+height: 262px;
+margin-left: 582px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+    margin-bottom: -50px;
+    img{
+        z-index: 5;
+    }
+}
+
+.line_group{
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-30deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.white{
+    width: 200vw;
+    background-color: white;
+    height: 380px;
+}
+
+.gray{
+    width: 200vw;
+height: 160px;
+background: #D3D6E9;
+opacity: 1;
+}
