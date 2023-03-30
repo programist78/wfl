@@ -1,6 +1,7 @@
 import styles from "./index.module.scss"
 import {IoIosArrowDown} from 'react-icons/io'
 import { useState } from "react"
+import Scene1 from "components/Scenes/Scene1";
 
 export default function Part1() {
   const [text, setText] = useState(""); // состояние для хранения текста
@@ -31,8 +32,11 @@ export default function Part1() {
     setShowText(false)
     setText("")
   }
+
+  
   return (
     <div className={styles.preback}>
+      <Scene1 />
       <div className={styles.gradient} />
     <div className={styles.back}>
         <p className={styles.title}>Features</p>
