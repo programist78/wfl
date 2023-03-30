@@ -1,6 +1,6 @@
 import Image from "next/image"
 import styles from "./index.module.scss"
-
+import Link from "next/link"
 export default function Part6() {
   return (
     <div className={styles.back}>
@@ -12,7 +12,7 @@ export default function Part6() {
 <br />
 <br />
 •Your WFL Wallet is a personal, secure passive income generator.</p>
-        <button>View more</button>
+        <Link href="/dashboard#card"><button>View more</button></Link>
         </div>
       </div>
     </div>

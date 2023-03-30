@@ -4,6 +4,16 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    height: auto;
+    // background: linear-gradient(180deg, #7C12E5 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.gradient{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
     height: 764px;
     background: linear-gradient(180deg, #7C12E5 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -12,6 +22,7 @@
     display: flex;
     width: 1440px;
     flex-direction: column;
+    z-index: 5;
 }
 
 .title{
@@ -42,7 +53,22 @@ margin-top: 200px;
 color: var.$text-color;
 }
 
-.button_open{
+.open_text{
+    width: 1075px;
+height: 192px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: var.$text-fontSize;
+line-height: 36px;
+letter-spacing: 0.05em;
+margin-left: 185px;
+/* dark-font */
+margin-top: 25px;
+color: var.$text-color;
+}
+
+.button_close{
     width: 200px;
     height: 60px;
     background: #7C12E5;
@@ -61,9 +87,89 @@ font-size: var.$text-fontSize;
 line-height: 36px;
 margin-left: 623px;
 color: rgba(255, 255, 255, 0.75);
+transition: .25s;
 .arrow{
     width: 30px;
     height: 30px;
     margin-top: 12px;
 }
 }
+
+.button_open{
+    width: 200px;
+    height: 60px;
+    background: #7C12E5;
+    border: none;
+    margin-top: 125px;
+box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
+border-radius: 10px;
+font-family: 'Poppins';
+font-style: normal;
+display: flex;
+gap: 5px;
+justify-content: center;
+align-items: center;
+font-weight: 400;
+font-size: var.$text-fontSize;
+line-height: 36px;
+margin-left: 623px;
+transition: .25s;
+color: rgba(255, 255, 255, 0.75);
+.arrow{
+    width: 30px;
+    height: 30px;
+    margin-top: 12px;
+    transform: rotate(-180deg);
+}
+}
+
+.button_close:hover{
+    background: #7c12e5b7;
+    .arrow{
+        animation: arrow_animate 0.25s ease-in forwards;
+    }
+}
+
+.button_open:hover{
+    background: #7c12e5b7;
+    .arrow{
+        animation: arrow_animate_reverse 0.25s ease-in forwards;
+    }
+}
+
+@keyframes arrow_animate {
+    25%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(-90deg);
+    }
+    75%{
+        transform: rotate(-135deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+
+.button_close:not(:hover) .arrow {
+    animation: arrow_animate_reverse 0.25s ease-in forwards;
+  }
+  
+  @keyframes arrow_animate_reverse {
+    0% {
+      transform: rotate(180deg);
+    }
+    25% {
+      transform: rotate(135deg);
+    }
+    50% {
+      transform: rotate(90deg);
+    }
+    75% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }

@@ -14,7 +14,27 @@ export default function Part11() {
           </div>
           <div className={styles.ill}>
             <div className={styles.comment1}>
-              <Image src="/logo-men.webp" width={50} height={50} alt="logo"/>
+              <Image src="/avatar-men.jpg" width={50} height={50} alt="logo"/>
+              <div className={styles.comment_about}>
+                <p className={styles.about_title}>
+                Numan Xafar
+                </p>
+                <p className={styles.about_text}>Join 2 Hour Ago</p>
+              </div>
+              <BsThreeDots className={styles.dots}/>
+            </div>
+            <div className={styles.comment1}>
+              <Image src="/avatar-men.jpg" width={50} height={50} alt="logo"/>
+              <div className={styles.comment_about}>
+                <p className={styles.about_title}>
+                Numan Xafar
+                </p>
+                <p className={styles.about_text}>Join 2 Hour Ago</p>
+              </div>
+              <BsThreeDots className={styles.dots}/>
+            </div>
+            <div className={styles.comment1}>
+              <Image src="/avatar-men.jpg" width={50} height={50} alt="logo"/>
               <div className={styles.comment_about}>
                 <p className={styles.about_title}>
                 Numan Xafar
@@ -25,7 +45,13 @@ export default function Part11() {
             </div>
           </div>
         </div>
-        <div className={styles.part2}></div>
+        <div className={styles.part2}>
+          <div className={styles.close_block}>
+            <Image src="/warning.svg" alt="*" width={50} height={50}/>
+            <p>Refer 10 friends that join to the Ultimate plan and earn income of 900$ recurring monthly !</p>
+            <button>View more</button>
+          </div>
+        </div> 
       </div>
     </div>
   )
