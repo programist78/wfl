@@ -1,0 +1,67 @@
+@use "../../../styles/various.module.scss" as var;
+
+
+.back{
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    align-items: center;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    margin-left: 150px
+}
+
+.title{
+    @include var.small_title;
+    margin-left: 100px;
+}
+
+.text{
+    @include var.dark_text;
+    width: 454px;
+}
+
+.ill{
+    display: flex;
+    align-items: center;
+    margin-left: -125px
+}
+
+.info{
+    width: 550px;
+height: 275px;
+background: #FFFFFF;
+border-radius: 15px;
+position: absolute;
+z-index: 5;
+display: flex;
+align-items: center;
+img{
+    position: absolute;
+    // right: 0;
+    margin-left: 275px;
+}
+p{
+width: 250px;
+font-weight: 600 !important;
+@include var.dark_text
+}}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    margin-top: 30px;
+    // gap: 0;
+    margin-bottom: 30px;
+
+    margin-left: 30px;
+}
+
+.phone{
+margin-left: 200px;
+}

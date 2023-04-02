@@ -10,3 +10,10 @@
 .title{
     @include var.feature_title;
 }
+
+.part1{
+    div > * {
+        margin-bottom: -20000px;
+      }
+
+}

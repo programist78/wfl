@@ -1,0 +1,35 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    gap: 125px;
+}
+
+.title{
+    @include var.small_title;
+    margin-left: 123px;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    p{
+        @include var.dark_text;
+        width: 1000px;
+        span{
+            @include var.small_title
+        }
+    }
+}
+
+.text1{
+    margin-left: 290px;
+
+}
+
+.text2{
+    margin-left: 150px;
+}

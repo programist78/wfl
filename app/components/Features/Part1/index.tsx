@@ -3,6 +3,9 @@ import {IoIosArrowDown} from 'react-icons/io'
 import { useState } from "react"
 import Scene1 from "components/Scenes/Scene1";
 import { useInView } from 'react-intersection-observer';
+import AnimatedLeft from "hooks/AnimatedLeft";
+import AnimatedText4 from "hooks/AnimatedText4";
+
 
 export default function Part1() {
   const [text, setText] = useState(""); // состояние для хранения текста
@@ -11,13 +14,13 @@ export default function Part1() {
     /* Optional options */
     threshold: 0,
   });
+  console.log(inView)
   // функция для обработки клика по кнопке
   const handleClick = () => {
     if (!showText) {
     setShowText(true); // показываем текст
     const originalText = " •  The WFL platform will encourage free wealthy lifestyles through the creation of smart contracts, Yield Farming, Stacking Pool for monthly and yearly profits, and an Exchange Module for one-stop Zero Commissions  cryptocurrency  exchange. In addition, the WFL coin will be profitable master-node for higher income. \n•  We offer the most generous and profitable referral program up to 90% commission. NFT marketplace and AI Investment pool. All these money income streams are shown and managed in your secure personal user dashboard."; // оригинальный текст
     let i = 0; // индекс символа
-
     const interval = setInterval(() => {
       // добавляем по одному символу к тексту
       setText((prevText) => prevText + originalText.charAt(i));
@@ -39,27 +42,29 @@ export default function Part1() {
 
   
   return (
-    <div className={styles.preback}>
-       <div ref={ref}>
-      <Scene1 />
+    <div className={styles.preback} ref={ref}>
+       <div >
+        {/* {inView ? */}
+      <Scene1 /> 
+      {/* : ""} */}
     </div>
       <div className={styles.gradient} />
     <div className={styles.back}>
+      {/* <AnimatedLeft> */}
+      <AnimatedText4>
         <p className={styles.title}>Features</p>
+        </AnimatedText4>
+        {/* </AnimatedLeft> */}
+        <AnimatedText4>
         <p className={styles.close_text}>
         •  This WEB3 DeFi ( decentralized finance) platform will help you to achieve your financial dreams with its decentralized multi income streams. 
         <br/>
         <br/>
         •  The WFL coin can be used to purchase products and services. 
         </p>
+        </AnimatedText4>
         {showText ?
         <div>
-        {/* <p className={styles.open_text}>
-        •  The WFL platform will encourage free wealthy lifestyles through the creation of smart contracts, Yield Farming, Stacking Pool for monthly and yearly profits, and an Exchange Module for one-stop Zero Commissions  cryptocurrency  exchange. In addition, the WFL coin will be profitable master-node for higher income.
-        <br />
-        <br />
-        •  We offer the most generous and profitable referral program up to 90% commission. NFT marketplace and AI Investment pool. All these money income streams are shown and managed in your secure personal user dashboard.
-        </p> */}
         <p className={styles.open_text}>{text}</p>
         <button className={styles.button_open} onClick={handleClickClose}>Read more <span><IoIosArrowDown className={styles.arrow}/></span></button>
         </div>

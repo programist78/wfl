@@ -33,7 +33,7 @@ font-style: normal;
 font-weight: 400;
 font-size: var.$title-fontSize;
 line-height: 105%;
-margin-top: 175px;
+margin-top: 100px;
 margin-left: 180px;
 color: var.$title-color;
 }
@@ -49,8 +49,9 @@ line-height: 36px;
 letter-spacing: 0.05em;
 margin-left: 185px;
 /* dark-font */
-margin-top: 200px;
+margin-top: 300px;
 color: var.$text-color;
+// text-shadow: 2px 2px 2px #ffffff;
 }
 
 .open_text{
@@ -63,8 +64,9 @@ font-size: var.$text-fontSize;
 line-height: 36px;
 letter-spacing: 0.05em;
 margin-left: 185px;
+// text-shadow: 2px 2px 2px #ffffff;
 /* dark-font */
-margin-top: 25px;
+margin-top: -25px;
 color: var.$text-color;
 }
 

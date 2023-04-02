@@ -8,3 +8,21 @@
 body{
   overflow-x: hidden;
 }
+
+.wrapper{
+  margin-top: 175px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p{
+    color: #fcb635;
+    text-shadow: 1px 1px 1px #ff99004f;
+  }
+}
+
+.content{
+  margin-left: 150px;
+  width: 250px
+}

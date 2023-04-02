@@ -77,3 +77,21 @@ height: 160px;
 background: #D3D6E9;
 opacity: 1;
 }
+
+@keyframes line1 {
+    0%{
+        margin-left: -200vw;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+
+@keyframes line2 {
+    0%{
+        margin-left: 200vw;
+    }
+    100%{
+        margin-left: 0;
+    }
+}

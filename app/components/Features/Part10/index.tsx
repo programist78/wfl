@@ -1,11 +1,16 @@
 import Image from "next/image"
 import styles from "./index.module.scss"
+import AnimatedRight from "hooks/AnimatedRight"
+import AnimatedText4 from "hooks/AnimatedText4"
 
 export default function Part10() {
   return (
     <div className={styles.back}>
+      <AnimatedRight>
       <p className={styles.title}>NFT Marketplace</p>
+      </AnimatedRight>
       <div className={styles.info}>
+        <AnimatedText4>
         <p className={styles.text}>
         •  This feature involves creating a marketplace where users can buy and sell non-fungible tokens (NFTs). To implement this feature, we will need to:
         <br />
@@ -16,6 +21,7 @@ export default function Part10() {
 <br />
 3. Ensure that the marketplace is secure, user-friendly, and easily accessible on your website platform.
         </p>
+        </AnimatedText4>
         <div className={styles.cards}>
           <div className={styles.card}>
             <Image src="/example1.webp" width={400} height={280} alt="example"/>
