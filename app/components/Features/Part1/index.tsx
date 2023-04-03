@@ -5,7 +5,7 @@ import Scene1 from "components/Scenes/Scene1";
 import { useInView } from 'react-intersection-observer';
 import AnimatedLeft from "hooks/AnimatedLeft";
 import AnimatedText4 from "hooks/AnimatedText4";
-
+// import {IoIosArrowDown} from  'react-icons/io'
 
 export default function Part1() {
   const [text, setText] = useState(""); // состояние для хранения текста
@@ -51,9 +51,29 @@ export default function Part1() {
       <div className={styles.gradient} />
     <div className={styles.back}>
       {/* <AnimatedLeft> */}
+      <div className={styles.back_layer}>
       <AnimatedText4>
         <p className={styles.title}>Features</p>
         </AnimatedText4>
+        <div className={styles.links}>
+          <div>
+            <p>Our approach</p>
+            <IoIosArrowDown className={styles.arrow}/>
+            {/* <div className={styles.onhover}>
+              <div>Investment trading AI</div>
+              <div>Smart contracts</div>
+            </div> */}
+          </div>
+          <div>
+            <p>Capabilities</p>
+            <IoIosArrowDown className={styles.arrow}/>
+          </div>
+          <div>
+            <p>Earning</p>
+            <IoIosArrowDown className={styles.arrow}/>
+          </div>
+        </div>
+        </div>
         {/* </AnimatedLeft> */}
         <AnimatedText4>
         <p className={styles.close_text}>

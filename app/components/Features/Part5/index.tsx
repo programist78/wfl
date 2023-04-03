@@ -15,6 +15,7 @@ export default function Part5() {
         <br />
         <br />
 •  Our institutional exchange rates ensure that you receive the best possible price for your trades, while our ZERO commission charge of only 0% ensures that you keep all of your profits. </p>
+<button className={styles.link_button}><p>Start</p></button>
 </AnimatedText4>
         <div className={styles.images}>
           <Image src="/Phone.webp" alt="Example" width={425} height={829} className={styles.phone}/>

@@ -40,6 +40,7 @@ export default function Part7() {
       •  This is the best way to spend your wealth without exchanging or withdrawing your income and money earned within the Wealth Free Life platform.
       </p>
       </AnimatedText4>
+      <button className={styles.link_button}><p>Open card</p></button>
       <animated.div ref={ref} style={springs}>
       <div className={styles.cards}>
 

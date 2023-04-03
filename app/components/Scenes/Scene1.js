@@ -11,14 +11,15 @@ const Big_Earth = memo(() => {
     const ref = useRef();
     const gltf = useLoader(
       GLTFLoader,
-      "/three/animation_earth/scene.gltf"
-      // "/three/Big_Earth/scene.gltf"
+      // "/three/animation_earth/scene.gltf"
+      "/three/Big_Earth/scene.gltf"
       // "/three/Poly_earth/scene.gltf"
+      // "/three/Earth/scene.gltf"
     )
 
-    const { actions } = useAnimations(gltf.animations, ref)
+    // const { actions } = useAnimations(gltf.animations, ref)
 
-    console.log(actions)
+    // console.log(actions)
 
 
       // useEffect(() => {
@@ -30,13 +31,13 @@ const Big_Earth = memo(() => {
 
 
     useEffect(() => {
-      gltf.scene.scale.set(0.5, 0.5, 0.5)
-      gltf.scene.position.set(3, -0.5, -1)
+      gltf.scene.scale.set(.03,.03, .03)
+      gltf.scene.position.set(2, 2, -1)
       gltf.scene.traverse((object) => {
         if (object instanceof Mesh) {
-          object.castShadow = true;
-          object.receiveShadow = true;
-          object.material.envMapIntensity = 20
+          // object.castShadow = true;
+          // object.receiveShadow = true;
+          object.material.envMapIntensity = 5
         }
       })
     }, [gltf])
@@ -109,9 +110,9 @@ export default memo(function Scene1() {
       title="My 3D Scene"
       description="This is my awesome 3D scene"
     />
-    <pointLight color="#000000" intensity={0.5} position={[0, 10, -1]} /> 
+    <pointLight color="yellow" intensity={1} position={[0, 0, 1]} /> 
     <Suspense fallback={null}>
-    <group dispose={null} scale={0.35} position={[-3, 0.65, -1]} rotation-y={0.625}>
+    <group dispose={null} scale={0.35} position={[-3, 0.15, -1]} rotation-y={0.625}>
     <Laptop rotation={[0, Math.PI, 0]} />
     </group>
         <Environment preset="city" />

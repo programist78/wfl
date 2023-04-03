@@ -65,3 +65,11 @@ font-weight: 600 !important;
 .phone{
 margin-left: 200px;
 }
+
+.button{
+    position: absolute;
+    @include var.blue_button;
+    margin-left: 135px;
+    margin-top: -310px;
+    z-index: 1000;
+}

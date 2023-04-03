@@ -35,3 +35,9 @@ height: 508px;
         margin-right: 200px;
     }
 }
+
+.link_button{
+    @include var.gold_button;
+    margin-left: 250px;
+    margin-top: -75px;
+}

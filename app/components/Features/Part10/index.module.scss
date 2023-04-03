@@ -107,3 +107,9 @@ margin-bottom: -15px;
 color: rgba(37, 37, 41, 0.8);
 }
 
+.link_button{
+    @include var.purple_button;
+    position: absolute;
+    margin-left: 800px;
+    margin-top: -70px;
+}

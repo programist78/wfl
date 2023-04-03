@@ -20,3 +20,10 @@ margin-left: 210px;
     @include var.feature_title;
     margin-left: 123px;
 }
+
+.button{
+    position: absolute;
+    @include var.blue_button;
+    margin-left: 1000px;
+    margin-top: -25px;
+}

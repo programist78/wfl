@@ -95,3 +95,10 @@ opacity: 1;
         margin-left: 0;
     }
 }
+
+.link_button{
+    @include var.gold_button;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 325px;
+}

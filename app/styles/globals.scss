@@ -26,3 +26,19 @@ body{
   margin-left: 150px;
   width: 250px
 }
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background-color 200ms linear;
+}

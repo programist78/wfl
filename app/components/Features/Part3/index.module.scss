@@ -47,3 +47,10 @@ border-radius: 20px;
 margin-left: 700px;
 margin-top: -650px;
 }
+
+.link_button{
+    @include var.purple_button;
+    position: absolute;
+    margin-left: 935px;
+    margin-top: -250px;
+}

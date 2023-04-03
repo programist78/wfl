@@ -2,7 +2,7 @@ import AnimatedRight from 'hooks/AnimatedRight'
 import styles from './index.module.scss'
 import Image from 'next/image'
 import AnimatedText4 from 'hooks/AnimatedText4'
-
+import { AiOutlineLink } from 'react-icons/ai'
 export default function Part8() {
   return (
     <div className={styles.back}>
@@ -23,6 +23,10 @@ export default function Part8() {
       </AnimatedText4>
       </div>
       <div className={styles.ill}>
+      <button className={styles.button}>
+            <p>Open</p>
+            <AiOutlineLink className={styles.link}/>
+          </button>
         <div className={styles.info}>
           <div className={styles.features}>
           <p>• Crypto payment!</p>

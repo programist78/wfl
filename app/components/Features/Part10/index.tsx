@@ -8,6 +8,9 @@ export default function Part10() {
     <div className={styles.back}>
       <AnimatedRight>
       <p className={styles.title}>NFT Marketplace</p>
+      <button className={styles.link_button}>
+        <p>View more</p>
+      </button>
       </AnimatedRight>
       <div className={styles.info}>
         <AnimatedText4>
