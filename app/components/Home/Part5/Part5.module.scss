@@ -1,0 +1,23 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 750px;
+    gap: 25px;
+}
+
+.title{
+    @include var.small_title;
+    margin-left: 110px;
+}
+
+.dashboard{
+    margin-left: 151px;
+    width: 1138px;
+height: 640.12px;
+background: #EFF1FF;
+box-shadow: 0px 10.7044px 16.0566px rgba(0, 133, 255, 0.25);
+border-radius: 21.4089px;
+}

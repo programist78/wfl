@@ -23,8 +23,10 @@ body{
 }
 
 .content{
-  margin-left: 150px;
-  width: 250px
+  margin-left: 160px;
+  width: 300px;
+  margin-top: 25px;
+  // height: 1300px;
 }
 
 html::-webkit-scrollbar {
@@ -41,4 +43,17 @@ html::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.15);
   transition: background-color 200ms linear;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: white;
+}
+
+.laptop_video{
+  width: 310px;
+  // height: 5000px;
+  margin-left: 10px;
 }

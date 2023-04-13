@@ -49,7 +49,7 @@ export default function NavBar() {
     {/* <div className={styles.back}> */}
       <animated.div style={part2Styles} className={styles.back}>
         <div className={styles.logo}>
-            <Image src="/logo.png" alt='Logo' width={40} height={40}/>
+            <Image src="/logo.svg" alt='Logo' width={40} height={40}/>
             <main className={roboto.className}>
             <p>WFL</p>
             </main>

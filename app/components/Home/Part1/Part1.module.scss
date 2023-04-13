@@ -1,0 +1,97 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    height: 750px;
+    justify-content: space-between;
+}
+
+.left_part{
+    align-items: center;
+    display: flex;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    // align-items: center;
+    gap: 30px;
+    button{
+        margin-left: 45px;
+        width: 225px;
+height: 65.04px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(180deg, #15D1C0 0%, rgba(0, 150, 136, 0.5) 100%);
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+mix-blend-mode: normal;
+    }
+}
+
+.title{
+    @include var.small_title
+}
+
+.text{
+    @include var.dark_text;
+    margin-left: 45px;
+}
+
+.right_part{
+    align-items: center;
+    display: flex;
+    width: 50%;
+    margin-right: 50px;
+}
+
+.ill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 813px;
+    height: 631px;
+}
+
+.home_dashboard{
+    width: 813px;
+    z-index: 1;
+    height: 631px;
+}
+
+.home_dashboard_appbar{
+    position: absolute;
+    margin-left: -650px;
+    margin-top: -50px;
+    width: 40px;
+    z-index: 2;
+    height: 367px;
+}
+
+.home_dashboard_exchange{
+    position: absolute;
+    width: 124px;
+    z-index: 2;
+    margin-left: 500px;
+    margin-top: 100px;
+    height: 140px;
+}
+
+.home_dashboard_transactions{
+    position: absolute;
+    width: 128px;
+    margin-left: 450px;
+    margin-top: 400px;
+    height: 169px;
+    z-index: 2;
+}

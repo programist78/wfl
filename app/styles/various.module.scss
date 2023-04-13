@@ -68,7 +68,7 @@ p{
 }
 
 @mixin purple_button {
-    background: #7C12E5;
+    background: #6e0dce;
 box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
 border-radius: 10px;
 border: none;
@@ -105,4 +105,47 @@ font-size: $text-fontSize;
 line-height: 36px;
 color: #FFFFFF;
 }
+}
+
+@mixin green_button {
+    background: radial-gradient(108.59% 108.59% at 50% 50%, #26A69A 0%, #FFFFFF 100%);
+box-shadow: 0px 0px 25px #26A69A;
+border-radius: 10px;
+border: none;
+width: 200px;
+height: 60px;
+border: 1px solid white;
+display: flex;
+justify-content: center;
+align-items: center;
+p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: $text-fontSize;
+line-height: 36px;
+color: #FFFFFF;
+}
+}
+
+@mixin card_title {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 26px;
+text-align: center;
+color: #232323;
+}
+
+@mixin card_text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
 }

@@ -61,6 +61,7 @@ font-style: normal;
 font-weight: 400;
 font-size: var.$text-fontSize;
 line-height: 36px;
+text-shadow: 1px 1px 1px #ffffff;
 letter-spacing: 0.05em;
 margin-left: 185px;
 /* dark-font */
@@ -72,14 +73,19 @@ color: var.$text-color;
 .links{
     display: flex;
     flex-direction: row;
-    width: 600px;
+    width: 650px;
 height: 82px;
 background: rgba(255, 255, 255, 0.642);
-border: 1px solid #7c12e53f;
+border: 1px solid #ffffff;
 border-radius: 20px;
-justify-content: center;
-gap: 20px;
+justify-content: space-between;
 align-items: center;
+div:first-child {
+    margin-left: 15px;
+}
+div:last-child{
+    margin-right: 15px;
+}
 div{
     display: flex;
     flex-direction: row;
@@ -88,18 +94,74 @@ div{
         width: 30px;
         height: 30px;
         color: #000000;
+        transition: .35s;
+
+        z-index: 3;
     }
+    .menu{
+        display: none;
+        position: absolute;
+        transition: .35s;
+
+    }
+
     p{
         font-family: 'Montserrat';
 font-style: normal;
 font-weight: 400;
 font-size: 24px;
 line-height: 29px;
-
+z-index: 3;
 color: #000000;
+transition: .35s;
+
+    }
+}
+div:hover{
+    .menu{
+        width: 225px;
+        height: auto;
+        margin-top: -20px;
+        background: #cbcde24d;
+        border-width: 0px 1px;
+        border-style: solid;
+        border-color: #FFFFFF;
+        backdrop-filter: blur(50px);
+        /* Note: backdrop-filter has minimal browser support */
+        display: flex;
+        gap: 25px;
+        margin-left: -20px;
+        padding-bottom: 25px;
+        z-index: 2;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: .35s;
+        p:first-child{
+            margin-top: 100px;
+        }
+        p{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 26px;
+            color: #000000;
+            transition: .35s;
+            margin-left: 15px;
+        }
+    }
+    .menu:first{
+        margin-left: -5px !important;
+    }
+  
+    .arrow{
+        transform: rotate(180deg);
+        transition: .35s;
     }
 }
 }
+
+
 
 .onhover{
     opacity: 0;
@@ -115,6 +177,7 @@ color: #000000;
 // }
 
 .open_text{
+    text-shadow: 2px 2px 5px #ffffff;
     width: 1075px;
 height: 192px;
 font-family: 'Poppins';

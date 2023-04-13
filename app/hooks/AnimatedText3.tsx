@@ -16,7 +16,7 @@ const AnimatedText3 = ({ children }) => {
       }
     }),
     {
-      // once: true
+      once: true
     }
   )
   return (

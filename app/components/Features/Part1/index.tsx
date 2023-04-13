@@ -63,14 +63,29 @@ export default function Part1() {
               <div>Investment trading AI</div>
               <div>Smart contracts</div>
             </div> */}
+            <div className={styles.menu} >
+              <p>• AI Pool</p>
+              <p>• Smart Contracts</p>
+            </div>
           </div>
           <div>
             <p>Capabilities</p>
             <IoIosArrowDown className={styles.arrow}/>
+            <div className={styles.menu} >
+              <p>• Exchange WFL</p>
+              <p>• Wfl wallet</p>
+              <p>• Crypto Payment Card</p>
+            </div>
           </div>
           <div>
             <p>Earning</p>
             <IoIosArrowDown className={styles.arrow}/>
+            <div className={styles.menu} >
+              <p>• DeFi E-Commerce</p>
+              <p>• Stacking pool</p>
+              <p>• NFT Marketplace</p>
+              <p>• Earn by inviting friends</p>
+            </div>
           </div>
         </div>
         </div>

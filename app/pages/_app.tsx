@@ -8,7 +8,6 @@ import { useRouter } from 'next/router'
 import { appWithTranslation } from 'next-i18next'
 import { ApolloCache } from '@apollo/client/core'
 import type { AppProps } from 'next/app'
-import { Open_Sans } from '@next/font/google'
 import { Poppins } from '@next/font/google'
 
 import RootLayout from 'components/Layout'

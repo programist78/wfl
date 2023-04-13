@@ -35,9 +35,7 @@ export default function FeaturesCom() {
       <AnimatedOpacity>
       <Part6 />
       </AnimatedOpacity>
-      {/* <AnimatedOpacity> */}
       <Part7 />
-      {/* </AnimatedOpacity> */}
       <AnimatedOpacity>
       <p className={styles.title}>Earnings</p>
       </AnimatedOpacity>
@@ -50,9 +48,7 @@ export default function FeaturesCom() {
       <AnimatedOpacity>
       <Part10 />
       </AnimatedOpacity>
-      {/* <AnimatedOpacity> */}
       <Part11 />
-      {/* </AnimatedOpacity> */}
     </div>
   )
 }

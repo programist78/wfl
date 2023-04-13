@@ -1,7 +1,7 @@
 import { useSpring, animated, useInView } from '@react-spring/web';
 
 const AnimatedText = ({ children }) => {
-  const [ref, inView] = useInView({}
+  const [ref, inView] = useInView({once:true}
     )
   // const [ props, api ] = useSpring(
   //   () => ({

@@ -78,26 +78,12 @@ background: #D3D6E9;
 opacity: 1;
 }
 
-@keyframes line1 {
-    0%{
-        margin-left: -200vw;
-    }
-    100%{
-        margin-left: 0;
-    }
-}
 
-@keyframes line2 {
-    0%{
-        margin-left: 200vw;
-    }
-    100%{
-        margin-left: 0;
-    }
-}
 
 .link_button{
-    @include var.gold_button;
+    // @include var.gold_button;
+    // @include var.blue_button;
+    @include var.green_button;
     position: absolute;
     margin-left: 150px;
     margin-top: 325px;
