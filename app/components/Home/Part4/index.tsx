@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import styles from './Part4.module.scss'
+import AnimatedText4 from 'hooks/AnimatedText4'
 
 export default function Part4() {
   return (
     <div className={styles.back}>
+        <AnimatedText4>
         <p className={styles.title}>Choose your plan</p>
+        </AnimatedText4>
         <div className={styles.cards}>
+        <AnimatedText4>
             <div className={styles.card_basic}>
                 <div className={styles.icon}>
                     <Image src="/home.svg" alt='.' width={40} height={40}/>
@@ -21,9 +25,12 @@ export default function Part4() {
                 </div>
                 <button className={styles.see}>See all features</button>
             </div>
+            </AnimatedText4>
+            <AnimatedText4>
+
             <div className={styles.card_premium}>
                 <div className={styles.icon}>
-                    <Image src="/flesh.svg" alt='.' width={40} height={40}/>
+                    <Image src="/flash.svg" alt='.' width={40} height={40}/>
                 </div>
                 <p className={styles.card_title}>Premium</p>
                 <p className={styles.card_price}>$100</p>
@@ -39,6 +46,8 @@ export default function Part4() {
                 </div>
                 <button className={styles.see}>See all features</button>
             </div>
+            </AnimatedText4>
+            <AnimatedText4>
             <div className={styles.card_basic}>
                 <div className={styles.icon}>
                     <Image src="/list.svg" alt='.' width={40} height={40}/>
@@ -56,6 +65,7 @@ export default function Part4() {
                 </div>
                 <button className={styles.see}>See all features</button>
             </div>
+            </AnimatedText4>
         </div>
     </div>
   )

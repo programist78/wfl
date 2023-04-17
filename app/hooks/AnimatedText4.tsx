@@ -10,7 +10,7 @@ const AnimatedText4 = ({ children }) => {
       },
       to: {
         x:0,
-        delay: 250,
+        delay: 400,
         opacity: 1,
         y: 0,
       }

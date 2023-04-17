@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: row;
     width: 1440px;
-    height: 750px;
+    height: auto;
+    padding-top: 75px;
     justify-content: space-between;
 }
 
@@ -61,13 +62,16 @@ mix-blend-mode: normal;
     align-items: center;
     width: 813px;
     height: 631px;
+    animation: 1s linear 0s alternate animate_dashboard;
 }
 
 .home_dashboard{
     width: 813px;
     z-index: 1;
     height: 631px;
+    animation: levitate 2s ease-in-out infinite;
 }
+
 
 .home_dashboard_appbar{
     position: absolute;
@@ -76,6 +80,7 @@ mix-blend-mode: normal;
     width: 40px;
     z-index: 2;
     height: 367px;
+    animation: levitate2 2s ease-in-out infinite;
 }
 
 .home_dashboard_exchange{
@@ -85,6 +90,7 @@ mix-blend-mode: normal;
     margin-left: 500px;
     margin-top: 100px;
     height: 140px;
+    animation: levitate2 2s ease-in-out infinite;
 }
 
 .home_dashboard_transactions{
@@ -94,4 +100,40 @@ mix-blend-mode: normal;
     margin-top: 400px;
     height: 169px;
     z-index: 2;
+    animation: levitate2 2s ease-in-out infinite;
+}
+
+
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes levitate2 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(5px) translateY(-10px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes animate_dashboard {
+    from{
+        filter: blur(25px);
+    }
+    to{
+        filter: blur(0px);
+    }
 }

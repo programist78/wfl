@@ -1,14 +1,22 @@
 import Image from 'next/image'
 import styles from './Part1.module.scss'
+import AnimatedText4 from 'hooks/AnimatedText4'
+import AnimatedLeft from 'hooks/AnimatedLeft'
 
 export default function Part1() {
   return (
     <div className={styles.back}>
         <div className={styles.left_part}>
             <div className={styles.box}>
+              <AnimatedLeft>
             <p className={styles.title}>Change your life, just now</p>
+            </AnimatedLeft>
+            <AnimatedText4>
             <p className={styles.text}>Join the revolutionary movement, be one of the first 1,000 to take control of your financial future</p>
+            </AnimatedText4>
+            <AnimatedText4>
             <button>JOIN NOW</button>
+            </AnimatedText4>
             </div>
         </div>
         <div className={styles.right_part}>

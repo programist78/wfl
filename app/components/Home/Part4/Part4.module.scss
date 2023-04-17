@@ -6,7 +6,7 @@
     height: 670px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 75px;
     align-items: center;
 }
 
@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: row;
     gap: 90px;
+    align-items: flex-end;
 }
 
 .card_basic{
@@ -112,6 +113,7 @@ margin-top: auto;
     height: 537px;
     width: 343px;
     gap: 15px;
+    transform: scale(1.07);
     object-fit: cover;
     background-size: 100% auto; /* растянуть на всю высоту */
     background-image: url(../../../public/plan_card_premium.webp);
