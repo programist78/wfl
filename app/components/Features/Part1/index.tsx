@@ -1,7 +1,8 @@
 import styles from "./index.module.scss"
 import {IoIosArrowDown} from 'react-icons/io'
 import { useState } from "react"
-import Scene1 from "components/Scenes/Scene1";
+// import Scene1 from "components/Three/Scene1.js";
+import Scene1 from "components/Three/Scene1.js";
 import { useInView } from 'react-intersection-observer';
 import AnimatedLeft from "hooks/AnimatedLeft";
 import AnimatedText4 from "hooks/AnimatedText4";
@@ -55,14 +56,10 @@ export default function Part1() {
       <AnimatedText4>
         <p className={styles.title}>Features</p>
         </AnimatedText4>
-        <div className={styles.links}>
+        {/* <div className={styles.links}>
           <div>
             <p>Our approach</p>
             <IoIosArrowDown className={styles.arrow}/>
-            {/* <div className={styles.onhover}>
-              <div>Investment trading AI</div>
-              <div>Smart contracts</div>
-            </div> */}
             <div className={styles.menu} >
               <p>• AI Pool</p>
               <p>• Smart Contracts</p>
@@ -87,7 +84,7 @@ export default function Part1() {
               <p>• Earn by inviting friends</p>
             </div>
           </div>
-        </div>
+        </div> */}
         </div>
         {/* </AnimatedLeft> */}
         <AnimatedText4>

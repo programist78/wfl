@@ -215,3 +215,39 @@ color: #FFFFFF;
     border: none ;
     border-radius: 7.1125px;
 }
+
+@mixin dashboard_gray_text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: rgba(255, 255, 255, 0.5);
+
+}
+
+@mixin name_crypto_text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 110%;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+
+
+@mixin footer_text{
+    color: $title-color;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+}

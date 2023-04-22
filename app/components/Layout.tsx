@@ -1,5 +1,6 @@
 import NavBar from './NavBar'
 import Header from './Head'
+import Footer from './Footer'
 
 
 export default function RootLayout({
@@ -13,6 +14,7 @@ export default function RootLayout({
       <>
         <NavBar />
         {children}
+        <Footer />
       </>
       </>
   )

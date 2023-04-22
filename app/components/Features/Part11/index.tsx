@@ -54,7 +54,7 @@ export default function Part11() {
         <div className={styles.part2}>
           <div className={styles.close_block}>
             <Image src="/warning.svg" alt="*" width={50} height={50}/>
-            <p>Refer 10 friends that join to the Ultimate plan and earn income of 900$ recurring monthly !</p>
+            <p>Users can also earn income from reoccurring referral commissions( 20%-90% ), from your invites!</p>
             <button>View more</button>
           </div>
         </div> 

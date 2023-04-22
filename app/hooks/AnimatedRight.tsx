@@ -15,7 +15,7 @@ const AnimatedRight = ({ children }) => {
       }
     }),
     {
-      rootMargin: '-30% 0%',
+      rootMargin: '20% 0%',
       once: true
     }
   )

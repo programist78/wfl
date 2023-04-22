@@ -34,10 +34,6 @@ export default function NavBar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
-  const part1Styles = useSpring({
-    transform: isScrollUp ? 'translateY(0%)' : 'translateY(20%)',
-    opacity: isScrollUp ? 1 : 1
-  })
 
   const part2Styles = useSpring({
     transform: isScrollUp ? 'translateY(-100%)' : 'translateY(0%)',
@@ -57,7 +53,7 @@ export default function NavBar() {
 
         <div className={styles.part2}>
 
-            <div>
+            {/* <div>
                 <p>Nft</p>
                 <IoIosArrowDown className={styles.arrow}/>
             </div>
@@ -68,12 +64,24 @@ export default function NavBar() {
             <div>
                 <p>Events</p>
                 <IoIosArrowDown className={styles.arrow}/>
+            </div> */}
+                        <div>
+                <p>Features</p>
+            </div>
+            <div>
+                <p>Pricing</p>
+            </div>
+            <div>
+                <p>Blog</p>
+            </div>
+            <div>
+                <p>About us</p>
             </div>
             
         </div>
         <div className={styles.part3}>
-            <p>Login</p>
-            <button>Get started</button>
+            <p>Sign in</p>
+            <button>Join Free</button>
         </div>
         </animated.div>
     {/* </div> */}

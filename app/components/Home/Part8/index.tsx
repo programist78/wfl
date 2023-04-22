@@ -10,7 +10,8 @@ export default function Part8() {
         <p className={styles.title}>Be one of the first</p>
         </AnimatedLeft>
         <AnimatedRight>
-        <p className={styles.text}>Claim your FREE account now and secure your spot on the early access waiting list. Don't miss out on this opportunity to change your life forever!</p>
+        <p className={styles.text}>Are you ready to join the revolution and unlock your financial potential?
+This WFL platform, created by top experts, is designed to help you reach your financial goals and achieve success beyond your dreams</p>
         </AnimatedRight>
         <AnimatedText4>
         <div className={styles.box}>

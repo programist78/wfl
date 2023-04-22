@@ -17,7 +17,7 @@ export default function FeaturesCom() {
     <div className={styles.back}>
          <Part1 />
       <AnimatedOpacity>
-      <Part2 />
+      {/* <Part2 /> */}
       </AnimatedOpacity>
       <AnimatedOpacity>
       <p className={styles.title}>Our approach</p>

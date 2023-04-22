@@ -5,8 +5,30 @@ import { useState } from 'react'
 import {BiMessageDetail} from 'react-icons/bi'
 import {RiArrowDownSLine} from 'react-icons/ri'
 import AnimatedText4 from 'hooks/AnimatedText4'
+import AnimatedLeft from 'hooks/AnimatedLeft'
+import AnimatedRight from 'hooks/AnimatedRight'
+import { useSpring, animated, useInView } from '@react-spring/web';
+import Notification from 'components/Notification'
 
 function Dashboard() {
+  const [openMenu, setOpenMenu] = useState("1")
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100
+      },
+      to: {
+        opacity: 1,
+        delay: 150,
+        y: 0
+      }
+    }),
+    {
+      rootMargin: '-20% 0%',
+      once: false
+    }
+  )
   const [numbersStatistic, setNumbersStatistic] = useState(["170", "160", "150", "140", "130", "120", "110"])
   const [datesStatistic, setDatesStatistic] = useState(["22 Nov", "23 Nov", "24 Nov", "25 Nov", "26 Nov", "27 Nov", "28 Nov"])
   return (
@@ -17,11 +39,22 @@ function Dashboard() {
                       <div />
         </div>
       <div className={styles.buttons}>
-        <div>
-        <Image src="/dashboard_button.svg" alt='.' width={25} height={25}/>
-        <div />
-        </div>
-        <Image src="/wallet_button.svg" alt='.' width={25} height={25}/>
+        {openMenu == "1" &&
+        <>
+         <div>
+         <Image onClick={() => setOpenMenu("1")} src="/dashboard_button_light.svg" alt='.' width={25} height={25}/>
+         <div />
+         </div> 
+         <Image onClick={() => setOpenMenu("2")} src="/wallet_button.svg" alt='.' width={25} height={25}/>
+         </>}
+         {openMenu == "2" &&
+        <>
+                 <Image onClick={() => setOpenMenu("1")} src="/dashboard_button.svg" alt='.' width={25} height={25}/>
+         <div>
+         <Image onClick={() => setOpenMenu("2")} src="/wallet_button_light.svg" alt='.' width={25} height={25}/>
+         <div />
+         </div> 
+         </>}
         <Image src="/e_commerce_button.svg" alt='.' width={25} height={25}/>
         <Image src="/referral_button.svg" alt='.' width={25} height={25}/>
         <Image src="/settings_button.svg" alt='.' width={25} height={25}/>
@@ -32,7 +65,10 @@ function Dashboard() {
       </div>
        </div>
       <div className={styles.content_part}>
-      <div className={styles.content_header}>
+        {openMenu == "1" 
+        &&
+        <>
+        <div className={styles.content_header}>
         <p>Dashboard</p>
         <TfiSearch className={styles.header_icon}/>
       </div>
@@ -92,7 +128,7 @@ function Dashboard() {
           ))}
           </div>
           <div className={styles.statistic_part}>
-            <Image src="/statictic1.webp" alt="." width={772} height={158} className={styles.statistic1}/>
+          <animated.div style={springs} ref={ref} ><Image src="/statictic1.webp" alt="." width={772} height={158} className={styles.statistic1}/></animated.div>
             <Image src="/background_statistic.webp" alt='.' width={772} height={227} className={styles.background_statistic}/>
           </div>
         </div>
@@ -102,6 +138,133 @@ function Dashboard() {
           ))}
         </div>
       </div>
+      </>
+        }
+        {openMenu == "2" 
+        &&
+        <>
+        <div className={styles.content_header}>
+        <p>Wallet</p>
+        <TfiSearch className={styles.header_icon}/>
+      </div>
+      <div className={styles.content_moneys}>
+        <div>
+          <Image src="/current.svg" alt='' width={35} height={35}/>
+          <div>
+            <p className={styles.money}>$2500.86</p>
+            <p>Current(debit card)</p>
+          </div>
+          <p>+120.14$</p>
+        </div>
+        <div className={styles.moneys_line}/>
+        <div>
+          <Image src="/savings.svg" alt='' width={35} height={35}/>
+          <div>
+            <p className={styles.money}>$350.48</p>
+            <p>Savings</p>
+          </div>
+          <p>+30.54$</p>
+        </div>
+        <div className={styles.moneys_line}/>
+        <div>
+          <Image src="/defi.svg" alt='' width={35} height={35}/>
+          <div>
+            <p className={styles.money}>$5000.26</p>
+            <p>Defi investing</p>
+          </div>
+          <p>+300.24$</p>
+        </div>
+      </div>
+      <div className={styles.content_statistic}>
+        {/* <div className={styles.statistic_money}>
+          <div>
+            <p className={styles.money}>$2500.36</p>
+            <p>Profits</p>
+          </div>
+            <p>+120.56$</p>
+        </div> */}
+        <div className={styles.statistic_cryptos}>
+          <div className={styles.cryptos_parts}>
+            <div className={styles.crypto_part1}>
+              <div className={styles.info_crypto}>
+                <div className={styles.crypto_name}>
+                  <div />
+                  <p className={styles.crypto_quantity_name}>Bitcoin</p>
+                </div>
+                <p className={styles.crypto_value_balance}>BTC/USDT</p>
+              </div>
+              <p className={styles.earning}>+0.2%</p>
+            </div>
+            <div className={styles.crypto_part2}>
+              <p className={styles.crypto_value_balance}>$300.456.33</p>
+              <p className={styles.crypto_quantity_name}>17.45</p>
+            </div>
+          </div>
+          <div className={styles.cryptos_parts}>
+            <div className={styles.crypto_part1}>
+              <div className={styles.info_crypto}>
+                <div className={styles.crypto_name}>
+                  <div />
+                  <p className={styles.crypto_quantity_name}>Avalanche</p>
+                </div>
+                <p className={styles.crypto_value_balance}>AVAX/USDT</p>
+              </div>
+              <p className={styles.earning}>+3.2%</p>
+            </div>
+            <div className={styles.crypto_part2}>
+              <p className={styles.crypto_value_balance}>$300.456.33</p>
+              <p className={styles.crypto_quantity_name}>17.45</p>
+            </div>
+          </div>
+          <div className={styles.cryptos_parts}>
+            <div className={styles.crypto_part1}>
+              <div className={styles.info_crypto}>
+                <div className={styles.crypto_name}>
+                  <div />
+                  <p className={styles.crypto_quantity_name}>Ethereum</p>
+                </div>
+                <p className={styles.crypto_value_balance}>ETH/USDT</p>
+              </div>
+              <p className={styles.earning}>+1.2%</p>
+            </div>
+            <div className={styles.crypto_part2}>
+              <p className={styles.crypto_value_balance}>$300.456.33</p>
+              <p className={styles.crypto_quantity_name}>17.45</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.statistic_settings}>
+          <div className={styles.settings_part1}>
+          <Image src="/statistic_settings.svg" alt='.' width={21} height={21}/>
+          <p>Transactions</p>
+          </div>
+          <div className={styles.settings_part2}>
+            <button className={styles.settings_unactive}>1D</button>
+            <button className={styles.settings_active}>7D</button>
+            <button className={styles.settings_unactive}>3M</button>
+            <button className={styles.settings_unactive}>1Y</button>
+            <Image src="/statistic_settings_calendar.svg" alt='.' width={21} height={21}/>
+          </div>
+        </div>
+        <div className={styles.statistic_basic}>
+          <div className={styles.numbers}>
+          {numbersStatistic?.map((index) => (
+            <p>{index}</p>
+          ))}
+          </div>
+          <div className={styles.statistic_part}>
+          <animated.div style={springs} ref={ref} ><Image src="/statictic1.webp" alt="." width={772} height={158} className={styles.statistic1}/></animated.div>
+            <Image src="/background_statistic.webp" alt='.' width={772} height={227} className={styles.background_statistic}/>
+          </div>
+        </div>
+        <div className={styles.statistic_date}>
+        {datesStatistic?.map((index) => (
+            <p>{index}</p>
+          ))}
+        </div>
+      </div>
+      </>
+        }
       </div>
     <div className={styles.user_part}>
       <div className={styles.user_header}>
@@ -200,8 +363,9 @@ export default function Part5() {
 
   return (
     <div className={styles.back}>
-        <AnimatedText4><p className={styles.title}>User dashboard</p></AnimatedText4>
-        <AnimatedText4> <Dashboard /></AnimatedText4>
+        <AnimatedLeft><p className={styles.title}>User dashboard</p></AnimatedLeft>
+        <AnimatedRight> <Dashboard /></AnimatedRight>
+        {/* <Notification message="Привет, я уведомление!" /> */}
     </div>
   )
 }

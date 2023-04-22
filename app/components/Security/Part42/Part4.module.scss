@@ -1,4 +1,5 @@
-$title-size: 3.5rem;
+//change size rem: 3.5rem
+$title-size: 2.5rem;
 
 .back{
     height: auto;
@@ -15,19 +16,19 @@ $title-size: 3.5rem;
 .sup_title{
     font-family: 'Poppins';
 font-style: normal;
-font-weight: 700;
+font-weight: 500;
 font-size: $title-size;
-line-height: 105%;
+line-height: 110%;
 color: #232323;
 margin-left: 180px;
-width: 884px;
+width: 1080px;
 }
 .preback2{
     width: 100%;
     height: auto;
         // background: rgba(211, 214, 233, 0.75);
         // background-color: #A0A7D7;
-        background-color: rgba(160, 167, 215, 0.5);
+        background-color: rgba(160, 167, 215, 0.4);
         -webkit-backdrop-filter: blur(2.5px);
         
         backdrop-filter: blur(2.5px);

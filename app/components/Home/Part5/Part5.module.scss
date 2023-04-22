@@ -60,7 +60,7 @@ border: 0.71125px solid #EFF1FF;
     flex-direction: column;
     gap: 35px;
     margin-top: 35px;
-    div:first-child{
+    div{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -288,12 +288,21 @@ color: #232325;
 .statistic_part{
     width: 773px;
     height: 227px;
+    // display: flex;
+    overflow: hidden;
 }
 
 .statistic1{
     position: absolute;
     margin-top: 55px;
+    z-index: 2;
     margin-bottom: 0;
+}
+
+.background_statistic{
+    width: 773px;
+    height: 227px;
+    z-index: 1;
 }
 
 .statistic_date{
@@ -477,4 +486,69 @@ line-height: 10px;
 
 color: #232325;
 
+}
+
+.statistic_cryptos{
+    width: 800px;
+height: 121px;
+display: flex;
+margin-top: -30px;
+flex-direction: row;
+background: #040521;
+border-radius: 15px;
+}
+
+.cryptos_parts{
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.crypto_part1{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.crypto_part2{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.info_crypto{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.crypto_name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    div{
+        width: 20px;
+height: 0px;
+border: 2px solid #14E30B;
+transform: rotate(-90deg);
+margin-left: -10px;
+    }
+}
+
+.crypto_value_balance{
+    @include var.dashboard_gray_text
+}
+
+.earning{
+    @include var.dashboard_earning
+}
+
+.crypto_quantity_name{
+    @include var.name_crypto_text
 }

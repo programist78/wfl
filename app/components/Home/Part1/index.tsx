@@ -17,6 +17,9 @@ export default function Part1() {
             <AnimatedText4>
             <button>JOIN NOW</button>
             </AnimatedText4>
+            <p className={styles.small_text}>
+            The first 1000 pre-members gets 10 WFL coin, 1 month free Ultimate Plan (100$) & E-Book*
+            </p>
             </div>
         </div>
         <div className={styles.right_part}>

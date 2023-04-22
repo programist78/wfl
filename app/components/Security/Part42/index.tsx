@@ -11,7 +11,7 @@ export default function Part42() {
     <div className={styles.back}>
                 <div className={styles.part1}>
            <p className={styles.sup_title}>
-        <AnimatedText>Security of identity from the big brother</AnimatedText></p>
+        <AnimatedText>Your funds and personal information secured stronger than a bank</AnimatedText></p>
         </div>
         <div className={styles.preback2}>
         <div className={styles.part2}>

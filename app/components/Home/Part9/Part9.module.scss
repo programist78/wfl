@@ -1,0 +1,92 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    width: 1440px;
+    height: auto;
+    gap: 50px;
+    display: flex;
+    padding-bottom: 100px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    @include var.small_title;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title_block{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 110%;
+margin-left: -30px;
+color: #000000;
+}
+
+.text{
+@include var.dark_text;
+margin-left: 30px;
+width: 777px;
+}
+
+.header_block{
+    display: flex;
+    width: 700px;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow{
+    width: 100px;
+    margin-left: -20px;
+    height: 40px;
+    color: #00000095;
+}
+.header_block:hover .arrow{
+    animation: arrow_animate 0.25s ease-in-out forwards;
+  }
+.header_block:not(:hover) .arrow{
+    animation: arrow_animate_reverse 0.25s ease-in-out forwards;
+  }
+
+@keyframes arrow_animate {
+    25%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(-90deg);
+    }
+    75%{
+        transform: rotate(-135deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+
+  
+  @keyframes arrow_animate_reverse {
+    0% {
+      transform: rotate(-180deg);
+    }
+    25% {
+      transform: rotate(-135deg);
+    }
+    50% {
+      transform: rotate(-90deg);
+    }
+    75% {
+      transform: rotate(-45deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
