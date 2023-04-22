@@ -18,6 +18,7 @@ This WFL platform, created by top experts, is designed to help you reach your fi
             <div className={styles.number}>903/1000</div>
             <p className={styles.box_text}>have already joined</p>
         </div>
+        <p className={styles.text2}>Claim your FREE account now and secure your spot on the early access waiting list. Don't miss out on this opportunity to change your life forever!</p>
         </AnimatedText4>
     </div>
   )
