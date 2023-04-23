@@ -23,7 +23,7 @@ const typeDefs = `#graphql
     email: String
     role: String
     password: String
-    confirmedEmail: String
+    confirmedEmail: Boolean
     subscriberMail: String
     balance: String
     avatarUrl: String
@@ -92,6 +92,7 @@ const typeDefs = `#graphql
 
     loginUser(about: LoginInput!): AuthPayload
     registerUser(id: ID, about: RegisterInput!): AuthPayload
+    sendConfirmedEmail(email: String!): AuthPayload
     changeStatus(id: ID, confirmationCode: String): User
     forgotPassword(id: ID, confirmationCode: String, password: String): User
     forgotPasswordSend(email: String): String

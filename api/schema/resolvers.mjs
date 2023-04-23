@@ -144,7 +144,7 @@ const resolvers = {
             const passwordHash = await bcrypt.hash(password, salt);
             let math = Math.random() * (43564389374833)
             let confirmationCode = Math.round(math)
-            const user = new User({ fullname, email, passwordHash, role:"USER",avatarUrl:url, confirmedEmail: "PENDING", confirmationCode, balance: "0", subscriberMail: subscribeInfo})
+            const user = new User({ fullname, email, passwordHash, role:"USER",avatarUrl:url, confirmedEmail: false, confirmationCode, balance: "0", subscriberMail: subscribeInfo})
             let result = await user.save()
             result = await serializeUser(result);
             //transporter
@@ -170,6 +170,39 @@ const resolvers = {
             
             
         },
+        sendConfirmedEmail: async(parent, {email}, context, info) => {
+            try {
+                if (!email) {
+                    throw new ValidationError("Enter all the data required !");
+                }
+            const user = await User.findOne({ email });
+            if (!user) {
+            throw new ValidationError("Email undefined");
+            }
+            if (user.confirmedEmail == true){
+                throw new ValidationError("You already confirmed the email");
+            }
+            //transporter
+            const transporter = nodemailer.createTransport(
+                sendgridTransport({
+                    auth:{
+                        api_key:process.env.SENDGRID_APIKEY,
+                    }
+                })
+            )
+            let mailOptions = { from: process.env.FROM_EMAIL, to: email, subject: 'Account Verification Link', text: 'Hello '+ user.fullname +',\n\n' + 'Please verify your account by clicking the link: \nhttp://localhost:3000/' + 'auth/confirmation/' + user.confirmationCode + '\n\nThank You!\n' };
+            transporter.sendMail(mailOptions, function (err) {
+                if (err) { 
+                return console.log(err)
+            }})
+             //end trans
+            return {user}
+            } catch (err) {
+                throw (err.message);
+            } 
+            
+            
+        },
         changeStatus: async (parent,{id, confirmationCode}, args) => {
             const user = await User.findById(
                 {_id:id}
@@ -183,13 +216,13 @@ const resolvers = {
             }
             const newuser = await User.findByIdAndUpdate(
                 id,
-                {status: "ACTIVE"},
+                {confirmedEmail: true},
                 { new: true }
             );
             return newuser
         },
         forgotPassword: async (parent,{id, confirmationCode, password}, args) => {
-            const user = await User.findById(
+            const user = await User.findOne(
                 {_id:id}
                 );
                 if (!user) {
