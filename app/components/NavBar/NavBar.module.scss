@@ -5,7 +5,7 @@
     flex-direction: row;
 }
 
-$font-logo: 1.75rem;
+$font-logo: 1.5rem;
 $text-font: 14px;
 
 .back{
@@ -26,10 +26,39 @@ $text-font: 14px;
     padding-left: 10%;
     padding-right: 10%;
     margin-right: 70px;
+    margin-top: 45px;
     color: #232323;
     z-index: 100000;
 }
+.back1{
+    position: fixed;
+    color: rgb(255, 255, 255);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    // background: url(../../public/mesh-679.png);
+    // background: url(../../public/mesh-527.png);
+    // background: url(../../public/mesh-759.png);
+    // background: url(../../public/mesh-290.png);
+    // background: url(../../public/mesh-759.png);
+    background: url(../../public/mesh-548.png);
+    background: url(../../public/mesh-527.png);
+    background: url(../../public/mesh-930.png);
+    background: url(../../public/mesh-316.png);
+    background-size: cover;
+    p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 45px;
+        // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        // background: #009688;
 
+    }
+}
 .logo{
     @include flex-inline;
 align-items: center;
@@ -38,7 +67,7 @@ gap: 15px;
     p{
         font-family: 'Roboto';
 font-style: normal;
-font-weight: 900;
+font-weight: 500;
 font-size: $font-logo;
 line-height: 35px;
 // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);

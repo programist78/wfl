@@ -46,6 +46,10 @@ const resolvers = {
                 }
                 return user
         },
+        getCount: async () => {
+            const count = await User.count();
+            return count;
+        }
     },
     
     Mutation: {
@@ -299,6 +303,52 @@ const resolvers = {
             }})   
             return "Email send!"
         },
+        sendAboutStart: async(_, args, context) => {
+            const transporter = nodemailer.createTransport(
+              sendgridTransport({
+                auth:{
+                  api_key:process.env.SENDGRID_APIKEY,
+                }
+              })
+            );
+          
+            // Получаем список всех пользователей
+            const users = await User.find();
+          
+            // Отправляем email для каждого пользователя
+            try {
+              await Promise.all(users.map(async (user) => {
+                let mailOptions = { 
+                  from: process.env.FROM_EMAIL, 
+                  to: user.email, 
+                   subject: 'Platform Launch Notification',
+                   html: `
+                   <body>
+                   <div style="border: 3px solid #4d4d4d;height: auto;min-height: 500px; background-color: #eef8fd; border-radius: 20px; padding: 20px; font-family: Arial, sans-serif; display: flex; align-items: center; flex-direction: column;">
+                   <h1 style="text-align: center; color: #0d1e34; font-size: 36px">Welcome to WealthFreeLife</h1>
+        <p style="color: #4d4d4d; font-size: 18px;">Hello ${user.fullname},</p>
+        <p style="color: #4d4d4d; font-size: 18px; line-height: 1.5;">The platform is now fully operational and we invite you to join us. We believe that WealthFreeLife is the perfect place for you to achieve your financial goals and live the life you have always wanted.</p>
+        <div style="margin: 30px 0; display: flex; justify-content: center;">
+          <a href="https://www.wealthfreelife.com" style="display: inline-block; background-color: #0d1e34; color: #fff; text-decoration: none; font-size: 24px; font-weight: bold; text-align: center; border-radius: 30px; padding: 15px 50px;">Visit our website</a>
+        </div>
+        <p style="color: #4d4d4d; font-size: 18px; line-height: 1.5;">Thank you for choosing WealthFreeLife.</p>
+        <div flex-direction: row; gap: 30px; margin-top: 30px;">
+          <a href="#" style="text-decoration: none;"><img style="width: 40px; height: 40px; border-radius: 50%;" src="./facebook.png" alt="facebook"/></a>
+          <a href="#" style="text-decoration: none;"><img style="width: 40px; height: 40px; border-radius: 50%;" src="./twitter.webp" alt="twitter"/></a>
+          <a href="#" style="text-decoration: none;"><img style="width: 40px; height: 40px; border-radius: 50%;" src="./instagram.png" alt="instagram"/></a>
+        </div>
+      </div>
+</body>
+               `
+           };
+                await transporter.sendMail(mailOptions);
+              }));
+              return "Send!"
+            } catch (error) {
+              console.error(error);
+              throw new Error("Failed to send emails to all users");
+            }
+          }
     }
 }
 

@@ -34,7 +34,6 @@ export default function Footer() {
     <ul className={styles.menu}>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">Home</a></li>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">About</a></li>
-      <li className={styles.menu__item}><a className={styles.menu__link} href="#">Services</a></li>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">Security</a></li>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">Contact</a></li>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">Features</a></li>

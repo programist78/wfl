@@ -55,6 +55,8 @@ const typeDefs = `#graphql
     getPostComments(id: ID): [PostCommentwanswers]
 
     getUser(email: String): User
+
+    getCount: String
   }
   input PostInput {
     title: String
@@ -98,6 +100,8 @@ const typeDefs = `#graphql
     forgotPasswordSend(email: String): String
 
     subscribeToNewsletter(email: String): String
+
+    sendAboutStart: String
   }
 `;
 

@@ -36,18 +36,20 @@ export default function NavBar() {
 
 
   const part2Styles = useSpring({
-    transform: isScrollUp ? 'translateY(-100%)' : 'translateY(0%)',
+    transform: isScrollUp ? 'translateY(-160%)' : 'translateY(0%)',
     opacity: isScrollUp ? 1 : 1
   })
   return (
     <main className={montserrat.className}>
-          
-    {/* <div className={styles.back}> */}
+          <div className={styles.preback}>
+    {/* <div className={styles.back}> */}  <div className={styles.back1}>
+          <p>Be the first of the 1000</p>
+        </div>
       <animated.div style={part2Styles} className={styles.back}>
         <div className={styles.logo}>
             <Image src="/logo.svg" alt='Logo' width={40} height={40}/>
             <main className={roboto.className}>
-            <p>WFL</p>
+            <p>Wealth Free Life</p>
             </main>
         </div>
 
@@ -81,11 +83,12 @@ export default function NavBar() {
         </div>
         <div className={styles.part3}>
             <p>Sign in</p>
-            <button>Join Free</button>
+            <button>Join Now</button>
         </div>
         </animated.div>
+      
     {/* </div> */}
-    
+    </div>
     </main>
   )
 }
