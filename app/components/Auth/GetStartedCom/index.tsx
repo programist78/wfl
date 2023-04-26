@@ -25,7 +25,13 @@ export default function GetStartedCom() {
         didOpen: (toast) => {
           toast.addEventListener('mouseenter', Swal.stopTimer)
           toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
+        },
+        customClass: {
+            container: 'custom-swal-font',
+            title: 'custom-swal-font',
+            content: 'custom-swal-font',
+            confirmButton: 'custom-swal-font',
+          },
       })
       const {
         register,
@@ -50,7 +56,9 @@ export default function GetStartedCom() {
             // Обработка ошибок вручную
             if (error = "Email already exists") {
                 Toast.fire({
-                    icon: 'error', title:`Email already exist`});
+                    icon: 'error',
+                    title:`Email already exist`,
+                });
             } else {
                 Toast.fire({
                     icon: 'error', title:`Incorrect information`});
@@ -103,7 +111,7 @@ export default function GetStartedCom() {
 
                 </div>
             </div>
-            <button className={styles.button}>JOIN NOW</button>
+            <button className={styles.button}>Join now</button>
         </form>
     </div>
   )
