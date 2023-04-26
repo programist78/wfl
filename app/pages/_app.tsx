@@ -1,4 +1,5 @@
 import '../styles/globals.scss'
+import { ApolloProvider } from '@apollo/client/react/context/ApolloProvider.js'
 import { InMemoryCache } from '@apollo/client/cache'
 import { ApolloClient } from '@apollo/client/core/ApolloClient.js'
 import { createUploadLink } from 'apollo-upload-client'
@@ -9,8 +10,13 @@ import { appWithTranslation } from 'next-i18next'
 import { ApolloCache } from '@apollo/client/core'
 import type { AppProps } from 'next/app'
 import { Poppins } from '@next/font/google'
-
+import { SessionProvider } from 'next-auth/react'
 import RootLayout from 'components/Layout'
+import { Provider } from 'react-redux'
+import { AuthProvider } from '../hooks/AuthContext.jsx'
+import { PersistGate } from 'redux-persist/integration/react'
+import store, {persistor} from '../redux/store'
+
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
@@ -56,24 +62,28 @@ AppProps) => {
     return <></>
   }
   return (
-    <>
-              {
-                loadingcomponent ? (
-                  // <Loader />
-                  <h1>Loading....</h1>
-                ) : (
+    <SessionProvider session={pageProps.session}>
+      <ApolloProvider client={apolloClient}>
+        <Provider store={store}>
+          <AuthProvider>
+            <PersistGate persistor={persistor}>
+              {loadingcomponent ? (
+                <h1>Loading...</h1>
+              ) : (
                 <>
-                    {/* <Head></Head> */}
-                    <RootLayout>
-                           <main className={poppins.className}>
-                          <Component {...pageProps} />
-                             </main>
-                             </RootLayout>
-                        </>
-                )
-               
-              }
-    </>
+                  {/* <Head></Head> */}
+                  <RootLayout>
+                    <main className={poppins.className}>
+                      <Component {...pageProps} />
+                    </main>
+                  </RootLayout>
+                </>
+              )}
+            </PersistGate>
+          </AuthProvider>
+        </Provider>
+      </ApolloProvider>
+    </SessionProvider>
   )
 }
 if (typeof window === 'undefined')

@@ -12,6 +12,7 @@ import AnswerComment from '../models/AnswerComment.js';
 import { ValidationError } from 'apollo-server-koa';
 import nodemailer from 'nodemailer'
 import sendgridTransport from 'nodemailer-sendgrid-transport';
+import FirstUser from '../models/FirstUser.js';
 const __dirname = path.resolve();
 dotenv.config()
 
@@ -174,6 +175,106 @@ const resolvers = {
             
             
         },
+        register1000User: async(parent, {email, fullname}, context, info) => {
+            try {
+                if (!email || !fullname ) {
+                    throw new ValidationError("Enter all the data required !");
+                }
+            const already_exsist = await FirstUser.findOne({ email });
+            if (already_exsist) {
+            throw new ValidationError("Email already exists");
+            }
+            let math = Math.random() * (43564389374833)
+            let confirmationCode = Math.round(math)
+            const user = new FirstUser({ fullname, email, role:"USER",confirmedEmail: false, confirmationCode})
+            let result = await user.save()
+            result = await serializeUser(result);
+            //transporter
+            const transporter = nodemailer.createTransport(
+                sendgridTransport({
+                    auth:{
+                        api_key:process.env.SENDGRID_APIKEY,
+                    }
+                })
+            )
+            let mailOptions = { from: process.env.FROM_EMAIL, to: user.email, subject: 'Account Verification Link', html: `
+            <style>
+            /* Общие стили для всего письма */
+            body {
+              font-family: Arial, sans-serif;
+              font-size: 16px;
+              line-height: 1.5;
+              margin: 0;
+              padding: 0;
+              color: #333;
+              background-color: #fff;
+            }
+            
+            /* Стили для контейнера */
+            .container {
+              max-width: 600px;
+              margin: 0 auto;
+              padding: 20px;
+              box-sizing: border-box;
+              border: 1px solid #ddd;
+            }
+            
+            /* Стили для заголовка */
+            h1 {
+              color: #007bff;
+              font-size: 24px;
+              font-weight: bold;
+              margin-top: 0;
+            }
+            
+            /* Стили для текста письма */
+            p {
+              margin-top: 0;
+              margin-bottom: 20px;
+            }
+            
+            /* Стили для ссылки */
+            a {
+              color: #007bff;
+              text-decoration: none;
+            }
+            
+            /* Стили для футера */
+            .footer {
+              margin-top: 50px;
+              text-align: center;
+              font-size: 14px;
+              color: #999;
+            }
+          </style>
+        <body>
+          <div class="container">
+            <h1>Welcome to WeathFreeLife, ${user.fullname}</h1>
+            <p>Thank you for joining WeathFreeLife. We are excited to have you as a member of our community.</p>
+            <p>WeathFreeLife is a platform for exploring and sharing weather information. You can check the latest weather conditions, share photos and stories, and connect with other weather enthusiasts from around the world.</p>
+            <p>To get started, please visit our website:</p>
+            <p>
+              <a href="https://www.weathfreelife.com/">www.weathfreelife.com</a>
+            </p>
+            <p>We look forward to seeing you on WeathFreeLife!</p>
+            <div class="footer">
+              <p>This email was sent by WeathFreeLife. If you have any questions or concerns, please contact us at support@weathfreelife.com.</p>
+            </div>
+          </div>
+        </body>
+            `
+        };
+            transporter.sendMail(mailOptions, function (err) {
+                if (err) { 
+                return console.log(err)
+            }})
+            return user.email
+            } catch (err) {
+                throw (err.message);
+            } 
+            
+            
+        },
         sendConfirmedEmail: async(parent, {email}, context, info) => {
             try {
                 if (!email) {
@@ -208,7 +309,7 @@ const resolvers = {
             
         },
         changeStatus: async (parent,{id, confirmationCode}, args) => {
-            const user = await User.findById(
+            const user = await FirstUser.findById(
                 {_id:id}
                 );
                 if (!user) {
@@ -218,7 +319,7 @@ const resolvers = {
             if (!isValidPass) {
                 throw new ValidationError("Invalid confirmationCode given!");
             }
-            const newuser = await User.findByIdAndUpdate(
+            const newuser = await FirstUser.findByIdAndUpdate(
                 id,
                 {confirmedEmail: true},
                 { new: true }
@@ -323,22 +424,68 @@ const resolvers = {
                   to: user.email, 
                    subject: 'Platform Launch Notification',
                    html: `
-                   <body>
-                   <div style="border: 3px solid #4d4d4d;height: auto;min-height: 500px; background-color: #eef8fd; border-radius: 20px; padding: 20px; font-family: Arial, sans-serif; display: flex; align-items: center; flex-direction: column;">
-                   <h1 style="text-align: center; color: #0d1e34; font-size: 36px">Welcome to WealthFreeLife</h1>
-        <p style="color: #4d4d4d; font-size: 18px;">Hello ${user.fullname},</p>
-        <p style="color: #4d4d4d; font-size: 18px; line-height: 1.5;">The platform is now fully operational and we invite you to join us. We believe that WealthFreeLife is the perfect place for you to achieve your financial goals and live the life you have always wanted.</p>
-        <div style="margin: 30px 0; display: flex; justify-content: center;">
-          <a href="https://www.wealthfreelife.com" style="display: inline-block; background-color: #0d1e34; color: #fff; text-decoration: none; font-size: 24px; font-weight: bold; text-align: center; border-radius: 30px; padding: 15px 50px;">Visit our website</a>
-        </div>
-        <p style="color: #4d4d4d; font-size: 18px; line-height: 1.5;">Thank you for choosing WealthFreeLife.</p>
-        <div flex-direction: row; gap: 30px; margin-top: 30px;">
-          <a href="#" style="text-decoration: none;"><img style="width: 40px; height: 40px; border-radius: 50%;" src="./facebook.png" alt="facebook"/></a>
-          <a href="#" style="text-decoration: none;"><img style="width: 40px; height: 40px; border-radius: 50%;" src="./twitter.webp" alt="twitter"/></a>
-          <a href="#" style="text-decoration: none;"><img style="width: 40px; height: 40px; border-radius: 50%;" src="./instagram.png" alt="instagram"/></a>
-        </div>
-      </div>
-</body>
+                     <head>
+                       <meta charset="UTF-8" />
+                       <title>Platform Launch Notification</title>
+                       <style>
+                         body {
+                           font-family: Arial, sans-serif;
+                           background-color: #f1f1f1;
+                         }
+                         .container {
+                           width: 80%;
+                           margin: auto;
+                           padding: 20px;
+                           background-color: #ffffff;
+                           border-radius: 10px;
+                           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                         }
+                         h1 {
+                           color: #1d3557;
+                           font-size: 32px;
+                           font-weight: bold;
+                           margin-bottom: 20px;
+                         }
+                         p {
+                           font-size: 16px;
+                           line-height: 1.5;
+                           color: #4a4a4a;
+                           margin-bottom: 20px;
+                         }
+                         .button {
+                           display: inline-block;
+                           background-color: #457b9d;
+                           color: #ffffff;
+                           font-size: 18px;
+                           font-weight: bold;
+                           padding: 10px 20px;
+                           text-decoration: none;
+                           border-radius: 5px;
+                           margin-top: 20px;
+                         }
+                         .security-icon {
+                           display: block;
+                           margin: 0 auto;
+                           width: 100px;
+                           height: 100px;
+                           background-image: url('http://localhost:4000/instagram.png');
+                           background-size: contain;
+                           background-repeat: no-repeat;
+                           background-position: center;
+                           margin-top: 20px;
+                         }
+                       </style>
+                     </head>
+                     <body>
+                       <div class="container">
+                         <h1>Platform Launch Notification</h1>
+                         <p>Dear User, ${user.fullname}</p>
+                         <p>We are pleased to announce that our platform is launching soon. We have implemented state-of-the-art security measures to ensure the safety of your data.</p>
+                         <div class="security-icon"></div>
+                         <p>Stay tuned for updates and details on how to access the platform.</p>
+                         <a href="wfl.com" class="button">Open</a>
+                       </div>
+                     </body>                   
                `
            };
                 await transporter.sendMail(mailOptions);

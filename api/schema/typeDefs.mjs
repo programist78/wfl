@@ -94,6 +94,7 @@ const typeDefs = `#graphql
 
     loginUser(about: LoginInput!): AuthPayload
     registerUser(id: ID, about: RegisterInput!): AuthPayload
+    register1000User(fullname: String, email: String): String
     sendConfirmedEmail(email: String!): AuthPayload
     changeStatus(id: ID, confirmationCode: String): User
     forgotPassword(id: ID, confirmationCode: String, password: String): User
