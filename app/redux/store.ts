@@ -13,17 +13,11 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist'
-import { cartReducer } from './slices/slice'
-import { userInfoReducer } from './slices/user'
-import { twoauthReducer } from './slices/twoauth'
 
 const rootReducer = combineReducers({
   auth: authReducer,
   admin: adminReducer,
-  people: peopleReducer,
-  cart: cartReducer,
-  // info: userInfoReducer,
-  twoauth: twoauthReducer
+  people: peopleReducer
 })
 
 const persistConfig = {

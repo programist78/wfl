@@ -17,7 +17,7 @@ const User = new mongoose.Schema(
     role: 
       {type: String,
     },
-    confirmedEmail: {type: Boolean, default: false},
+    confirmedEmail: {type: Boolean},
     subscriberMail: {type: Boolean, default: false},
     token: { type: String },
     confirmationCode: { type: String }, 

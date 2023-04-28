@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import Image from 'next/image'
 import styles from './GetStarted.module.scss'
 import { useMutation } from '@apollo/client'
 import {REGISTER_FIRST} from '../../../apollo/auth'
@@ -6,8 +6,12 @@ import Swal from 'sweetalert2';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import { useState } from 'react'
+import { useSession, signIn, signOut } from "next-auth/react"
+import GoogleAuth from '../../Google-Auth';
 
-export default function GetStartedCom() {
+export default function GetStartedCom2() {
+  const { data: session } = useSession()
     const validationSchema = Yup.object().shape({
         fullname: Yup.string()
         .required('Fullname is required'),
@@ -73,7 +77,7 @@ export default function GetStartedCom() {
           } ,
         
         // variables: {about: {email: dataEmail, password: dataPassword}},
-        variables: { email, fullname },
+        variables: { email, fullname, confirmedEmailGet: false  },
     });
     const onSubmit = data => {
         setEmail(data.email)
@@ -81,38 +85,51 @@ export default function GetStartedCom() {
         // setData(data)
         setTimeout(registerUser, 500)
       };
-
-    // function handleSubmit() {
-        // registeruser()
-    //   }
   return (
-    <div className={styles.preback}>
-        <form className={styles.back} onSubmit={handleSubmit(onSubmit)}>
-            <p className={styles.title}>Become a member!</p>
-            <div>
-                <div>
-                    <p>Full Name</p>
-                    <input 
+    <div className={styles.back}>
+        <div className={styles.part1}>
+            <form className={styles.big_form} onSubmit={handleSubmit(onSubmit)}>
+                <p className={styles.title}>Become a member</p>
+                <p className={styles.text}>Enter your details to see when the platform will start</p>
+                <div className={styles.forms}>
+                    <div className={styles.form}>
+                        <p>Full Name</p>
+                        <input 
                     name="fullname"
                     type="text"
                      {...register('fullname')}
                      className={`form-control ${errors.fullname ? 'is-invalid' : ''}`}/>
                      <div className="invalid-feedback">{errors.fullname?.message}</div>
-                </div>
-                <div>
-                <p>Email</p>
-                <input
+                    </div>
+                    <div className={styles.form}>
+                        <p>Email</p>
+                        <input
             name="email"
             type="text"
             {...register('email')}
             className={`form-control ${errors.email ? 'is-invalid' : ''}`}
             />
           <div className="invalid-feedback">{errors.email?.message}</div>
-
+                    </div>
+                    <button className={styles.button}>Join now</button>
                 </div>
-            </div>
-            <button className={styles.button}>Join now</button>
-        </form>
+                <div className={styles.between}>
+                    <div />
+                    <p>Or join with</p>
+                    <div />
+                </div>
+                <GoogleAuth />
+                {/* <button className={styles.sign_google}>
+                    <Image src="/google.svg" alt='google' width={30} height={30}/>
+                    <p>Sign up with Google</p>
+                </button> */}
+            </form>
+        </div>
+        <div className={styles.prepart2}>
+        <div className={styles.part2}>
+            <Image src="/UserDashboard_sign_in.webp" width={1095} height={615} alt='.'/>
+        </div>
+        </div>
     </div>
   )
 }

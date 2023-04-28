@@ -43,7 +43,7 @@ const resolvers = {
                 {email}
                 );
                 if (!user) {
-                    throw new ValidationError("Invalid email given -getUser");
+                    throw new ValidationError("User undefined");
                 }
                 return user
         },
@@ -175,7 +175,7 @@ const resolvers = {
             
             
         },
-        register1000User: async(parent, {email, fullname}, context, info) => {
+        register1000User: async(parent, {email, fullname, confirmedEmailGet}, context, info) => {
             try {
                 if (!email || !fullname ) {
                     throw new ValidationError("Enter all the data required !");
@@ -186,7 +186,13 @@ const resolvers = {
             }
             let math = Math.random() * (43564389374833)
             let confirmationCode = Math.round(math)
-            const user = new FirstUser({ fullname, email, role:"USER",confirmedEmail: false, confirmationCode})
+            let confirmedEmail = false
+            if (confirmedEmailGet === true) {
+                confirmedEmail = true
+            }            
+            console.log(`${confirmedEmailGet} -confirmedEmailGet`)
+            console.log(`${confirmedEmail} -confirmedEmail`)
+            const user = new FirstUser({ fullname, email, role:"USER",confirmedEmail, confirmationCode})
             let result = await user.save()
             result = await serializeUser(result);
             //transporter
@@ -198,76 +204,98 @@ const resolvers = {
                 })
             )
             let mailOptions = { from: process.env.FROM_EMAIL, to: user.email, subject: 'Account Verification Link', html: `
-            <style>
-            /* Общие стили для всего письма */
-            body {
-              font-family: Arial, sans-serif;
-              font-size: 16px;
-              line-height: 1.5;
-              margin: 0;
-              padding: 0;
-              color: #333;
-              background-color: #fff;
-            }
-            
-            /* Стили для контейнера */
-            .container {
-              max-width: 600px;
-              margin: 0 auto;
-              padding: 20px;
-              box-sizing: border-box;
-              border: 1px solid #ddd;
-            }
-            
-            /* Стили для заголовка */
-            h1 {
-              color: #007bff;
-              font-size: 24px;
-              font-weight: bold;
-              margin-top: 0;
-            }
-            
-            /* Стили для текста письма */
-            p {
-              margin-top: 0;
-              margin-bottom: 20px;
-            }
-            
-            /* Стили для ссылки */
-            a {
-              color: #007bff;
-              text-decoration: none;
-            }
-            
-            /* Стили для футера */
-            .footer {
-              margin-top: 50px;
-              text-align: center;
-              font-size: 14px;
-              color: #999;
-            }
-          </style>
+            <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Email confirmation</title>
+        </head>
         <body>
-          <div class="container">
-            <h1>Welcome to WeathFreeLife, ${user.fullname}</h1>
-            <p>Thank you for joining WeathFreeLife. We are excited to have you as a member of our community.</p>
-            <p>WeathFreeLife is a platform for exploring and sharing weather information. You can check the latest weather conditions, share photos and stories, and connect with other weather enthusiasts from around the world.</p>
-            <p>To get started, please visit our website:</p>
-            <p>
-              <a href="https://www.weathfreelife.com/">www.weathfreelife.com</a>
-            </p>
-            <p>We look forward to seeing you on WeathFreeLife!</p>
-            <div class="footer">
-              <p>This email was sent by WeathFreeLife. If you have any questions or concerns, please contact us at support@weathfreelife.com.</p>
+            <div class="back">
+              <div class="header">
+                <img src="./logo.svg" alt="WFL"/>
+                <p class="logo_text">Wealth Free Life</p>
+              </div>
+              <div class="part_info">
+                <p class="title">Сonfirm your mail</p>
+                <p class="text">Dear, ${user.fullname}</p>
+                <p class="text">We would like to thank you for registering on our website. To confirm your email address, please click on the button below:</p>
+                <a href="http://localhost:3000/auth/confirmation/${user.confirmationCode}-${user.id}">Confirm mail</a>              
+                <p>We appreciate your participation and are ready to provide you with our assistance at any time. If you have any questions or problems, please contact us and we will try to help you as soon as possible.</p>
+              </div>
+              <div class="footer">
+                <p class="text_footer">Copyright © 2023 Wealth Free Life</p>
+                <p class="text_footer">A ConsenSys Formation</p>
+              </div>
             </div>
-          </div>
+            <style>
+              .back {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #0e6e6e;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+              }
+              .header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                flex-direction: column;
+                justify-content: center;
+              }
+              .header img {
+                width: 75px;
+                height: 75px;
+              }
+              .logo_text {
+                font-size: 150%;
+                font-weight: 600;
+                color: #ffffff;
+                
+              }
+              .part_info {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+              }
+              .title {
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+              button {
+                background-color: #56CBBD;
+                color: #ffffff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: none;
+                font-size: 16px;
+                margin-bottom: 20px;
+                cursor: pointer;
+              }
+              button:hover {
+                background-color: #9100d9;
+              }
+              .text_footer {
+                text-align: center;
+                font-size: 12px;
+                color: #999999;
+                margin-top: 20px;
+              }
+            </style>
         </body>
             `
         };
+        // if (confirmedEmailGet === false){
+            console.log("Sending...")
             transporter.sendMail(mailOptions, function (err) {
                 if (err) { 
                 return console.log(err)
             }})
+        // }
             return user.email
             } catch (err) {
                 throw (err.message);
@@ -295,7 +323,7 @@ const resolvers = {
                     }
                 })
             )
-            let mailOptions = { from: process.env.FROM_EMAIL, to: email, subject: 'Account Verification Link', text: 'Hello '+ user.fullname +',\n\n' + 'Please verify your account by clicking the link: \nhttp://localhost:3000/' + 'auth/confirmation/' + user.confirmationCode + '\n\nThank You!\n' };
+            let mailOptions = { from: process.env.FROM_EMAIL, to: email, subject: 'Account Verification Link', text: 'Hello '+ user.fullname +',\n\n' + 'Please verify your account by clicking the link: \nhttp://localhost:3000/' + 'auth/confirmation/' + user.confirmationCode + "-" + user.id + '\n\nThank You!\n' };
             transporter.sendMail(mailOptions, function (err) {
                 if (err) { 
                 return console.log(err)
