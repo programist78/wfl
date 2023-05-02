@@ -68,16 +68,28 @@ const resolvers = {
             const urlForArray = `${process.env.HOST}/${assetUniqName}.${extension}`;
             images.push(urlForArray);
             }
-            const {title, text, price} = post
-            const postcreate = new Post({ title, text,price, images })
+            const {title, text} = post
+            const postcreate = new Post({ title, text, images })
             await postcreate.save()
             return postcreate;
         },
-        updatePost: async (parent,{ post, id }) => {
-            const {title, texten, textru, textua, episode} = post
+        updatePost: async (parent,{ post, id, image }) => {
+            let images = [];
+            
+            for (let i = 0; i < image.length; i++) {
+            const { createReadStream, filename, mimetype } = await image[i];
+            const stream = createReadStream();
+            const assetUniqName = fileRenamer(filename);
+            let extension = mimetype.split("/")[1];
+            const pathName = path.join(__dirname,   `./uploads/${assetUniqName}.${extension}`);
+            await stream.pipe(fs.createWriteStream(pathName));
+            const urlForArray = `${process.env.HOST}/${assetUniqName}.${extension}`;
+            images.push(urlForArray);
+            }
+            const {title, text} = post
             const postcreate = await Post.findByIdAndUpdate(
                 id,
-                {title, texten, textru, textua, episode},
+                {title, text, images},
                 { new: true }
             );
             return postcreate

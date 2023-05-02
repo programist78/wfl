@@ -10,10 +10,6 @@ const Post = new mongoose.Schema(
         type: String,
         required: true,
     },
-    price: {
-      type: Number,
-      required: true,
-  },
     viewsCount: {
       type: Number,
       default: 0,

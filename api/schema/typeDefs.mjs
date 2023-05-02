@@ -13,7 +13,6 @@ const typeDefs = `#graphql
     id: ID
     title: String
     text: String
-    price: String
     images: [String]
     comments: [String]
   }
@@ -61,7 +60,6 @@ const typeDefs = `#graphql
   input PostInput {
     title: String
     text: String
-    price: String
   }
 
   input PostCommentInput{
@@ -86,7 +84,7 @@ const typeDefs = `#graphql
   type Mutation {
     createPost(post: PostInput!, image: [Upload]!): Post
     deletePost(id: ID): String
-    updatePost(id: ID,post: PostInput): Post
+    updatePost(id: ID,post: PostInput, image: [Upload]!): Post
 
     PostcreateComment(id: ID, about: PostCommentInput) : PostComment
     PostanswerComment(id: ID, about: PostCommentInput) : PostCommentwanswers

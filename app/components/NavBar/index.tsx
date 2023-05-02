@@ -5,6 +5,7 @@ import { Roboto } from '@next/font/google'
 import { useState, useEffect } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import { Montserrat } from '@next/font/google'
+import Link from 'next/link'
 const roboto = Roboto({
     weight: ['300', '400', '500', '700', '900'],
     subsets: ['latin'],
@@ -46,13 +47,14 @@ export default function NavBar() {
           <p>Be the first of the 1000</p>
         </div>
       <animated.div style={part2Styles} className={styles.back}>
+        <Link href="/">
         <div className={styles.logo}>
             <Image src="/logo.svg" alt='Logo' width={40} height={40}/>
             <main className={roboto.className}>
             <p>Wealth Free Life</p>
             </main>
         </div>
-
+        </Link>
         <div className={styles.part2}>
 
             {/* <div>
@@ -83,7 +85,7 @@ export default function NavBar() {
         </div>
         <div className={styles.part3}>
             <p>Sign in</p>
-            <button>Join Now</button>
+            <Link href="/auth/join-now"><button>Join Now</button></Link>
         </div>
         </animated.div>
       
