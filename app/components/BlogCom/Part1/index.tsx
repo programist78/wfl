@@ -20,7 +20,9 @@ export default function Part1({ lastpost }: Props) {
     <div className={styles.preback}>
     <div className={styles.back}>
         <div className={styles.part1}>
+        <div className={styles.onhover}>View more</div>
         <img src={lastPostArray?.images[0]} alt='Last post' className={styles.last_post}/>
+        <div className={styles.color_back} />
         <div className={styles.info}>
         <p className={styles.info_title}>{lastPostArray.title}</p>
         <p className={styles.info_text}>{lastPostArray.text}</p>

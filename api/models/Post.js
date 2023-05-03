@@ -14,6 +14,7 @@ const Post = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    tags: [{ type: String}],
     images: {},
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PostComment' }],
   },

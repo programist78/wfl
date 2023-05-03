@@ -15,6 +15,7 @@ const typeDefs = `#graphql
     text: String
     images: [String]
     comments: [String]
+    tags: [String]
   }
   type User{
     id: ID
@@ -56,10 +57,13 @@ const typeDefs = `#graphql
     getUser(email: String): User
 
     getCount: String
+
+    getTags: [String]
   }
   input PostInput {
     title: String
     text: String
+    tags: [String]
   }
 
   input PostCommentInput{

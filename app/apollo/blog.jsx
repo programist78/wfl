@@ -96,3 +96,9 @@ mutation PostdeleteanswerComment($postdeleteanswerCommentId: ID) {
     PostdeleteanswerComment(id: $postdeleteanswerCommentId)
   }
 `
+
+export const GET_TAGS = gql`
+query Query {
+  getTags
+}
+`

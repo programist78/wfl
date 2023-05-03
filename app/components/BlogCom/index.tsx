@@ -10,7 +10,7 @@ export default function BlogCom() {
   return (
     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
         <Part1 lastpost={data.getAllPosts[0]}  />
-        <Part2 />
+        <Part2 loading={loading} info={data.getAllPosts}/>
     </div>
   )
 }

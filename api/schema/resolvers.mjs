@@ -13,6 +13,7 @@ import { ValidationError } from 'apollo-server-koa';
 import nodemailer from 'nodemailer'
 import sendgridTransport from 'nodemailer-sendgrid-transport';
 import FirstUser from '../models/FirstUser.js';
+import Tag from '../models/Tag.js';
 const __dirname = path.resolve();
 dotenv.config()
 
@@ -50,6 +51,14 @@ const resolvers = {
         getCount: async () => {
             const count = await User.count();
             return count;
+        },
+        getTags: async() => {
+            const sortQuery = { createdAt: -1 };
+            let tag = await Tag.find({}, {_id: 0, name: 1})
+            console.log(tag)
+            const tagNames = tag.map((tag) => tag.name);
+            console.log(tagNames);
+            return tagNames
         }
     },
     
@@ -68,8 +77,26 @@ const resolvers = {
             const urlForArray = `${process.env.HOST}/${assetUniqName}.${extension}`;
             images.push(urlForArray);
             }
-            const {title, text} = post
-            const postcreate = new Post({ title, text, images })
+            const {title, text,tags} = post
+            for (let i = 0; i < tags.length; i++) {
+                const tag = tags[i];
+                Tag.findOne({ name: tag }, (err, existingTag) => {
+                  if (err) {
+                    console.error(err);
+                    return;
+                  }
+                  if (!existingTag) {
+                    Tag.create({ name: tag }, (err, newTag) => {
+                      if (err) {
+                        console.error(err);
+                        return;
+                      }
+                      console.log(`Создан новый тег: ${newTag.name}`);
+                    });
+                  }
+                });
+              }
+            const postcreate = new Post({ title, text, images, tags })
             await postcreate.save()
             return postcreate;
         },
