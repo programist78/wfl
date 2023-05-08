@@ -33,6 +33,17 @@ background: #FFFFFF;
 border-radius: 30px;
 margin-right: 0;
 margin-left: auto;
+border: none;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+transition: .35s;
+outline: none;
+line-height: 20px;
+color: #232325;
+padding-left: 15px;
+transition: .35s;
 }
 
 .filters{
@@ -41,16 +52,26 @@ margin-left: auto;
     height: 35px;
     position: relative;
     margin-top: 80px;
-    p{
-        font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-margin-left: 15px;
-line-height: 36px;
-color: #232325;
-text-decoration: underline;
-    }
+
+button{
+    border: none;
+    height: 34px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    // margin-left: 15px;
+    line-height: 36px;
+    color: rgba(35, 35, 37, 0.5);
+    background: none;
+}
+.choose{
+    border-bottom:2px solid black ;
+    color: rgba(35, 35, 37, 1);
+}
 }
 
 .underline{

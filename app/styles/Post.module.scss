@@ -1,0 +1,92 @@
+@use "./various.module.scss" as var;
+
+.back{
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.image{
+    width: 1300px;
+    height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-top: 120px;
+}
+
+.title{
+    @include var.small_title
+}
+
+.part2{
+    width: 1440px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text{
+    @include var.super_small_text;
+    width: 56.11vw;
+}
+
+.shares{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    p{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+color: rgba(0, 0, 0, 0.6);
+    }
+}
+.share{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: .35s;
+
+    img{
+        width: 70%;
+        height: auto;
+    }
+}
+.share:hover{
+    background-color: white;
+    transition: .35s;
+}
+.line{
+    width: 81px;
+height: 0px;
+border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.other{
+    display: flex;
+    flex-direction: column;
+    width: 391px;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+    p{
+        @include var.blog_small_title;
+        color: #0C0D0E !important;
+    }
+}
+
+.second_line{
+    width: 238.5px;
+height: 0px;
+border: 1px solid rgba(0, 0, 0, 0.15);
+width: 80%;
+}

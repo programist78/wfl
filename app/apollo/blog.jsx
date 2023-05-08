@@ -1,27 +1,29 @@
 import { gql } from '@apollo/client'
 
 export const GET_ALL_POSTS = gql`
-query Query {
-    getAllPosts {
-      id
-      title
-      text
-      images
-      comments
-    }
+query GetAllPosts {
+  getAllPosts {
+    id
+    title
+    text
+    images
+    comments
+    tags
   }
+}
 `
 
 export const GET_ONE_POST = gql`
 query GetPost($getPostId: ID) {
-    getPost(id: $getPostId) {
-      id
-      title
-      text
-      images
-      comments
-    }
+  getPost(id: $getPostId) {
+    id
+    title
+    text
+    images
+    comments
+    tags
   }
+}
 `
 
 export const GET_POST_COMMENTS = gql`
@@ -40,14 +42,15 @@ query GetPostComments($getPostCommentsId: ID) {
 
 export const CREATE_POST = gql`
 mutation Mutation($post: PostInput!, $image: [Upload]!) {
-    createPost(post: $post, image: $image) {
-      id
-      title
-      text
-      images
-      comments
-    }
+  createPost(post: $post, image: $image) {
+    id
+    title
+    text
+    images
+    comments
+    tags
   }
+}
 `
 
 export const DELETE_POST = gql`
@@ -58,14 +61,15 @@ mutation DeletePost($deletePostId: ID) {
 
 export const UPDATE_POST = gql`
 mutation UpdatePost($image: [Upload]!, $updatePostId: ID, $post: PostInput) {
-    updatePost(image: $image, id: $updatePostId, post: $post) {
-      id
-      title
-      text
-      images
-      comments
-    }
+  updatePost(image: $image, id: $updatePostId, post: $post) {
+    id
+    title
+    text
+    images
+    comments
+    tags
   }
+}
 `
 
 export const CREATE_COMMENT = gql`

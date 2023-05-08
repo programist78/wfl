@@ -75,9 +75,9 @@ export default function NavBar() {
             <div>
                 <p>Pricing</p>
             </div>
-            <div>
+            <Link href="/blog"><div>
                 <p>Blog</p>
-            </div>
+            </div></Link>
             <div>
                 <p>About us</p>
             </div>

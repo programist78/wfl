@@ -10,13 +10,13 @@ const Post = new mongoose.Schema(
         type: String,
         required: true,
     },
-    viewsCount: {
-      type: Number,
-      default: 0,
-    },
+    // viewsCount: {
+    //   type: Number,
+    //   default: 0,
+    // },
     tags: [{ type: String}],
     images: {},
-  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PostComment' }],
+  // comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PostComment' }],
   },
   {
     timestamps: true,

@@ -1,0 +1,38 @@
+@use "../../../styles/various.module.scss" as var;
+
+
+.back{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 337px;
+    height: 190px;
+    img{
+        width: 337px;
+        height: 190px;
+        position: absolute;
+        z-index: 1;
+        border-radius: 10px;
+    }
+}
+
+.blur{
+    background: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(3.71452px);
+width: 100%;
+height: 107px;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 2;
+p{
+    @include var.card_text;
+    color: #232325 !important;
+}
+}

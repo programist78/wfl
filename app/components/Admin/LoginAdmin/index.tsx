@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import styles from './GetStarted.module.scss'
+import Image from 'next/image';
+import styles from '../../Auth/GetStarted2/GetStarted.module.scss'
 import { useMutation } from '@apollo/client'
 import {REGISTER_FIRST} from '../../../apollo/auth'
 import Swal from 'sweetalert2';
@@ -10,7 +10,7 @@ import { useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import GoogleAuth from '../../Google-Auth';
 
-export default function GetStartedCom2() {
+export default function LoginAdmin() {
   const { data: session } = useSession()
     const validationSchema = Yup.object().shape({
         fullname: Yup.string()
@@ -89,18 +89,10 @@ export default function GetStartedCom2() {
     <div className={styles.back}>
         <div className={styles.part1}>
             <form className={styles.big_form} onSubmit={handleSubmit(onSubmit)}>
-                <p className={styles.title}>Become a member</p>
-                <p className={styles.text}>Enter your details to see when the platform will start</p>
+                <p className={styles.title}>Hello admin</p>
+                <p className={styles.text}>Enter your details 
+to log into the system</p>
                 <div className={styles.forms}>
-                    <div className={styles.form}>
-                        <p>Full Name</p>
-                        <input 
-                    name="fullname"
-                    type="text"
-                     {...register('fullname')}
-                     className={`form-control ${errors.fullname ? 'is-invalid' : ''}`}/>
-                     <div className="invalid-feedback">{errors.fullname?.message}</div>
-                    </div>
                     <div className={styles.form}>
                         <p>Email</p>
                         <input
@@ -110,6 +102,16 @@ export default function GetStartedCom2() {
             className={`form-control ${errors.email ? 'is-invalid' : ''}`}
             />
           <div className="invalid-feedback">{errors.email?.message}</div>
+                    </div>
+                    <div className={styles.form}>
+                        <p>Password</p>
+                        <input
+            name="password"
+            type="text"
+            {...register('password')}
+            className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+            />
+          <div className="invalid-feedback">{errors.password?.message}</div>
                     </div>
                     <button className={styles.button}>Join now</button>
                 </div>

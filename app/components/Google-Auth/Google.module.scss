@@ -6,8 +6,9 @@
     margin-top: 30px;
     border: none !important;
     border-radius: 12.5px;
-    width: 300px;
     background-color: #FFFFFF !important;
+    width: 300px;
+    border: 1px solid rgba(58, 61, 90, 0.25) !important;
     height: 50px;
     p{
         font-family: 'Montserrat';
@@ -20,7 +21,6 @@ color: #232325;
     transition: .35s;
 }
 .button:hover{
-    background: none !important;
     transition: .35s;
-    border: 1px solid rgba(58, 61, 90, 0.25) !important;
+    border: none !important;
 }
