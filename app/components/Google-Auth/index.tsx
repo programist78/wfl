@@ -41,7 +41,6 @@ export default function GoogleAuth() {
   useEffect(() => {
     if (session && !auth) {
       register_first()
-      console.log("fuck")
     }
   }, [session && auth]);
   console.log(auth)

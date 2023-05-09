@@ -95,7 +95,7 @@ const typeDefs = `#graphql
     PostdeleteanswerComment(id: ID): String
 
     loginUser(about: LoginInput!): AuthPayload
-    registerUser(id: ID, about: RegisterInput!): AuthPayload
+    registerUser(about: RegisterInput!): AuthPayload
     register1000User(fullname: String, email: String, confirmedEmailGet: Boolean): String
     sendConfirmedEmail(email: String!): AuthPayload
     changeStatus(id: ID, confirmationCode: String): User

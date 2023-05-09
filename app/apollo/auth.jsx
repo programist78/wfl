@@ -30,3 +30,24 @@ query Query($email: String) {
   }
 }
 `
+
+export const LOGIN_USER = gql`
+mutation LoginUser($about: LoginInput!) {
+  loginUser(about: $about) {
+    user {
+      id
+      fullname
+      email
+      role
+      password
+      confirmedEmail
+      subscriberMail
+      balance
+      avatarUrl
+      twoauth
+      havetwoauth
+    }
+    token
+  }
+}
+`

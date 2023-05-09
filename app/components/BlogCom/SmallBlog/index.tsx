@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client'
 import styles from './SmallBlog.module.scss'
 import { GET_ALL_POSTS } from 'apollo/blog'
+import Loader from 'components/Loader'
 
 export default function SmallBlog() {
     const {data, loading, error} = useQuery(GET_ALL_POSTS)
@@ -8,7 +9,7 @@ export default function SmallBlog() {
                     <div className={styles.back}>
             {(loading ? [...Array(3)] :data.getAllPosts).map((obj, key) => 
              loading ? 
-             (<h1>Loading</h1>) :
+             (<Loader />) :
             (
                 <div className={styles.blog}>
                     <img src={obj.images}/>

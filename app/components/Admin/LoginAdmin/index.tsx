@@ -1,20 +1,28 @@
 import Image from 'next/image';
 import styles from '../../Auth/GetStarted2/GetStarted.module.scss'
 import { useMutation } from '@apollo/client'
-import {REGISTER_FIRST} from '../../../apollo/auth'
+import {LOGIN_USER, REGISTER_FIRST} from '../../../apollo/auth'
 import Swal from 'sweetalert2';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import GoogleAuth from '../../Google-Auth';
-
+import { useRouter } from 'next/router';
+import { AuthContext } from 'hooks/AuthContext';
+import { useAppSelector } from 'hooks/type';
 export default function LoginAdmin() {
+  const {admin} = useAppSelector((state) => state.admin)
   const { data: session } = useSession()
+  const context = useContext(AuthContext) || "";
+
+  const router = useRouter()
     const validationSchema = Yup.object().shape({
-        fullname: Yup.string()
-        .required('Fullname is required'),
+      password: Yup.string()
+      .required('Password is required')
+      .min(5, 'Password must be at least 5 characters')
+      .max(40, 'Password must not exceed 40 characters'),
         email: Yup.string()
           .required('Email is required')
           .email('Email is invalid'),
@@ -47,41 +55,42 @@ export default function LoginAdmin() {
       });      
       const [data, setData] = useState()
 
-    const [fullname, setFullname] = useState("")
+    const [password, setPassword] = useState("")
     const [email, setEmail] = useState("");
-    const [registerUser, {loading}] = useMutation(REGISTER_FIRST, {
+    const [registerUser, {loading}] = useMutation(LOGIN_USER, {
         
-        // update(proxy, { data: {registerUser: userData}}){
-        //     context.login(userData)
-        //     router.push('/');
-        // },
+        update(proxy, { data: {loginUser: userData}}){
+            context.login(userData);
+            console.log(userData)
+            router.push('/');
+        },
         onError: (error) => {
-            Swal.fire(`Incorrect data: ${error}`);
+            Swal.fire(`${error}`);
             // Обработка ошибок вручную
-            if (error = "Email already exists") {
-                Toast.fire({
-                    icon: 'error',
-                    title:`Email already exist`,
-                });
-            } else {
-                Toast.fire({
-                    icon: 'error', title:`Incorrect information`});
-            }
+            // if (error = "Email already exists") {
+            //     Toast.fire({
+            //         icon: 'error',
+            //         title:`Email already exist`,
+            //     });
+            // } else {
+            //     Toast.fire({
+            //         icon: 'error', title:`Incorrect information`});
+            // }
           },
 
           onCompleted: (data) => {
             Toast.fire({
                 icon: 'success',
-                title: `Confirm your email ${data.register1000User}`
+                title: `Hello`
               })
           } ,
         
         // variables: {about: {email: dataEmail, password: dataPassword}},
-        variables: { email, fullname, confirmedEmailGet: false  },
+        variables: {about:  { email, password }},
     });
     const onSubmit = data => {
         setEmail(data.email)
-        setFullname(data.fullname)
+        setPassword(data.password)
         // setData(data)
         setTimeout(registerUser, 500)
       };
@@ -115,16 +124,12 @@ to log into the system</p>
                     </div>
                     <button className={styles.button}>Join now</button>
                 </div>
-                <div className={styles.between}>
+                {/* <div className={styles.between}>
                     <div />
                     <p>Or join with</p>
                     <div />
                 </div>
-                <GoogleAuth />
-                {/* <button className={styles.sign_google}>
-                    <Image src="/google.svg" alt='google' width={30} height={30}/>
-                    <p>Sign up with Google</p>
-                </button> */}
+                <GoogleAuth /> */}
             </form>
         </div>
         <div className={styles.prepart2}>

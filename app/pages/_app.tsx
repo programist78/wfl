@@ -16,6 +16,7 @@ import { Provider } from 'react-redux'
 import { AuthProvider } from '../hooks/AuthContext.jsx'
 import { PersistGate } from 'redux-persist/integration/react'
 import store, {persistor} from '../redux/store'
+import Loader from 'components/Loader'
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
@@ -68,7 +69,7 @@ AppProps) => {
           <AuthProvider>
             <PersistGate persistor={persistor}>
               {loadingcomponent ? (
-                <h1>Loading...</h1>
+                <Loader />
               ) : (
                 <>
                   {/* <Head></Head> */}

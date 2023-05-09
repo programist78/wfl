@@ -32,19 +32,6 @@ export default function Posts({ queryId }) {
   //     if (error || !data) return <h1>Error</h1>
   // }
   return (
-    // <div className={styles.back}>
-    //   {/* {auth && <RiDeleteBin6Fill onClick={onClickDelete} className={styles.bin}/>} */}
-    //             <div className={styles.backtitle}>
-    //             <img
-    //             className={styles.image}
-    //             src={data?.getPost.images}
-    //             alt="webXwizard"
-    //           />
-    //             <p className={styles.title}>{data?.getPost.title}</p>
-    //             <p className={styles.text}>{data?.getPost.text}</p>
-    //             </div>
-    //             <Image src="/for_post.webp" width={1400} height={1473} alt="." className={styles.for_post}/>
-    // </div>
     <div style={{    display: "flex",
       flexDirection: "column",
       alignItems: "center", width: "100vw"}}>
