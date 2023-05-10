@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import { Montserrat } from '@next/font/google'
 import Link from 'next/link'
+import { useAppSelector } from 'hooks/type'
 const roboto = Roboto({
     weight: ['300', '400', '500', '700', '900'],
     subsets: ['latin'],
@@ -15,6 +16,7 @@ const roboto = Roboto({
     subsets: ['latin'],
   })
 export default function NavBar() {
+  const {admin} = useAppSelector((state) => state.admin);
   const [isScrollUp, setIsScrollUp] = useState(false)
 
   useEffect(() => {
@@ -69,6 +71,9 @@ export default function NavBar() {
                 <p>Events</p>
                 <IoIosArrowDown className={styles.arrow}/>
             </div> */}
+                                  {admin && <Link href="/admin/dashboard"> <div>
+                <p>Dashboard</p>
+            </div></Link>}
                         <div>
                 <p>Features</p>
             </div>

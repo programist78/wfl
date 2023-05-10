@@ -1,0 +1,66 @@
+@use "../../../styles/various.module.scss" as var;
+
+@mixin rectangle {
+    border: 1px solid rgba(58, 61, 90, 0.25);
+    border-radius: 12.5px;
+    width: 300px;
+    background: #FFFFFF;
+    height: 50px;
+
+}
+.back{
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    width: 100vw;
+    align-items: center;
+    height: auto;
+    padding-bottom: 100px;
+    form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        gap: 30px;
+        div{
+            p{
+                @include var.dark_text
+            }
+            input{
+@include rectangle;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+color: #232325;
+padding-left: 15px;
+transition: .35s;
+            }
+        }
+    }
+}
+
+.editor{
+    width: 80vw
+}
+
+.title{
+    @include var.small_title
+}
+
+.button{
+    @include rectangle;
+    background-color: #1E9BF6 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    @include var.super_small_text;
+    color: white !important;
+    border: none !important;
+    transition: .35s;
+}
+
+.button:hover{
+    opacity: 0.75;
+    transition: .35s;
+}

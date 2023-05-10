@@ -1,0 +1,577 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 750px;
+    gap: 25px;
+}
+
+.admin_button{
+    width: 40%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white !important;
+    background:#087DE7;
+    padding-left: 25px;
+    border-radius: 15px
+}
+
+.title{
+    @include var.small_title;
+    margin-left: 110px;
+}
+
+.dashboard{
+    // margin-left: 151px;
+    padding-top: 50px;
+    // padding-bottom: 200px;
+    width: 100vw;
+height: 840.12px;
+background: #EFF1FF;
+box-shadow: 0px 10.7044px 16.0566px rgba(0, 133, 255, 0.25);
+border-radius: 21.4089px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 18px;
+flex-direction: row;
+z-index: 1;
+//TODO
+color: black;
+}
+
+.openFull{
+    z-index: 100000 !important;
+    position: absolute;
+    margin-top: -100px;
+}
+
+.appbar_part{
+    background: #FFFFFF;
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 15px;
+width: 54px;
+height: 604.56px;
+display: flex;
+margin-left: 1%;
+flex-direction: column;
+align-items: center;
+}
+
+.logo_part{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    img{
+        filter: drop-shadow(0px 2.845px 2.845px rgba(0, 150, 136, 0.25));
+    }
+    div{
+        width: 53.34px;
+height: 0px;
+border: 0.71125px solid #EFF1FF;
+    }
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 35px;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+            position: absolute;
+            width: 30px;
+            background: linear-gradient(180deg, #00D1FF -33.04%, #1118CA 166.67%);
+filter: blur(3.55625px);
+border-radius: 7.1125px;
+            display: flex;
+            z-index: 1;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7.1125px;
+        }
+        img{
+            z-index: 2;
+        }
+    }
+}
+.info_button{
+    div{
+        width: 53.34px;
+height: 0px;
+border: 0.71125px solid #EFF1FF;
+    }
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+.content_part{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 600px;
+    width: 800px;
+    // align-items: center;
+    // height: auto;
+}
+
+.content_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 778px;
+    p{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 28.45px;
+line-height: 43px;
+
+/* title-color */
+
+color: #0C0D0E;
+
+    }
+}
+
+.header_icon{
+    width: 21px;
+    height: 21px;
+}
+
+.content_moneys{
+    width: 800px;
+height: 125px;
+display: flex;
+gap: 14px;
+flex-direction: row;
+align-items: center;
+background: #FFFFFF;
+border-radius: 10.6687px;
+div:first-child{
+    margin-left: 15px;
+}
+div{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    width: 235px;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        p{
+            @include var.dashboard_description
+        }
+        .money{
+            @include var.dashboard_money;
+            margin-bottom: -10px;
+        }
+    }
+    p{
+        @include var.dashboard_earning
+    }
+}
+}
+
+.money{
+    @include var.dashboard_money;
+}
+
+.moneys_line{
+    width: 0px !important;
+    height: 125px;
+    border: 0.71125px solid #EFF1FF;
+}
+
+.content_statistic{
+    width: 800px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.statistic_money{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 800px;
+    p{
+        @include var.dashboard_earning;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        margin-left: 28px;
+        .money{
+            @include var.dashboard_money
+        }
+        p{
+           @include var.dashboard_description
+        }
+    }
+    
+}
+
+.statistic_settings{
+    display: flex;
+    width: 800px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.settings_part1{
+    margin-left: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11.38px;
+        line-height: 17px;
+        /* identical to box height */
+        
+        
+        /* text-color */
+        
+        color: #232325;
+        
+    }
+}
+
+.settings_part2{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    button{
+        width: 21px;
+        height: 21px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3.55625px;
+        font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 11.38px;
+line-height: 14px;
+/* identical to box height */
+    }
+}
+
+.settings_unactive{
+    background: #EFF1FF;
+    color: #232325;
+    border: 0.71125px solid #232325;
+}
+
+.settings_active{
+    background: #782AEE;
+    color: white;
+    border: none;
+}
+
+.statistic_basic{
+    display: flex;
+    flex-direction: row;
+    gap: 7.5px;
+}
+
+.numbers{
+    // gap: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 227px;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 11.38px;
+line-height: 14px;
+color: #232325;
+}
+
+.statistic_part{
+    width: 773px;
+    height: 227px;
+    // display: flex;
+    overflow: hidden;
+}
+
+.statistic1{
+    position: absolute;
+    margin-top: 55px;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.background_statistic{
+    width: 773px;
+    height: 227px;
+    z-index: 1;
+}
+
+.statistic_date{
+    display: flex;
+    flex-direction: row;
+    width: 773px;
+    justify-content: space-between;
+    margin-left: 28px;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 11.38px;
+line-height: 14px;
+color: #232325;
+}
+
+.user_part{
+    display: flex;
+    flex-direction: column;
+    width: 213.38px;
+height: 604.56px;
+margin-right: 2%;
+align-items: center;
+gap: 10px;
+background: #FFFFFF;
+border-radius: 14.225px;
+}
+
+.user_header{
+    display: flex;
+    flex-direction: row;
+    width: 190px;
+    justify-content: space-between;
+    margin-top: 10px;
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        p{
+            font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 11.38px;
+line-height: 17px;
+
+/* title-color */
+
+color: #0C0D0E;
+
+        }
+    }
+    .user_icon{
+        width: 21px;
+        height: 21px;
+    }
+}
+
+.line{
+    width: 213.38px;
+height: 0px;
+border: 0.71125px solid #EFF1FF;
+}
+
+.user_balance{
+    display: flex;
+    width: 191px;
+    flex-direction: row;
+    justify-content: space-between;
+    p{
+        @include var.dashboard_earning
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        p{
+            @include var.dashboard_description
+        }
+        .money{
+            @include var.dashboard_money
+        }
+    }
+}
+
+.exchange{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    p{
+        @include var.dashboard_user_title
+    }
+    button{
+        @include var.dashboard_button_blue
+    }
+}
+
+.exchange_input{
+    display: flex;
+    flex-direction: column;
+    div:first-child{
+        border-radius: 7px 7px 0 0 ;
+    }
+p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 11.38px;
+line-height: 14px;
+color: #737381;
+}
+    }
+// }
+
+.exchange_child{
+    display: flex;
+    gap: 1px;
+    width: 177.81px;
+height: 35px;
+background: #F3F5FF;
+display: flex;
+align-items: center;
+border-radius: 0 0 7px 7px;
+p{
+    margin-left: 5px;
+}
+div{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+    margin-left: auto;
+}
+}
+
+.transactions{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    p{
+        // @include var.dashboard_user_title
+    }
+    button{
+        @include var.dashboard_button_blue
+    }
+}
+.transactions_transaction{
+width: 177.81px;
+height: 44.58px;
+background: #F3F5FF;
+border-radius: 7.1125px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+}
+
+.name{
+    font-family: 'Montserrat' !important;
+font-style: normal !important;
+font-weight: 500 !important;
+font-size: 11.38px !important;
+line-height: 14px !important;
+color: #0C0D0E !important;
+}
+
+.transaction_marker{
+    font-family: 'Montserrat' !important;
+font-style: normal !important;
+font-weight: 500 !important;
+font-size: 11.38px !important;
+line-height: 14px !important;
+color: #14E30B !important;
+}
+
+.transaction_date{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 8.535px;
+line-height: 10px;
+
+/* text-color */
+
+color: #232325;
+
+}
+
+.statistic_cryptos{
+    width: 800px;
+height: 121px;
+display: flex;
+margin-top: -30px;
+flex-direction: row;
+background: #040521;
+border-radius: 15px;
+}
+
+.cryptos_parts{
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.crypto_part1{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.crypto_part2{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.info_crypto{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.crypto_name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    div{
+        width: 20px;
+height: 0px;
+border: 2px solid #14E30B;
+transform: rotate(-90deg);
+margin-left: -10px;
+    }
+}
+
+.crypto_value_balance{
+    @include var.dashboard_gray_text
+}
+
+.earning{
+    @include var.dashboard_earning
+}
+
+.crypto_quantity_name{
+    @include var.name_crypto_text
+}
