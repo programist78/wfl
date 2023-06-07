@@ -51,3 +51,9 @@ mutation LoginUser($about: LoginInput!) {
   }
 }
 `
+
+export const GET_COUNT = gql`
+query Query {
+  getCount
+}
+`

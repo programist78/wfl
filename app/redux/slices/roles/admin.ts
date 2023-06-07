@@ -13,9 +13,12 @@ const adminSlice = createSlice({
       } else {
       }
     },
+    logout: (state) => {
+      state.admin = false;
+    },
   },
 })
 
 export const adminReducer = adminSlice.reducer
 
-export const { addAdmintoLocal } = adminSlice.actions
+export const { addAdmintoLocal, logout } = adminSlice.actions

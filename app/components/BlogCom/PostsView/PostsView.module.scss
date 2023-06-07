@@ -9,6 +9,17 @@
     margin-top: 40px;
 }
 
+.delete{
+    // margin-left: -100px;
+    z-index: 20;
+    // margin-top: -250px;
+    border-radius: 1vw;
+    border: none;
+    // border: 1px solid rgba(0, 0, 0, 0.397);
+    padding: 15px;
+    background-color: white;
+}
+
 .back:hover{
     .image{
         opacity: 0.75;

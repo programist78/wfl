@@ -84,10 +84,47 @@ width: 80%;
 .part2{
         width: 1440px;
 }
-.text{
-    @include var.super_small_text;
-    width: 56.11vw;
+.markdown{
     width: 808px;
+    overflow: hidden;
+    pre{
+        background-color: #10061d;
+    }
+    code {
+        font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Courier New', monospace;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: #60ffaa;
+        font-size: 14px;
+        line-height: 1.5;
+        white-space: pre-wrap;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        border: 1px solid #ddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      th {
+        background-color: #00c4e693;
+      }
+    //   p{
+        @include var.super_small_text;
+        width: 56.11vw;
+        width: 808px;
+    //   }
+    img{
+        width: 56.11vw;
+        height: 100%;
+    }
+}
+.text{
+
 }
 .share{
         width: 60px;

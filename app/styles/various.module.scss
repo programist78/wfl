@@ -260,4 +260,514 @@ font-size: 32px;
 line-height: 39px;
 color: #FCFCFC;
 }
+//tablet
+@mixin feature_title_tablet {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: $title-fontSize;
+line-height: 150px;
+color: $title-color;
+}
 
+@mixin small_title_tablet {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 110%;
+    color: $smallTitle-color;
+}
+
+@mixin dark_text_tablet {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    color: $text-color;
+}
+
+@mixin light_text_tablet {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 33px;
+color: $text-color-light;
+}
+
+@mixin blue_button_tablet {
+    width: 200px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 41, 255, 0.5);
+border: 1px solid #FFFFFF;
+backdrop-filter: blur(7.5px);
+border-radius: 30px;
+gap: 15px;
+p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    color: $text-color-light;
+}
+.link{
+    width: 25px;
+    height: 25px;
+}
+}
+
+@mixin purple_button_tablet {
+    background: #8B1FE0;
+box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
+border-radius: 10px;
+border: none;
+width: 200px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+// p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 33px;
+color: #FFFFFF;
+// }
+}
+
+@mixin gold_button_tablet {
+    background: #F5A30C;
+box-shadow: 0px 0px 25px rgb(255, 166, 0.5);
+border-radius: 10px;
+border: none;
+width: 200px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 33px;
+color: #FFFFFF;
+}
+}
+
+@mixin green_button_tablet {
+    background: radial-gradient(108.59% 108.59% at 50% 50%, #26A69A 0%, #FFFFFF 100%);
+box-shadow: 0px 0px 25px #26A69A;
+border-radius: 10px;
+border: none;
+width: 200px;
+height: 60px;
+border: 1px solid white;
+display: flex;
+justify-content: center;
+align-items: center;
+p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 33px;
+color: #FFFFFF;
+}
+}
+
+@mixin card_title_tablet {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 22px;
+text-align: center;
+color: #232323;
+}
+
+@mixin card_text_tablet{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+@mixin super_small_text_tablet{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #232325;
+}
+
+@mixin dashboard_money_tablet{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 30px;
+color: #0C0D0E;
+}
+
+@mixin dashboard_description_tablet{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 9px;
+line-height: 12px;
+
+/* text-color */
+
+color: #232325;
+
+}
+
+@mixin dashboard_earning_tablet{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 9px;
+line-height: 12px;
+color: #14E30B;
+}
+
+@mixin dashboard_user_title_tablet{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 9px;
+line-height: 12px;
+color: #232325;
+}
+
+@mixin dashboard_button_blue_tablet{
+    width: 177.81px;
+    height: 28.45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 9px;
+line-height: 12px;
+color: #FFFFFF;
+    background: #087DE7;
+    border: none ;
+    border-radius: 7.1125px;
+}
+
+@mixin dashboard_gray_text_tablet{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+
+color: rgba(255, 255, 255, 0.5);
+
+}
+
+@mixin name_crypto_text_tablet{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 110%;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+
+
+@mixin footer_text_tablet{
+    color: $title-color;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+}
+
+@mixin blog_small_title_tablet{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+color: #FCFCFC;
+}
+
+//phone
+@mixin feature_title_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: $title-fontSize;
+line-height: 150px;
+color: $title-color;
+}
+
+@mixin small_title_phone {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 105%;
+    color: $smallTitle-color;
+}
+
+@mixin dark_text_phone {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $text-color;
+}
+
+@mixin light_text_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: $text-color-light;
+}
+
+@mixin blue_button_phone {
+    width: 100px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 41, 255, 0.5);
+border: 1px solid #FFFFFF;
+backdrop-filter: blur(7.5px);
+border-radius: 15px;
+gap: 7.5px;
+p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $text-color-light;
+}
+.link{
+    width: 12.5px;
+    height: 12.5px;
+}
+}
+
+@mixin purple_button_phone {
+    background: #8B1FE0;
+box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
+border-radius: 5px;
+border: none;
+width: 100px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+// p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: #FFFFFF;
+// }
+}
+
+@mixin gold_button_phone {
+    background: #F5A30C;
+box-shadow: 0px 0px 25px rgb(255, 166, 0.5);
+border-radius: 10px;
+border: none;
+width: 100px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: #FFFFFF;
+}
+}
+
+@mixin green_button_phone {
+    background: radial-gradient(108.59% 108.59% at 50% 50%, #26A69A 0%, #FFFFFF 100%);
+box-shadow: 0px 0px 25px #26A69A;
+border-radius: 10px;
+border: none;
+width: 100px;
+height: 30px;
+border: 1px solid white;
+display: flex;
+justify-content: center;
+align-items: center;
+p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: #FFFFFF;
+}
+}
+
+@mixin card_title_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 13px;
+text-align: center;
+color: #232323;
+}
+
+@mixin card_text_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+@mixin super_small_text_phone {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 13px;
+    color: #232325;
+}
+
+@mixin dashboard_money_phone {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+color: #0C0D0E;
+}
+
+@mixin dashboard_description_phone {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 6px;
+line-height: 7px;
+
+/* text-color */
+
+color: #232325;
+
+}
+
+@mixin dashboard_earning_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 6px;
+line-height: 8px;
+color: #14E30B;
+}
+
+@mixin dashboard_user_title_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 6px;
+line-height: 8px;
+color: #232325;
+}
+
+@mixin dashboard_button_blue_phone {
+    width: 177.81px;
+    height: 28.45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 6px;
+line-height: 8px;
+color: #FFFFFF;
+    background: #087DE7;
+    border: none ;
+    border-radius: 7.1125px;
+}
+
+@mixin dashboard_gray_text_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: rgba(255, 255, 255, 0.5);
+
+}
+
+@mixin name_crypto_text_phone {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 110%;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+
+
+@mixin footer_text_phone {
+    color: $title-color;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+font-size: 8px;
+line-height: 11px;
+}
+
+@mixin blog_small_title_phone {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+color: #FCFCFC;
+}

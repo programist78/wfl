@@ -12,6 +12,9 @@ import { useSelector } from "react-redux";
 import {RiDeleteBin6Fill} from 'react-icons/ri'
 import Image from "next/image";
 import dynamic from 'next/dynamic';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
 const SmallBlog = dynamic(() => import('components/BlogCom/SmallBlog'), {
   loading: () => <p>Loading...</p>,
 });
@@ -62,7 +65,7 @@ export default function Posts({ queryId }) {
               <Image src="/link.svg" alt='' width={45} height={45}/>
               </div>
             </div>
-            <div className={styles.text}>{data?.getPost.text}</div>
+            <div ><ReactMarkdown className={styles.markdown} children={data?.getPost.text} remarkPlugins={[remarkGfm]} /></div>
             <div className={styles.other}>
               <p>You may also like:</p>
               <div className={styles.second_line} />

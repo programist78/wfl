@@ -1,0 +1,70 @@
+@use "../../../styles/various.module.scss" as var;
+
+
+.back{
+    display: flex;
+    flex-direction: row;
+align-items: center;
+    height: 500px;
+    width: 1100px;
+    justify-content: space-between
+}
+
+.title{
+    @include var.small-title
+}
+
+
+.boxes{
+    display: flex;
+    flex-direction: column;
+    width: 613px;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.box{
+    width: 500px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.green_box{
+    margin-right: 80px;
+}
+
+.icon_box{
+    left: 0;
+    width: 68px;
+    height: 68px;   
+    position: absolute;
+    border-radius: 50%; 
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.green_card{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.text_part{
+    position: absolute;
+    margin-left: 70px;
+    z-index: 2;
+}
+
+.card_title{
+    @include var.card_title
+}
+
+.card_text{
+    @include var.card_text;
+    color: var.$text-color
+}

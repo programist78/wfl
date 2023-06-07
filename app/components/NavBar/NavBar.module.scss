@@ -28,6 +28,7 @@ $text-font: 14px;
     margin-right: 70px;
     margin-top: 45px;
     color: #232323;
+    z-index: 1000;
 }
 .back1{
     position: fixed;
@@ -46,6 +47,7 @@ $text-font: 14px;
     background: url(../../public/mesh-527.png);
     background: url(../../public/mesh-930.png);
     background: url(../../public/mesh-316.png);
+    background: linear-gradient(270.04deg, rgba(117, 22, 222, 0.75) 0.04%, rgba(36, 71, 250, 0.8) 49.33%, #00aeff 100.95%);
     background-size: cover;
     p{
         font-family: 'Roboto';

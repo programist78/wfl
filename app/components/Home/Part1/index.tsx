@@ -12,7 +12,7 @@ export default function Part1() {
             <p className={styles.title}>Change your life, just now</p>
             </AnimatedLeft>
             <AnimatedText4>
-            <p className={styles.text}>Join the revolutionary movement, be one of the first 1,000 to take control of your financial future</p>
+            <p className={styles.text}>Don't Miss Out on This Exclusive Opportunity to Join the First 1,000 Members. Sign up Today and Unlock Your Path to Wealth!</p>
             </AnimatedText4>
             <AnimatedText4>
             <button>JOIN NOW</button>

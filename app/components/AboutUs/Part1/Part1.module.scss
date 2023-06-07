@@ -1,0 +1,49 @@
+@use "../../../styles/various.module.scss" as var;
+
+.back{
+    width: 1300px;
+    height: 575px;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    // justify-content: center;
+}
+
+.back_image{
+    width: 1300px;
+    height: 575px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.darker_back{
+    width: 1300px;
+    height: 575px;
+    position: absolute;
+    z-index: 2;
+    background: #000000;
+opacity: 0.4;
+border-radius: 50px;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    margin-left: 105px;
+}
+
+.title{
+    @include var.small_title;
+    width: 697px;
+    color: white
+}
+
+.text{
+    @include var.dark_text;
+    color: white;
+    width: 707px;
+    margin-left: 60px
+}

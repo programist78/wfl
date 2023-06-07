@@ -4,21 +4,21 @@ import {BsTwitter} from  'react-icons/bs'
 import {AiFillLinkedin} from  'react-icons/ai'
 import {AiFillInstagram} from  'react-icons/ai'
 import Image from 'next/image'
-
+import Link from 'next/link'
 export default function Footer() {
   
   return (
     <div className={styles.prefooter}>
       <div className={styles.marquee}>
         <ul className={styles.marquee__content}>
-        <p>Copyright 2023 © Wealth Free Life. All rights reserved</p>
-        <p>Your satisfaction is our top priority at Wealth Free Life</p>
-        <p>Get in touch with our support team at wfl@mail.com</p>
+       <Link href="/blog"> <p>How to create wealth on WFL without any... check title in blogs</p></Link>
+       <Link href="/about-us"><p>How Wealth Free Life Platform Works?</p></Link>
+       <Link href="/blog/1344457"><p>The High Value of WFL Cryptocurrency Coin</p></Link>
         </ul>
         <ul className={styles.marquee__content} arial-hidden="true">
-        <p>Copyright 2023 © Wealth Free Life. All rights reserved</p>
-        <p>Your satisfaction is our top priority at Wealth Free Life</p>
-        <p>Get in touch with our support team at wfl@mail.com</p>
+        <Link href="/blog"> <p>How to create wealth on WFL without any... check title in blogs</p></Link>
+        <Link href="/about-us"><p>How Wealth Free Life Platform Works?</p></Link>
+        <Link href="/blog/1344457"><p>The High Value of WFL Cryptocurrency Coin</p></Link>
         </ul>
       </div>
     <div className={styles.footer}>

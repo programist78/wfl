@@ -5,6 +5,10 @@ import styles from './PostsView.module.scss'
 import { useInView } from 'react-intersection-observer'
 import { useState, useEffect } from 'react';
 import { PostSkeleton } from './Skeleton';
+import { useAppSelector } from 'hooks/type';
+import { useMutation } from '@apollo/client';
+import { DELETE_POST } from 'apollo/blog';
+import Swal from 'sweetalert2';
 const PostView = ({
   id,
   title,
@@ -24,6 +28,36 @@ const PostView = ({
     triggerOnce:true
   })
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'center',
+    showConfirmButton: false,
+    timer: 3000,
+    width: "400px",
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },
+    customClass: {
+        container: 'custom-swal-font',
+        title: 'custom-swal-font',
+        content: 'custom-swal-font',
+        confirmButton: 'custom-swal-font',
+      },
+  })
+
+  const { admin } = useAppSelector((state) => state.admin);   
+const [deletePost, {loading}] = useMutation(DELETE_POST, {
+  onCompleted: (data) => {
+    Toast.fire({
+        icon: 'success',
+        title: `Deleted`
+      })
+  },
+  variables: {deletePostId: id}
+})
+
 
 
   return (
@@ -31,8 +65,10 @@ const PostView = ({
             {inView ?
       (
         <>
+            {admin && <button  className={`${styles.title} ${styles.delete}`} style={{position: "absolute", color: "red"}} onClick={() => deletePost()}>Delete</button>}
         <Link prefetch={false} href={`/blog/${id}`}>
     <div className={styles.back} key={id} >
+
     {hasError ? (
         <img
         className={styles.image}
