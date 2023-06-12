@@ -29,9 +29,9 @@ console.log(`admin: ${admin}`)
 console.log(`people: ${people}`)
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <>
-        <NavBar />
+        {/* <NavBar /> */}
         {children}
         <Footer />
       </>

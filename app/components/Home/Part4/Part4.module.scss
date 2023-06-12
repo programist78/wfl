@@ -1,123 +1,261 @@
 @use "../../../styles/various.module.scss" as var;
 
-
-.back{
-    width: 1440px;
-    height: 670px;
+@media screen  and (min-width: 1024px) {
+    .back{
+        width: 100vw;
+        // height: 670px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 75px;
+    }
+    
+    .title{
+        @include var.small_title
+    }
+    
+    .cards{
+        display: flex;
+        flex-direction: row;
+        // gap: 90px;
+ 
+        width: 90vw;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .card_basic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 506px;
+        width: 343px;
+        gap: 15px;
+        object-fit: cover;
+        background-image: url(../../../public/plan_card_basic.webp);
+        background-size: 100% auto; /* растянуть на всю высоту */
+    }
+    
+    .icon{
+        width: 65px;
+        border-radius: 50%;
+    height: 65px;
     display: flex;
-    flex-direction: column;
-    gap: 75px;
+    justify-content: center;
     align-items: center;
-}
-
-.title{
-    @include var.small_title
-}
-
-.cards{
-    display: flex;
-    flex-direction: row;
-    gap: 90px;
-    align-items: flex-end;
-}
-
-.card_basic{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 506px;
-    width: 343px;
-    gap: 15px;
-    object-fit: cover;
-    background-image: url(../../../public/plan_card_basic.webp);
-    background-size: 100% auto; /* растянуть на всю высоту */
-}
-
-.icon{
-    width: 65px;
-    border-radius: 50%;
-height: 65px;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #FFFFFF;
-}
-
-.card_title{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 110%;
-color: #FFFFFF;
-}
-
-.card_price{
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 48px;
-line-height: 59px;
-color: #FCFCFC;
-}
-.get_started{
-    width: 343px;
-    height: 59px;
-    background: rgba(17, 202, 190, 0.25);
-    border: 1px solid #FFFFFF;
-    border-radius: 20px;
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-margin-top: 20px;
-font-size: 32px;
-line-height: 110%;
-color: #FCFCFC;
-}
-.description{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    height: 30%;
-    justify-content: space-around;
-    p{
+    background: #FFFFFF;
+    }
+    
+    .card_title{
         font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 110%;
-        
-        color: #FFFFFF;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 110%;
+    color: #FFFFFF;
+    }
+    
+    .card_price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FCFCFC;
+    }
+    .get_started{
+        width: 343px;
+        height: 59px;
+        background: rgba(17, 202, 190, 0.25);
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 110%;
+    color: #FCFCFC;
+    }
+    .description{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 30%;
+        justify-content: space-around;
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 110%;
+            
+            color: #FFFFFF;
+        }
+    }
+    .see{
+        width: 343px;
+    height: 53px;
+    background: linear-gradient(177.18deg, #FFFFFF 2.35%, rgba(255, 255, 255, 0) 97.66%);
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 110%;
+    color: #232325;
+    border: none;
+    margin-top: auto;
+    }
+    
+    
+    .card_premium{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 537px;
+        width: 343px;
+        gap: 15px;
+        transform: scale(1.07);
+        object-fit: cover;
+        background-size: 100% auto; /* растянуть на всю высоту */
+        background-image: url(../../../public/plan_card_premium.webp);
+            .get_started{
+                background: rgba(17, 76, 202, 0.25);
+            }
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+        .cards{
+            width: 1200px;
+        }
     }
 }
-.see{
-    width: 343px;
-height: 53px;
-background: linear-gradient(177.18deg, #FFFFFF 2.35%, rgba(255, 255, 255, 0) 97.66%);
-border-radius: 30px;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 110%;
-color: #232325;
-border: none;
-margin-top: auto;
-}
 
-
-.card_premium{
+@media screen and (min-width: 768px)  and (max-width: 1024px) {
+    .back{
+        width: 100vw;
+        // height: 670px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .title{
+        @include var.small_title_tablet
+    }
+    
+    .cards{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .card_basic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 438px;
+        width: 300px;
+        gap: 15px;
+        object-fit: cover;
+        background-image: url(../../../public/plan_card_basic.webp);
+        background-size: 100% auto; /* растянуть на всю высоту */
+    }
+    
+    .icon{
+        width: 65px;
+        border-radius: 50%;
+    height: 65px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 537px;
-    width: 343px;
-    gap: 15px;
-    transform: scale(1.07);
-    object-fit: cover;
-    background-size: 100% auto; /* растянуть на всю высоту */
-    background-image: url(../../../public/plan_card_premium.webp);
-        .get_started{
-            background: rgba(17, 76, 202, 0.25);
+    background: #FFFFFF;
+    }
+    
+    .card_title{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 110%;
+    color: #FFFFFF;
+    }
+    
+    .card_price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 110%;
+    color: #FCFCFC;
+    }
+    .get_started{
+        width: 100%;
+        height: 59px;
+        background: rgba(17, 202, 190, 0.25);
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 110%;
+    color: #FCFCFC;
+    }
+    .description{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 30%;
+        justify-content: space-around;
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 110%;
+            
+            color: #FFFFFF;
         }
+    }
+    .see{
+        width: 100%;
+    height: 53px;
+    background: linear-gradient(177.18deg, #FFFFFF 2.35%, rgba(255, 255, 255, 0) 97.66%);
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 110%;
+    color: #232325;
+    border: none;
+    margin-top: auto;
+    }
+    
+    
+    .card_premium{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 537px;
+        width: 343px;
+        gap: 15px;
+        transform: scale(1.07);
+        object-fit: cover;
+        background-size: 100% auto; /* растянуть на всю высоту */
+        background-image: url(../../../public/plan_card_premium.webp);
+            .get_started{
+                background: rgba(17, 76, 202, 0.25);
+            }
+    }
 }
+

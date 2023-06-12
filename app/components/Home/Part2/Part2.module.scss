@@ -1,16 +1,41 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    width: 1440px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@media screen and (min-width: 1024px) {
+    .back{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .video{
+        width: 1000px;
+        border-radius: 20px;
+        border: 5px solid white;
+        height: 562.5px;
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+    }
 }
 
-.video{
-    width: 1000px;
-    border-radius: 20px;
-    border: 5px solid white;
-    height: 562.5px;
+@media screen and (max-width: 1024px) {
+    .back{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .video{
+        width: 90vw;
+        border-radius: 2vw;
+        border: 5px solid white;
+        height: 50.56vw;
+    }
 }

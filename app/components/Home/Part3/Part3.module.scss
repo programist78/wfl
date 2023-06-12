@@ -1,68 +1,216 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    height: 780px;
-    width: 1440px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-direction: column;
-}
 
-.title{
-    @include var.small_title;
-    width: 528px;
-    text-align: center;
-}
-
-.part2{
-    display: flex;
-    flex-direction: row;
+@media screen and (min-width: 1024px) {
+    .back{
+        height: 780px;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-direction: column;
+    }
+    
+    .title{
+        @include var.small_title;
+        width: 528px;
+        text-align: center;
+    }
+    
+    .part2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw
+    }
+    
+    .text{
+        @include var.dark_text;
+        width: 474px;
+        margin-top: 25px;
+        text-align: center;
+    }
+    
+    .box{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    height: 354px;
+    background: linear-gradient(180deg, rgba(0, 150, 136, 0.15) 0%, #15D1C0 100%);
+    backdrop-filter: blur(2px);
     justify-content: space-between;
-    gap: 85px
-}
-
-.text{
-    @include var.dark_text;
-    width: 474px;
-    margin-top: 25px;
-}
-
-.box{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-height: 354px;
-background: linear-gradient(180deg, rgba(0, 150, 136, 0.15) 0%, #15D1C0 100%);
-backdrop-filter: blur(2px);
-justify-content: space-between;
-border-radius: 12px;
-align-items: center;
-div{
-    background: #232323;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: flex;
-    margin-top: 25px;
-    justify-content: center;
+    border-radius: 12px;
     align-items: center;
-}
+    div{
+        background: #232323;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        display: flex;
+        margin-top: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    
+    .card_title{
+        @include var.card_title;
+        max-width: 200px;
+    }
+    
+    .card_text{
+        @include var.card_text;
+        max-width: 200px;
+        margin-bottom: 25px;
+    }
+    
+    .part3{
+        // position: absolute;
+        margin-top: -175px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+        .part2{
+            width: 1000px;
+        }
+    }
 }
 
-.card_title{
-    @include var.card_title;
-    max-width: 200px;
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-direction: column;
+    }
+    
+    .title{
+        @include var.small_title_tablet;
+        width: 528px;
+        text-align: center;
+    }
+    
+    .part2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90vw
+    }
+    
+    .text{
+        @include var.dark_text_tablet;
+        width: 30vw;
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .box{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    height: 279px;
+    background: linear-gradient(180deg, rgba(0, 150, 136, 0.15) 0%, #15D1C0 100%);
+    backdrop-filter: blur(2px);
+    justify-content: space-between;
+    border-radius: 8px;
+    align-items: center;
+    div{
+        background: #232323;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        margin-top: 17.5px;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    
+    .card_title{
+        @include var.card_title_tablet;
+        max-width: 180px;
+    }
+    
+    .card_text{
+        @include var.card_text_tablet;
+        max-width: 180px;
+        margin-bottom: 25px;
+    }
+    
 }
 
-.card_text{
-    @include var.card_text;
-    max-width: 200px;
-    margin-bottom: 25px;
+@media screen and (max-width: 768px) {
+    .back{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        flex-direction: column;
+    }
+    
+    .title{
+        @include var.small_title_phone;
+        width: 80vw;
+        text-align: center;
+    }
+    
+    .part2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90vw
+    }
+    
+    .text{
+        @include var.dark_text_phone;
+        width: 70vw;
+        left: 15vw;
+        margin-top: -60px;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .box{
+        display: flex;
+        flex-direction: column;
+        width: 125px;
+    height: 177px;
+    background: linear-gradient(180deg, rgba(0, 150, 136, 0.15) 0%, #15D1C0 100%);
+    backdrop-filter: blur(2px);
+    justify-content: space-between;
+    border-radius: 8px;
+    align-items: center;
+    div{
+        background: #232323;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        margin-top: 12.5px;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 50%;
+            height: 50%
+        }
+    }
+    }
+    
+    .card_title{
+        @include var.card_title_phone;
+        max-width: 115px;
+    }
+    
+    .card_text{
+        @include var.card_text_phone;
+        max-width: 115px;
+        margin-bottom: 15px;
+    }
+    
 }
-
-.part3{
-    // position: absolute;
-    margin-top: -175px;
-}
-
