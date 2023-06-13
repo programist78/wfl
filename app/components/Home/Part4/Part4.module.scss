@@ -157,6 +157,7 @@
         align-items: center;
     }
     
+    
     .card_basic{
         display: flex;
         flex-direction: column;
@@ -167,6 +168,8 @@
         object-fit: cover;
         background-image: url(../../../public/plan_card_basic.webp);
         background-size: 100% auto; /* растянуть на всю высоту */
+        order: 2; /* Изменен порядок для элемента card_basic */
+
     }
     
     .icon{
@@ -251,6 +254,8 @@
         gap: 15px;
         transform: scale(1.07);
         object-fit: cover;
+        order: 3; /* Изменен порядок для элемента card_premium */
+
         background-size: 100% auto; /* растянуть на всю высоту */
         background-image: url(../../../public/plan_card_premium.webp);
             .get_started{

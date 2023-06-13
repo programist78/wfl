@@ -1,81 +1,248 @@
 @use "../../../styles/various.module.scss" as var;
 
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        width: 100vw;
+        align-items: center;
+        height: auto;
+    }
 
-.back{
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    width: 1440px;
-    align-items: center;
-    height: auto;
-}
-
-.part1{
-    display: flex;
-    flex-direction: row;
-    width: 1100px;
-    justify-content: space-between;
-    align-items: center;
-    button{
-        @include var.purple_button
+    .part1{
+        display: flex;
+        flex-direction: row;
+        width: 70vw;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            @include var.purple_button
+        }
+    }
+    
+    .title{
+        @include var.small-title;
+        width: 600px;
+    }
+    
+    .part2{
+        display: flex;
+        flex-direction: row;
+        width: 1024px;
+        justify-content: space-between;
+    }
+    
+    .small_part{
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+        width: 450px;
+    }
+    
+    .feature{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .feature_header{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        p{
+            font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #7516DE;
+        }
+    }
+    
+    .feature_text{
+        @include var.super_small_text;
+        margin-left: 60px;
+    }
+    
+    .more{
+        display: flex;
+        flex-direction: row;
+        p{
+            ont-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 110%;
+    color: rgba(21, 12, 75, 0.5);
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+        .part1{
+            width: 1100px;
+        }
     }
 }
 
-.title{
-    @include var.small-title;
-    width: 600px;
-}
-
-.part2{
-    display: flex;
-    flex-direction: row;
-    width: 1024px;
-    justify-content: space-between;
-}
-
-.small_part{
-    display: flex;
-    flex-direction: column;
-    gap: 65px;
-    width: 450px;
-}
-
-.feature{
-    display: flex;
-    flex-direction: column;
-}
-
-.feature_header{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    img{
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 100vw;
+        align-items: center;
+        height: auto;
     }
-    p{
-        font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 32px;
-line-height: 39px;
-color: #7516DE;
+
+    .part1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90vw;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        button{
+            @include var.purple_button_tablet;
+            // width: 500px !important
+        }
+    }
+    
+    .title{
+        @include var.small-title_tablet;
+        width: 2/3;
+    }
+    
+    .part2{
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        justify-content: space-between;
+    }
+    
+    .small_part{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        width: 37.5vw;
+    }
+    
+    .feature{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .feature_header{
+        display: flex;
+        flex-direction: row;
+        gap: 7.5px;
+        p{
+            font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px;
+    color: #7516DE;
+        }
+    }
+    
+    .feature_text{
+        @include var.super_small_text_tablet;
+        margin-left: 40px;
+    }
+    
+    .more{
+        display: flex;
+        flex-direction: row;
+        p{
+            font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 110%;
+    color: rgba(21, 12, 75, 0.5);
+        }
     }
 }
 
-.feature_text{
-    @include var.super_small_text;
-    margin-left: 60px;
-}
+@media screen and (max-width: 768px)  {
+    .back{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100vw;
+        align-items: center;
+        height: auto;
+    }
 
-.more{
-    display: flex;
-    flex-direction: row;
-    p{
-        ont-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 32px;
-line-height: 110%;
-color: rgba(21, 12, 75, 0.5);
+    .part1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90vw;
+        gap: 7.5px;
+        justify-content: center;
+        align-items: center;
+        button{
+            @include var.purple_button_phone;
+            // width: 500px !important
+        }
+    }
+    
+    .title{
+        @include var.small-title_phone;
+    }
+    
+    .part2{
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        justify-content: space-between;
+    }
+    
+    .small_part{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        width: 37.5vw;
+    }
+    
+    .feature{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .feature_header{
+        display: flex;
+        flex-direction: row;
+        gap: 7.5px;
+        p{
+            font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px;
+    color: #7516DE;
+        }
+    }
+    
+    .feature_text{
+        @include var.super_small_text_tablet;
+        margin-left: 40px;
+    }
+    
+    .more{
+        display: flex;
+        flex-direction: row;
+        p{
+            font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 110%;
+    color: rgba(21, 12, 75, 0.5);
+        }
     }
 }
