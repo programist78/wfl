@@ -139,6 +139,7 @@
         width: 100vw;
         // height: 670px;
         display: flex;
+        gap: 50px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -150,9 +151,9 @@
     
     .cards{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 90vw;
-        justify-content: space-between;
+        gap: 50px;
         flex-wrap: wrap;
         align-items: center;
     }
@@ -264,3 +265,130 @@
     }
 }
 
+@media screen  and (max-width: 768px) {
+    .back{
+        width: 100vw;
+        // height: 670px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 37.5px;
+    }
+    
+    .title{
+        @include var.small_title_phone
+    }
+    
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 45px; 
+        width: 90vw;
+        align-items: center;
+    }
+    
+    .card_basic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 253px;
+        width: 171.5px;
+        gap: 7.5px;
+        object-fit: cover;
+        background-image: url(../../../public/plan_card_basic.webp);
+        background-size: 100% auto; /* растянуть на всю высоту */
+    }
+    
+    .icon{
+        width: 32.5px;
+        border-radius: 50%;
+    height: 32.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    img{
+        width: 16px;
+        height: 16px;
+    }
+    }
+    
+    .card_title{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    color: #FFFFFF;
+    }
+    
+    .card_price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FCFCFC;
+    }
+    .get_started{
+        width: 171.5px;
+        height: 29.5px;
+        background: rgba(17, 202, 190, 0.25);
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 110%;
+    color: #FCFCFC;
+    }
+    .description{
+        display: flex;
+        flex-direction: column;
+        width: 125px;
+        height: 30%;
+        justify-content: space-around;
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size:8px;
+            line-height: 110%;
+            
+            color: #FFFFFF;
+        }
+    }
+    .see{
+        width: 171.5px;
+    height: 26.5px;
+    background: linear-gradient(177.18deg, #FFFFFF 2.35%, rgba(255, 255, 255, 0) 97.66%);
+    border-radius: 15px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 110%;
+    color: #232325;
+    border: none;
+    margin-top: auto;
+    }
+    
+    
+    .card_premium{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 268.5px;
+        width: 171.5px;
+        gap: 7.5px;
+        transform: scale(1.07);
+        object-fit: cover;
+        background-size: 100% auto; /* растянуть на всю высоту */
+        background-image: url(../../../public/plan_card_premium.webp);
+            .get_started{
+                background: rgba(17, 76, 202, 0.25);
+            }
+    }
+}

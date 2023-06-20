@@ -1,554 +1,1740 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
+
+@media screen and (min-width: 1310px) {
+    .title{
+        @include var.small_title;
+        margin-left: 110px;
+    }
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: 25px;
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+    }
+    .dashboard{
+        margin-left: 151px;
+        width: 1138px;
+    height: 640.12px;
+    background: #EFF1FF;
+    box-shadow: 0px 10.7044px 16.0566px rgba(0, 133, 255, 0.25);
+    border-radius: 21.4089px;
     display: flex;
-    flex-direction: column;
-    width: 1440px;
-    height: 750px;
-    gap: 25px;
-}
-
-.title{
-    @include var.small_title;
-    margin-left: 110px;
-}
-
-.dashboard{
-    margin-left: 151px;
-    width: 1138px;
-height: 640.12px;
-background: #EFF1FF;
-box-shadow: 0px 10.7044px 16.0566px rgba(0, 133, 255, 0.25);
-border-radius: 21.4089px;
-display: flex;
-align-items: center;
-gap: 18px;
-flex-direction: row;
-//TODO
-color: black;
-}
-
-.appbar_part{
-    background: #FFFFFF;
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 15px;
-width: 54px;
-height: 604.56px;
-display: flex;
-margin-left: 18px;
-flex-direction: column;
-align-items: center;
-}
-
-.logo_part{
-    margin-top: 18px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 18px;
-    img{
-        filter: drop-shadow(0px 2.845px 2.845px rgba(0, 150, 136, 0.25));
+    flex-direction: row;
+    //TODO
+    color: black;
     }
-    div{
-        width: 53.34px;
-height: 0px;
-border: 0.71125px solid #EFF1FF;
-    }
-}
-.buttons{
+    
+    .appbar_part{
+        background: #FFFFFF;
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 15px;
+    width: 54px;
+    height: 604.56px;
     display: flex;
+    margin-left: 18px;
     flex-direction: column;
-    gap: 35px;
-    margin-top: 35px;
-    div{
+    align-items: center;
+    }
+    
+    .logo_part{
+        margin-top: 18px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        gap: 18px;
+        img{
+            filter: drop-shadow(0px 2.845px 2.845px rgba(0, 150, 136, 0.25));
+        }
         div{
-            position: absolute;
-            width: 30px;
-            background: linear-gradient(180deg, #00D1FF -33.04%, #1118CA 166.67%);
-filter: blur(3.55625px);
-border-radius: 7.1125px;
+            width: 53.34px;
+    height: 0px;
+    border: 0.71125px solid #EFF1FF;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-top: 35px;
+        div{
             display: flex;
-            z-index: 1;
-            height: 30px;
             justify-content: center;
             align-items: center;
-            border-radius: 7.1125px;
-        }
-        img{
-            z-index: 2;
-        }
-    }
-}
-.info_button{
-    div{
-        width: 53.34px;
-height: 0px;
-border: 0.71125px solid #EFF1FF;
-    }
-    display: flex;
-    gap: 18px;
-    flex-direction: column;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: 18px;
-}
-.content_part{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 800px;
-    align-items: center;
-    height: auto;
-}
-
-.content_header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 778px;
-    p{
-        font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 28.45px;
-line-height: 43px;
-
-/* title-color */
-
-color: #0C0D0E;
-
-    }
-}
-
-.header_icon{
-    width: 21px;
-    height: 21px;
-}
-
-.content_moneys{
-    width: 800px;
-height: 125px;
-display: flex;
-gap: 14px;
-flex-direction: row;
-align-items: center;
-background: #FFFFFF;
-border-radius: 10.6687px;
-div:first-child{
-    margin-left: 15px;
-}
-div{
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    align-items: center;
-    width: 235px;
-
-    div{
-        display: flex;
-        flex-direction: column;
-        p{
-            @include var.dashboard_description
-        }
-        .money{
-            @include var.dashboard_money;
-            margin-bottom: -10px;
+            div{
+                position: absolute;
+                width: 30px;
+                background: linear-gradient(180deg, #00D1FF -33.04%, #1118CA 166.67%);
+    filter: blur(3.55625px);
+    border-radius: 7.1125px;
+                display: flex;
+                z-index: 1;
+                height: 30px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 7.1125px;
+            }
+            img{
+                z-index: 2;
+            }
         }
     }
-    p{
-        @include var.dashboard_earning
-    }
-}
-}
-
-.money{
-    @include var.dashboard_money;
-}
-
-.moneys_line{
-    width: 0px !important;
-    height: 125px;
+    .info_button{
+        div{
+            width: 53.34px;
+    height: 0px;
     border: 0.71125px solid #EFF1FF;
-}
-
-.content_statistic{
-    width: 800px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.statistic_money{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    width: 800px;
-    p{
-        @include var.dashboard_earning;
+        }
+        display: flex;
+        gap: 18px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: 18px;
     }
-    div{
+    .content_part{
         display: flex;
         flex-direction: column;
-        margin-left: 28px;
-        .money{
-            @include var.dashboard_money
-        }
+        gap: 30px;
+        width: 800px;
+        align-items: center;
+        height: auto;
+    }
+    
+    .content_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 778px;
         p{
-           @include var.dashboard_description
+            font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28.45px;
+    line-height: 43px;
+    
+    /* title-color */
+    
+    color: #0C0D0E;
+    
         }
     }
     
-}
-
-.statistic_settings{
-    display: flex;
-    width: 800px;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.settings_part1{
-    margin-left: 28px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    p{
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11.38px;
-        line-height: 17px;
-        /* identical to box height */
-        
-        
-        /* text-color */
-        
-        color: #232325;
-        
-    }
-}
-
-.settings_part2{
-    gap: 10px;
-    display: flex;
-    flex-direction: row;
-    button{
+    .header_icon{
         width: 21px;
         height: 21px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 3.55625px;
-        font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 11.38px;
-line-height: 14px;
-/* identical to box height */
     }
-}
-
-.settings_unactive{
-    background: #EFF1FF;
-    color: #232325;
-    border: 0.71125px solid #232325;
-}
-
-.settings_active{
-    background: #782AEE;
-    color: white;
-    border: none;
-}
-
-.statistic_basic{
+    
+    .content_moneys{
+        width: 800px;
+    height: 125px;
     display: flex;
+    gap: 14px;
     flex-direction: row;
-    gap: 7.5px;
-}
-
-.numbers{
-    // gap: 100px;
-    display: flex;
-    flex-direction: column;
-    height: 227px;
-    justify-content: space-between;
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 11.38px;
-line-height: 14px;
-color: #232325;
-}
-
-.statistic_part{
-    width: 773px;
-    height: 227px;
-    // display: flex;
-    overflow: hidden;
-}
-
-.statistic1{
-    position: absolute;
-    margin-top: 55px;
-    z-index: 2;
-    margin-bottom: 0;
-}
-
-.background_statistic{
-    width: 773px;
-    height: 227px;
-    z-index: 1;
-}
-
-.statistic_date{
-    display: flex;
-    flex-direction: row;
-    width: 773px;
-    justify-content: space-between;
-    margin-left: 28px;
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 11.38px;
-line-height: 14px;
-color: #232325;
-}
-
-.user_part{
-    display: flex;
-    flex-direction: column;
-    width: 213.38px;
-height: 604.56px;
-align-items: center;
-gap: 10px;
-background: #FFFFFF;
-border-radius: 14.225px;
-}
-
-.user_header{
-    display: flex;
-    flex-direction: row;
-    width: 190px;
-    justify-content: space-between;
-    margin-top: 10px;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 10.6687px;
+    div:first-child{
+        margin-left: 15px;
+    }
     div{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+        width: 235px;
+    
+        div{
+            display: flex;
+            flex-direction: column;
+            p{
+                @include var.dashboard_description
+            }
+            .money{
+                @include var.dashboard_money;
+                margin-bottom: -10px;
+            }
+        }
+        p{
+            @include var.dashboard_earning
+        }
+    }
+    }
+    
+    .money{
+        @include var.dashboard_money;
+    }
+    
+    .moneys_line{
+        width: 0px !important;
+        height: 125px;
+        border: 0.71125px solid #EFF1FF;
+    }
+    
+    .content_statistic{
+        width: 800px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .statistic_money{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        width: 800px;
+        p{
+            @include var.dashboard_earning;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-left: 28px;
+            .money{
+                @include var.dashboard_money
+            }
+            p{
+               @include var.dashboard_description
+            }
+        }
+        
+    }
+    
+    .statistic_settings{
+        display: flex;
+        width: 800px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .settings_part1{
+        margin-left: 28px;
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 5px;
         p{
             font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 11.38px;
-line-height: 17px;
-
-/* title-color */
-
-color: #0C0D0E;
-
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11.38px;
+            line-height: 17px;
+            /* identical to box height */
+            
+            
+            /* text-color */
+            
+            color: #232325;
+            
         }
     }
-    .user_icon{
-        width: 21px;
-        height: 21px;
+    
+    .settings_part2{
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        button{
+            width: 21px;
+            height: 21px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3.55625px;
+            font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11.38px;
+    line-height: 14px;
+    /* identical to box height */
+        }
     }
-}
-
-.line{
-    width: 213.38px;
-height: 0px;
-border: 0.71125px solid #EFF1FF;
-}
-
-.user_balance{
-    display: flex;
-    width: 191px;
-    flex-direction: row;
-    justify-content: space-between;
+    
+    .settings_unactive{
+        background: #EFF1FF;
+        color: #232325;
+        border: 0.71125px solid #232325;
+    }
+    
+    .settings_active{
+        background: #782AEE;
+        color: white;
+        border: none;
+    }
+    
+    .statistic_basic{
+        display: flex;
+        flex-direction: row;
+        gap: 7.5px;
+    }
+    
+    .numbers{
+        // gap: 100px;
+        display: flex;
+        flex-direction: column;
+        height: 227px;
+        justify-content: space-between;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11.38px;
+    line-height: 14px;
+    color: #232325;
+    }
+    
+    .statistic_part{
+        width: 773px;
+        height: 227px;
+        // display: flex;
+        overflow: hidden;
+    }
+    
+    .statistic1{
+        position: absolute;
+        margin-top: 55px;
+        z-index: 2;
+        margin-bottom: 0;
+    }
+    
+    .background_statistic{
+        width: 773px;
+        height: 227px;
+        z-index: 1;
+    }
+    
+    .statistic_date{
+        display: flex;
+        flex-direction: row;
+        width: 773px;
+        justify-content: space-between;
+        margin-left: 28px;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11.38px;
+    line-height: 14px;
+    color: #232325;
+    }
+    
+    .user_part{
+        display: flex;
+        flex-direction: column;
+        width: 213.38px;
+    height: 604.56px;
+    align-items: center;
+    gap: 10px;
+    background: #FFFFFF;
+    border-radius: 14.225px;
+    }
+    
+    .user_header{
+        display: flex;
+        flex-direction: row;
+        width: 190px;
+        justify-content: space-between;
+        margin-top: 10px;
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            p{
+                font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.38px;
+    line-height: 17px;
+    
+    /* title-color */
+    
+    color: #0C0D0E;
+    
+            }
+        }
+        .user_icon{
+            width: 21px;
+            height: 21px;
+        }
+    }
+    
+    .line{
+        width: 213.38px;
+    height: 0px;
+    border: 0.71125px solid #EFF1FF;
+    }
+    
+    .user_balance{
+        display: flex;
+        width: 191px;
+        flex-direction: row;
+        justify-content: space-between;
+        p{
+            @include var.dashboard_earning
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            p{
+                @include var.dashboard_description
+            }
+            .money{
+                @include var.dashboard_money
+            }
+        }
+    }
+    
+    .exchange{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+            @include var.dashboard_user_title
+        }
+        button{
+            @include var.dashboard_button_blue
+        }
+    }
+    
+    .exchange_input{
+        display: flex;
+        flex-direction: column;
+        div:first-child{
+            border-radius: 7px 7px 0 0 ;
+        }
     p{
-        @include var.dashboard_earning
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.38px;
+    line-height: 14px;
+    color: #737381;
+    }
+        }
+    // }
+    
+    .exchange_child{
+        display: flex;
+        gap: 1px;
+        width: 177.81px;
+    height: 35px;
+    background: #F3F5FF;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 7px 7px;
+    p{
+        margin-left: 5px;
     }
     div{
         display: flex;
+        flex-direction: row;
+        margin-right: 5px;
+        margin-left: auto;
+    }
+    }
+    
+    .transactions{
+        display: flex;
         flex-direction: column;
+        gap: 5px;
         p{
-            @include var.dashboard_description
+            // @include var.dashboard_user_title
         }
-        .money{
-            @include var.dashboard_money
+        button{
+            @include var.dashboard_button_blue
         }
     }
-}
-
-.exchange{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    p{
-        @include var.dashboard_user_title
-    }
-    button{
-        @include var.dashboard_button_blue
-    }
-}
-
-.exchange_input{
-    display: flex;
-    flex-direction: column;
-    div:first-child{
-        border-radius: 7px 7px 0 0 ;
-    }
-p{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 11.38px;
-line-height: 14px;
-color: #737381;
-}
-    }
-// }
-
-.exchange_child{
-    display: flex;
-    gap: 1px;
+    .transactions_transaction{
     width: 177.81px;
-height: 35px;
-background: #F3F5FF;
-display: flex;
-align-items: center;
-border-radius: 0 0 7px 7px;
-p{
-    margin-left: 5px;
-}
-div{
+    height: 44.58px;
+    background: #F3F5FF;
+    border-radius: 7.1125px;
     display: flex;
     flex-direction: row;
-    margin-right: 5px;
-    margin-left: auto;
-}
-}
-
-.transactions{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    p{
-        // @include var.dashboard_user_title
-    }
-    button{
-        @include var.dashboard_button_blue
-    }
-}
-.transactions_transaction{
-width: 177.81px;
-height: 44.58px;
-background: #F3F5FF;
-border-radius: 7.1125px;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
-}
-
-.name{
-    font-family: 'Montserrat' !important;
-font-style: normal !important;
-font-weight: 500 !important;
-font-size: 11.38px !important;
-line-height: 14px !important;
-color: #0C0D0E !important;
-}
-
-.transaction_marker{
-    font-family: 'Montserrat' !important;
-font-style: normal !important;
-font-weight: 500 !important;
-font-size: 11.38px !important;
-line-height: 14px !important;
-color: #14E30B !important;
-}
-
-.transaction_date{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 8.535px;
-line-height: 10px;
-
-/* text-color */
-
-color: #232325;
-
-}
-
-.statistic_cryptos{
-    width: 800px;
-height: 121px;
-display: flex;
-margin-top: -30px;
-flex-direction: row;
-background: #040521;
-border-radius: 15px;
-}
-
-.cryptos_parts{
-    display: flex;
-    width: 33%;
-    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    color: white;
-}
-
-.crypto_part1{
+    }
+    
+    .name{
+        font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 11.38px !important;
+    line-height: 14px !important;
+    color: #0C0D0E !important;
+    }
+    
+    .transaction_marker{
+        font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 11.38px !important;
+    line-height: 14px !important;
+    color: #14E30B !important;
+    }
+    
+    .transaction_date{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.535px;
+    line-height: 10px;
+    
+    /* text-color */
+    
+    color: #232325;
+    
+    }
+    
+    .statistic_cryptos{
+        width: 800px;
+    height: 121px;
     display: flex;
+    margin-top: -30px;
     flex-direction: row;
-    width: 80%;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.crypto_part2{
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
-}
-
-.info_crypto{
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-}
-
-.crypto_name{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    div{
-        width: 20px;
-height: 0px;
-border: 2px solid #14E30B;
-transform: rotate(-90deg);
-margin-left: -10px;
+    background: #040521;
+    border-radius: 15px;
+    }
+    
+    .cryptos_parts{
+        display: flex;
+        width: 33%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+    }
+    
+    .crypto_part1{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .crypto_part2{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-between;
+    }
+    
+    .info_crypto{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    
+    .crypto_name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        div{
+            width: 20px;
+    height: 0px;
+    border: 2px solid #14E30B;
+    transform: rotate(-90deg);
+    margin-left: -10px;
+        }
+    }
+    
+    .crypto_value_balance{
+        @include var.dashboard_gray_text
+    }
+    
+    .earning{
+        @include var.dashboard_earning
+    }
+    
+    .crypto_quantity_name{
+        @include var.name_crypto_text
     }
 }
 
-.crypto_value_balance{
-    @include var.dashboard_gray_text
+@media screen and (min-width: 768px) and (max-width: 1310px) {
+    .title{
+        @include var.small_title_tablet;
+    }
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        gap: 17.5px;
+    }
+    .dashboard{
+        // margin-left: 151px;
+        width: 79vw;
+    height: 44vw;
+    background: #EFF1FF;
+    box-shadow: 0px 7.7044px 10.0566px rgba(0, 133, 255, 0.25);
+    border-radius: 21.4089px;
+    display: flex;
+    align-items: center;
+    gap: 1.25vw;
+    flex-direction: row;
+    //TODO
+    color: black;
+    }
+    
+    .appbar_part{
+        background: #FFFFFF;
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 1.04vw;
+    width: 3.75vw;
+    height: 42vw;
+    display: flex;
+    margin-left: 1.25vw;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .logo_part{
+        margin-top: 1.25vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25vw;
+        img{
+            filter: drop-shadow(0px 2.845px 2.845px rgba(0, 150, 136, 0.25));
+            width: 2.43vw;
+            height: 2.43vw;
+        }
+        div{
+            width: 3.7vw;
+    height: 0px;
+    border: 0.04vw solid #EFF1FF;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 2.43vw;
+        margin-top: 2.43vw;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                position: absolute;
+                width: 2.08vw;
+                background: linear-gradient(180deg, #00D1FF -33.04%, #1118CA 166.67%);
+    filter: blur(3.55625px);
+    border-radius: 0.5vw;
+                display: flex;
+                z-index: 1;
+                height: 2.08vw;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.5vw
+            }
+            img{
+                z-index: 2;
+            }
+        }
+        img{
+            width: 2vw;
+            height: 2vw;
+        }
+    }
+    .info_button{
+        img{
+            width: 1.73vw;
+            height: 1.73vw;
+        }
+        div{
+            width: 3.7vw;
+    height: 0px;
+    border: 0.04vw solid #EFF1FF;
+        }
+        display: flex;
+        gap: 1.25vw;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: 1.25vw;
+    }
+    .content_part{
+        display: flex;
+        flex-direction: column;
+        gap: 2.08vw;
+        width: 55.5vw;
+        align-items: center;
+        height: auto;
+    }
+    
+    .content_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 54.02vw;
+        p{
+            font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.94vw;
+    line-height: 3vw;
+    
+    /* title-color */
+    
+    color: #0C0D0E;
+    
+        }
+    }
+    
+    .header_icon{
+        width: 1.45vw;
+        height: 1.45vw;
+    }
+    
+    .content_moneys{
+        width: 55.5vw;
+    height: 8.6vw;
+    display: flex;
+    gap: 0.97vw;
+    flex-direction: row;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 0.73vw;
+    div:first-child{
+        margin-left: 1.29vw;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        gap: 0.83vw;
+        align-items: center;
+        width: 16.31vw;
+        img{
+            width: 2.5vw;
+            height: 2.5vw;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            p{
+                @include var.dashboard_description_tablet;
+            }
+            .money{
+                @include var.dashboard_money_tablet;
+                margin-bottom: -0.69vw;
+            }
+        }
+        p{
+            @include var.dashboard_earning_tablet
+        }
+    }
+    }
+    
+    .money{
+        @include var.dashboard_money_tablet;
+    }
+    
+    .moneys_line{
+        width: 0px !important;
+        height: 8.6vw;
+        border: 0.048vw solid #EFF1FF;
+    }
+    
+    .content_statistic{
+        width: 55.5vw;
+        margin-top: 0.69vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0.69vw;
+    }
+    
+    .statistic_money{
+        display: flex;
+        flex-direction: row;
+        gap: 0.34vw;
+        width: 55.5vw;
+        p{
+            @include var.dashboard_earning_tablet;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-left: 1.94vw;
+            .money{
+                @include var.dashboard_money_tablet
+            }
+            p{
+               @include var.dashboard_description_tablet
+            }
+        }
+        
+    }
+    
+    .statistic_settings{
+        display: flex;
+        width: 55.5vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .settings_part1{
+        margin-left: 1.94vw; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.347vw;
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.8vw;
+            line-height: 1vw;
+            /* identical to box height */
+            
+            
+            /* text-color */
+            
+            color: #232325;
+            
+        }
+        img{
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+    }
+    
+    .settings_part2{
+        gap: 0.69vw;
+        display: flex;
+        flex-direction: row;
+        button{
+            width: 1.45vw;
+            height: 1.45vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.24vw;
+            font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.79vw;
+    line-height: 1vw;
+    /* identical to box height */
+        }
+        img{
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+    }
+    
+    .settings_unactive{
+        background: #EFF1FF;
+        color: #232325;
+        border: 0.048vw solid #232325;
+    }
+    
+    .settings_active{
+        background: #782AEE;
+        color: white;
+        border: none;
+    }
+    
+    .statistic_basic{
+        display: flex;
+        flex-direction: row;
+        gap: 0.52vw;
+    }
+    
+    .numbers{
+        // gap: 100px;
+        display: flex;
+        flex-direction: column;
+        height: 15.76vw;
+        justify-content: space-between;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.79vw;
+    line-height: 0.97vw;
+    color: #232325;
+    }
+    
+    .statistic_part{
+        width: 53.68vw;
+        height: 15.76vw;
+        // display: flex;
+        overflow: hidden;
+    }
+    
+    .statistic1{
+        position: absolute;
+        margin-top: 3.81vw;
+        z-index: 2;
+        width: 53.68vw;
+        height: 10.76vw;
+        margin-bottom: 0;
+    }
+    
+    .background_statistic{
+        width: 53.68vw;
+        height: 15.76vw;
+        z-index: 1;
+    }
+    
+    .statistic_date{
+        display: flex;
+        flex-direction: row;
+        width: 53.68vw;
+        justify-content: space-between;
+        margin-left: 1.944vw;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.78vw;
+    line-height: 0.97vw;
+    color: #232325;
+    }
+    
+    .user_part{
+        display: flex;
+        flex-direction: column;
+        width: 15vw;
+    height: 42vw;
+    align-items: center;
+    gap: 0.7vw;
+    background: #FFFFFF;
+    border-radius: 0.9875vw;
+    }
+    
+    .user_header{
+        display: flex;
+        flex-direction: row;
+        width: 13.19vw;
+        justify-content: space-between;
+        margin-top: 0.69vw;
+        img{
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.347vw;
+            p{
+                font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.79vw;
+    line-height: 1.18vw;
+    
+    /* title-color */
+    
+    color: #0C0D0E;
+    
+            }
+        }
+        .user_icon{
+            width: 1.45vw;
+            height: 1.45vw;
+        }
+    }
+    
+    .line{
+        width: 14.79vw;
+    height: 0px;
+    border: 0.048vw solid #EFF1FF;
+    }
+    
+    .user_balance{
+        display: flex;
+        width: 13.26vw;
+        flex-direction: row;
+        justify-content: space-between;
+        p{
+            @include var.dashboard_earning_tablet
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            p{
+                @include var.dashboard_description_tablet
+            }
+            .money{
+                @include var.dashboard_money_tablet
+            }
+        }
+    }
+    
+    .exchange{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+            @include var.dashboard_user_title_tablet
+        }
+        button{
+            @include var.dashboard_button_blue_tablet
+        }
+    }
+    
+    .exchange_input{
+        display: flex;
+        flex-direction: column;
+        div:first-child{
+            border-radius: 0.48vw 0.48vw 0 0 ;
+        }
+    p{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 0.97vw;
+    color: #737381;
+    }
+        }
+    // }
+    
+    .exchange_child{
+        display: flex;
+        gap: 1px;
+        width: 12.29vw;
+    height: 2.43vw;
+    background: #F3F5FF;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 0.48vw 0.48vw;
+    p{
+        margin-left: 0.35vw;
+    }
+    img{
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        margin-right: 0.35vw;
+        margin-left: auto;
+
+    }
+    }
+    
+    .transactions{
+        display: flex;
+        flex-direction: column;
+        gap: 0.35vw;
+        p{
+            @include var.dashboard_user_title_tablet
+        }
+        button{
+            @include var.dashboard_button_blue_tablet
+        }
+    }
+    .transactions_transaction{
+    width: 12.29vw;
+    height: 3.05vw;
+    background: #F3F5FF;
+    border-radius: 0.49vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    img{
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    }
+    
+    .name{
+        font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 0.78vw !important;
+    line-height: 1vw !important;
+    color: #0C0D0E !important;
+    }
+    
+    .transaction_marker{
+        font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 0.78vw !important;
+    line-height: 0.97vw !important;
+    color: #14E30B !important;
+    }
+    
+    .transaction_date{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.59vw;
+    line-height: 0.69vw;
+    
+    /* text-color */
+    
+    color: #232325;
+    
+    }
+    
+    .statistic_cryptos{
+        width: 55.5vw;
+    height: 8.4vw;
+    display: flex;
+    margin-top: -2.08vw;
+    flex-direction: row;
+    background: #040521;
+    border-radius: 1.04vw;
+    }
+    
+    .cryptos_parts{
+        display: flex;
+        width: 33%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+    }
+    
+    .crypto_part1{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .crypto_part2{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-between;
+    }
+    
+    .info_crypto{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    
+    .crypto_name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        div{
+            width: 1.38vw;
+    height: 0px;
+    border: 2px solid #14E30B;
+    transform: rotate(-90deg);
+    margin-left: -0.69vw;
+        }
+    }
+    
+    .crypto_value_balance{
+        @include var.dashboard_gray_text_tablet
+    }
+    
+    .earning{
+        @include var.dashboard_earning_tablet
+    }
+    
+    .crypto_quantity_name{
+        @include var.name_crypto_text_tablet
+    }
 }
 
-.earning{
-    @include var.dashboard_earning
+@media screen and (max-width: 768px) {
+    .title{
+        @include var.small_title_phone;
+    }
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        gap: 12.5px;
+    }
+    .dashboard{
+        // margin-left: 151px;
+        width: 79vw;
+    height: 44vw;
+    background: #EFF1FF;
+    box-shadow: 0px 7.7044px 10.0566px rgba(0, 133, 255, 0.25);
+    border-radius: 21.4089px;
+    display: flex;
+    align-items: center;
+    gap: 1.25vw;
+    flex-direction: row;
+    //TODO
+    color: black;
+    }
+    
+    .appbar_part{
+        background: #FFFFFF;
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 1.04vw;
+    width: 3.75vw;
+    height: 42vw;
+    display: flex;
+    margin-left: 1.25vw;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .logo_part{
+        margin-top: 1.25vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25vw;
+        img{
+            filter: drop-shadow(0px 2.845px 2.845px rgba(0, 150, 136, 0.25));
+            width: 2.43vw;
+            height: 2.43vw;
+        }
+        div{
+            width: 3.7vw;
+    height: 0px;
+    border: 0.04vw solid #EFF1FF;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 2.43vw;
+        margin-top: 2.43vw;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                position: absolute;
+                width: 2.08vw;
+                background: linear-gradient(180deg, #00D1FF -33.04%, #1118CA 166.67%);
+    filter: blur(3.55625px);
+    border-radius: 0.5vw;
+                display: flex;
+                z-index: 1;
+                height: 2.08vw;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.5vw
+            }
+            img{
+                z-index: 2;
+            }
+        }
+        img{
+            width: 2vw;
+            height: 2vw;
+        }
+    }
+    .info_button{
+        img{
+            width: 1.73vw;
+            height: 1.73vw;
+        }
+        div{
+            width: 3.7vw;
+    height: 0px;
+    border: 0.04vw solid #EFF1FF;
+        }
+        display: flex;
+        gap: 1.25vw;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: 1.25vw;
+    }
+    .content_part{
+        display: flex;
+        flex-direction: column;
+        gap: 2.08vw;
+        width: 55.5vw;
+        align-items: center;
+        height: auto;
+    }
+    
+    .content_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 54.02vw;
+        p{
+            font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.94vw;
+    line-height: 3vw;
+    
+    /* title-color */
+    
+    color: #0C0D0E;
+    
+        }
+    }
+    
+    .header_icon{
+        width: 1.45vw;
+        height: 1.45vw;
+    }
+    
+    .content_moneys{
+        width: 55.5vw;
+    height: 8.6vw;
+    display: flex;
+    gap: 0.97vw;
+    flex-direction: row;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 0.73vw;
+    div:first-child{
+        margin-left: 1.29vw;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        gap: 0.83vw;
+        align-items: center;
+        width: 16.31vw;
+        img{
+            width: 2.5vw;
+            height: 2.5vw;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            p{
+                @include var.dashboard_description_tablet;
+            }
+            .money{
+                @include var.dashboard_money_tablet;
+                margin-bottom: -0.69vw;
+            }
+        }
+        p{
+            @include var.dashboard_earning_tablet
+        }
+    }
+    }
+    
+    .money{
+        @include var.dashboard_money_tablet;
+    }
+    
+    .moneys_line{
+        width: 0px !important;
+        height: 8.6vw;
+        border: 0.048vw solid #EFF1FF;
+    }
+    
+    .content_statistic{
+        width: 55.5vw;
+        margin-top: 0.69vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0.69vw;
+    }
+    
+    .statistic_money{
+        display: flex;
+        flex-direction: row;
+        gap: 0.34vw;
+        width: 55.5vw;
+        p{
+            @include var.dashboard_earning_tablet;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-left: 1.94vw;
+            .money{
+                @include var.dashboard_money_tablet
+            }
+            p{
+               @include var.dashboard_description_tablet
+            }
+        }
+        
+    }
+    
+    .statistic_settings{
+        display: flex;
+        width: 55.5vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .settings_part1{
+        margin-left: 1.94vw; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.347vw;
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.8vw;
+            line-height: 1vw;
+            /* identical to box height */
+            
+            
+            /* text-color */
+            
+            color: #232325;
+            
+        }
+        img{
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+    }
+    
+    .settings_part2{
+        gap: 0.69vw;
+        display: flex;
+        flex-direction: row;
+        button{
+            width: 1.45vw;
+            height: 1.45vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.24vw;
+            font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.79vw;
+    line-height: 1vw;
+    /* identical to box height */
+        }
+        img{
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+    }
+    
+    .settings_unactive{
+        background: #EFF1FF;
+        color: #232325;
+        border: 0.048vw solid #232325;
+    }
+    
+    .settings_active{
+        background: #782AEE;
+        color: white;
+        border: none;
+    }
+    
+    .statistic_basic{
+        display: flex;
+        flex-direction: row;
+        gap: 0.52vw;
+    }
+    
+    .numbers{
+        // gap: 100px;
+        display: flex;
+        flex-direction: column;
+        height: 15.76vw;
+        justify-content: space-between;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.79vw;
+    line-height: 0.97vw;
+    color: #232325;
+    }
+    
+    .statistic_part{
+        width: 53.68vw;
+        height: 15.76vw;
+        // display: flex;
+        overflow: hidden;
+    }
+    
+    .statistic1{
+        position: absolute;
+        margin-top: 3.81vw;
+        z-index: 2;
+        width: 53.68vw;
+        height: 10.76vw;
+        margin-bottom: 0;
+    }
+    
+    .background_statistic{
+        width: 53.68vw;
+        height: 15.76vw;
+        z-index: 1;
+    }
+    
+    .statistic_date{
+        display: flex;
+        flex-direction: row;
+        width: 53.68vw;
+        justify-content: space-between;
+        margin-left: 1.944vw;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.78vw;
+    line-height: 0.97vw;
+    color: #232325;
+    }
+    
+    .user_part{
+        display: flex;
+        flex-direction: column;
+        width: 15vw;
+    height: 42vw;
+    align-items: center;
+    gap: 0.7vw;
+    background: #FFFFFF;
+    border-radius: 0.9875vw;
+    }
+    
+    .user_header{
+        display: flex;
+        flex-direction: row;
+        width: 13.19vw;
+        justify-content: space-between;
+        margin-top: 0.69vw;
+        img{
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.347vw;
+            p{
+                font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.79vw;
+    line-height: 1.18vw;
+    
+    /* title-color */
+    
+    color: #0C0D0E;
+    
+            }
+        }
+        .user_icon{
+            width: 1.45vw;
+            height: 1.45vw;
+        }
+    }
+    
+    .line{
+        width: 14.79vw;
+    height: 0px;
+    border: 0.048vw solid #EFF1FF;
+    }
+    
+    .user_balance{
+        display: flex;
+        width: 13.26vw;
+        flex-direction: row;
+        justify-content: space-between;
+        p{
+            @include var.dashboard_earning_tablet
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            p{
+                @include var.dashboard_description_tablet
+            }
+            .money{
+                @include var.dashboard_money_tablet
+            }
+        }
+    }
+    
+    .exchange{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+            @include var.dashboard_user_title_tablet
+        }
+        button{
+            @include var.dashboard_button_blue_tablet
+        }
+    }
+    
+    .exchange_input{
+        display: flex;
+        flex-direction: column;
+        div:first-child{
+            border-radius: 0.48vw 0.48vw 0 0 ;
+        }
+    p{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 0.97vw;
+    color: #737381;
+    }
+        }
+    // }
+    
+    .exchange_child{
+        display: flex;
+        gap: 1px;
+        width: 12.29vw;
+    height: 2.43vw;
+    background: #F3F5FF;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 0.48vw 0.48vw;
+    p{
+        margin-left: 0.35vw;
+    }
+    img{
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        margin-right: 0.35vw;
+        margin-left: auto;
+
+    }
+    }
+    
+    .transactions{
+        display: flex;
+        flex-direction: column;
+        gap: 0.35vw;
+        p{
+            @include var.dashboard_user_title_tablet
+        }
+        button{
+            @include var.dashboard_button_blue_tablet
+        }
+    }
+    .transactions_transaction{
+    width: 12.29vw;
+    height: 3.05vw;
+    background: #F3F5FF;
+    border-radius: 0.49vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    img{
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    }
+    
+    .name{
+        font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 0.78vw !important;
+    line-height: 1vw !important;
+    color: #0C0D0E !important;
+    }
+    
+    .transaction_marker{
+        font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 0.78vw !important;
+    line-height: 0.97vw !important;
+    color: #14E30B !important;
+    }
+    
+    .transaction_date{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.59vw;
+    line-height: 0.69vw;
+    
+    /* text-color */
+    
+    color: #232325;
+    
+    }
+    
+    .statistic_cryptos{
+        width: 55.5vw;
+    height: 8.4vw;
+    display: flex;
+    margin-top: -2.08vw;
+    flex-direction: row;
+    background: #040521;
+    border-radius: 1.04vw;
+    }
+    
+    .cryptos_parts{
+        display: flex;
+        width: 33%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+    }
+    
+    .crypto_part1{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .crypto_part2{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-between;
+    }
+    
+    .info_crypto{
+        display: flex;
+        flex-direction: column;
+        gap: 0.65vw;
+    }
+    
+    .crypto_name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        div{
+            width: 1.38vw;
+    height: 0px;
+    border: 0.13vw solid #14E30B;
+    transform: rotate(-90deg);
+    margin-left: -0.69vw;
+        }
+    }
+    
+    .crypto_value_balance{
+        @include var.dashboard_gray_text_tablet
+    }
+    
+    .earning{
+        @include var.dashboard_earning_tablet
+    }
+    
+    .crypto_quantity_name{
+        @include var.name_crypto_text_tablet
+    }
 }
 
-.crypto_quantity_name{
-    @include var.name_crypto_text
-}
+
+
+
+
