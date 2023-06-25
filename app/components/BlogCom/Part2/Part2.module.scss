@@ -1,84 +1,298 @@
 @use "../../../styles/various.module.scss" as var;
-
-.preback{
-    display: flex;
-    width: 1440px;
-    justify-content: center;
-}
-
-.back{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 65px;
-    width: 1300px;
-    position: relative;
-    margin-bottom: 200px;
-}
-
-.back2{
-    display: flex;
-    flex-direction: row;
-    width: 1300px;
-    // justify-content: space-between;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.search{
-    width: 550px;
-height: 70px;
-background: #FFFFFF;
-border-radius: 30px;
-margin-right: 0;
-margin-left: auto;
-border: none;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-transition: .35s;
-outline: none;
-line-height: 20px;
-color: #232325;
-padding-left: 15px;
-transition: .35s;
-}
-
-.filters{
-    display: flex;
-    flex-direction: row;
-    height: 35px;
-    position: relative;
-    margin-top: 80px;
-
-button{
+@media screen and (min-width: 1024px) {
+    .preback{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+    
+    .back{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 65px;
+        width: 90.27vw;
+        position: relative;
+        margin-bottom: 200px;
+        
+    }
+    
+    .back2{
+        display: flex;
+        flex-direction: row;
+        width: 90.27vw;
+        // justify-content: space-between;
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .search{
+        width: 550px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    margin-right: 0;
+    margin-left: auto;
     border: none;
-    height: 34px;
-    font-family: 'Poppins';
+    font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    // margin-left: 15px;
-    line-height: 36px;
-    color: rgba(35, 35, 37, 0.5);
-    background: none;
-}
-.choose{
-    border-bottom:2px solid black ;
-    color: rgba(35, 35, 37, 1);
-}
+    font-weight: 500;
+    font-size: 16px;
+    transition: .35s;
+    outline: none;
+    line-height: 20px;
+    color: #232325;
+    padding-left: 15px;
+    transition: .35s;
+    }
+    
+    .filters{
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        position: relative;
+        margin-top: 80px;
+    
+    button{
+        border: none;
+        height: 34px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        // margin-left: 15px;
+        line-height: 36px;
+        color: rgba(35, 35, 37, 0.5);
+        background: none;
+    }
+    .choose{
+        border-bottom:2px solid black ;
+        color: rgba(35, 35, 37, 1);
+    }
+    }
+    
+    .underline{
+        width: 90.27vw;
+    height: 0px;
+    opacity: 0.1;
+    border: 2px solid #0C0D0E;
+    position: absolute;
+    bottom: 0;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .underline, .back2, .back{
+            width: 1300px;
+        }
+        .preback{
+            width: 1440px;
+        }
+    }
 }
 
-.underline{
-    width: 1300px;
-height: 0px;
-opacity: 0.1;
-border: 2px solid #0C0D0E;
-position: absolute;
-bottom: 0;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .preback{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+    
+    .back{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 65px;
+        width: 100vw;
+        position: relative;
+        margin-bottom: 200px;
+        
+    }
+    
+    .back2{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        // justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .search{
+        width: 550px;
+        height: 63px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    // margin-right: 50%;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .35s;
+    outline: none;
+    line-height: 20px;
+    color: #232325;
+    padding-left: 15px;
+    transition: .35s;
+    }
+    
+    .filters{
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        position: relative;
+        width: 100vw;
+        margin-top: 80px;
+    
+    button{
+        border: none;
+        height: 34px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        width: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        // margin-left: 15px;
+        line-height: 36px;
+        color: rgba(35, 35, 37, 0.5);
+        background: none;
+    }
+    .choose{
+        border-bottom:2px solid black ;
+        color: rgba(35, 35, 37, 1);
+    }
+    }
+    
+    .underline{
+        width: 100vw;
+    height: 0px;
+    opacity: 0.1;
+    border: 2px solid #0C0D0E;
+    position: absolute;
+    bottom: 0;
+    }
+
 }
+
+@media screen and (max-width: 768px) {
+    .preback{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+    
+    .back{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 45px;
+        width: 100vw;
+        position: relative;
+        margin-bottom: 100px;
+        
+    }
+    
+    .back2{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        // justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .search{
+        width: 70vw;
+        height: 8vw;
+    background: #FFFFFF;
+    border-radius: 15px;
+    // margin-right: 50%;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    transition: .35s;
+    outline: none;
+    line-height: 10px;
+    color: #232325;
+    padding-left: 7.5px;
+    transition: .35s;
+    }
+    // .filters:
+    .filters::-webkit-scrollbar {
+        width: 0.25vw;
+        // margin-top: 100px;
+      }
+      
+      .filters::-webkit-scrollbar-track {
+        border-radius: 8px;
+      
+        background: rgba(255, 255, 255, 0.5);
+      }
+      
+      .filters::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        transition: background-color 200ms linear;
+      }
+    .filters{
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        position: relative;
+        width: 100vw;
+        overflow-x: scroll;
+        margin-top: 40px;
+        
+    
+    button{
+        border: none;
+        height: 17px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        // margin-left: 15px;
+        line-height: 16px;
+        color: rgba(35, 35, 37, 0.5);
+        background: none;
+        white-space: nowrap;
+
+        
+        
+    }
+    .choose{
+        border-bottom:1px solid black ;
+        color: rgba(35, 35, 37, 1);
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+    }
+    
+    .underline{
+        width: 100vw;
+    height: 0px;
+    opacity: 0.1;
+    border: 1px solid #0C0D0E;
+    position: absolute;
+    bottom: 0;
+    }
+
+}
+

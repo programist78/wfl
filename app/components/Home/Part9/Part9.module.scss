@@ -1,7 +1,8 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    width: 1440px;
+@media screen and (min-width: 1024px) {
+  .back{
+    width: 100vw;
     height: auto;
     gap: 50px;
     display: flex;
@@ -34,6 +35,8 @@ color: #000000;
 @include var.dark_text;
 margin-left: 30px;
 width: 777px;
+font-size: 18px;
+line-height: 110%;
 }
 
 .header_block{
@@ -50,6 +53,121 @@ width: 777px;
     height: 40px;
     color: #00000095;
 }
+@media screen and (min-width: 1440px) {
+  .back{
+    width: 1440px;
+  }
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .back{
+    width: 100vw;
+    height: auto;
+    gap: 35px;
+    display: flex;
+    padding-bottom: 75px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    @include var.small_title_tablet;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    gap: 22.5px;
+}
+
+.title_block{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 110%;
+margin-left: -28px;
+color: #000000;
+}
+
+.text{
+@include var.dark_text;
+width: 80vw;
+font-size: 16px;
+line-height: 110%;
+}
+
+.header_block{
+    display: flex;
+    width: 80vw;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow{
+    width: 80px;
+    margin-left: -20px;
+    height: 30px;
+    color: #00000095;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .back{
+    width: 100vw;
+    height: auto;
+    gap: 25px;
+    display: flex;
+    padding-bottom: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    @include var.small_title_phone;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title_block{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 110%;
+margin-left: -16px;
+color: #000000;
+}
+
+.text{
+@include var.dark_text;
+font-size: 9px;
+line-height: 110%;
+width: 80vw;
+}
+
+.header_block{
+    display: flex;
+    width: 80vw;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow{
+    width: 50px;
+    margin-left: -10px;
+    height: 20px;
+    color: #00000095;
+}
+}
+
 .header_block:hover .arrow{
     animation: arrow_animate 0.25s ease-in-out forwards;
   }

@@ -1,72 +1,230 @@
 @use "../../../styles/various.module.scss" as var;
 
-
-.back{
-    width: 1440px;
+@media screen and (min-width: 1024px) {
+    .back{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center
+    }
+    
+    
+    .title{
+        @include var.small_title;
+    }
+    
+    .reviews{
+        // width: 1440px;
+        height: auto;
+    }
+    
+    .review{
+        width: 374px;
+    height: 165px;
+    background: linear-gradient(181.78deg, #2CC8B9 1.51%, #2CC8B9 1.52%, rgba(0, 150, 136, 0.15) 122%), url(../../../public/back_mesh.png);
+    box-shadow: 0px 0px 15px #2FCEC0;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    align-items: center
-}
-
-
-.title{
-    @include var.small_title;
-}
-
-.reviews{
-    // width: 1440px;
-    height: auto;
-}
-
-.review{
-    width: 374px;
-height: 165px;
-background: linear-gradient(181.78deg, #2CC8B9 1.51%, #2CC8B9 1.52%, rgba(0, 150, 136, 0.15) 122%), url(../../../public/back_mesh.png);
-box-shadow: 0px 0px 15px #2FCEC0;
-border-radius: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 25px;
-margin-bottom: 25px
-}
-
-.review_text{
-    @include var.card_text;
-    width: 324px;
-    margin-top: 15px;
-}
-
-.review_bottom{
-    display: flex;
-    flex-direction: row;
-    width: 310px;
-    margin-top: auto;
-    margin-bottom: 15px;
     align-items: center;
-    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px
+    }
+    
+    .review_text{
+        @include var.card_text;
+        width: 324px;
+        margin-top: 15px;
+    }
+    
+    .review_bottom{
+        display: flex;
+        flex-direction: row;
+        width: 310px;
+        margin-top: auto;
+        margin-bottom: 15px;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .names{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .review_nick{
+        @include var.card_text;
+        color: #0C0D0E;
+    }
+    
+    .review_who{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 110%;
+    margin-left: 5px;
+    color: #383838;
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+    }
 }
 
-.names{
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center
+    }
+    
+    
+    .title{
+        @include var.small_title_tablet;
+    }
+    
+    .reviews{
+        // width: 1440px;
+        height: auto;
+    }
+    
+    .review{
+        width: 338px;
+    height: 150px;
+    background: linear-gradient(181.78deg, #2CC8B9 1.51%, #2CC8B9 1.52%, rgba(0, 150, 136, 0.15) 122%), url(../../../public/back_mesh.png);
+    box-shadow: 0px 0px 15px #2FCEC0;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px
+    }
+    
+    .review_text{
+        @include var.card_text_tablet;
+        width: 293px;
+        height: 63px;
+        word-break: break-all;
+        margin-top: 15px;
+    }
+    
+    .review_bottom{
+        display: flex;
+        flex-direction: row;
+        width: 293px;
+        margin-top: auto;
+        margin-bottom: 12.5px;
+        align-items: center;
+        gap: 12.5px;
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    
+    .names{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .review_nick{
+        @include var.card_text_tablet;
+        color: #0C0D0E;
+    }
+    
+    .review_who{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 110%;
+    margin-left: 5px;
+    color: #383838;
+    }
 }
 
-.review_nick{
-    @include var.card_text;
-    color: #0C0D0E;
-}
-
-.review_who{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 110%;
-margin-left: 5px;
-color: #383838;
+@media screen and (max-width: 768px) {
+    .back{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center
+    }
+    
+    
+    .title{
+        @include var.small_title_phone;
+    }
+    
+    .reviews{
+        // width: 1440px;
+        height: auto;
+    }
+    
+    .review{
+        width: 190px;
+    height: 84px;
+    background: linear-gradient(181.78deg, #2CC8B9 1.51%, #2CC8B9 1.52%, rgba(0, 150, 136, 0.15) 122%), url(../../../public/back_mesh.png);
+    box-shadow: 0px 0px 15px #2FCEC0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px
+    }
+    
+    .review_text{
+        @include var.card_text_phone;
+        width: 165px;
+        height: 35px;
+        word-break: break-all;
+        margin-top: 10px;
+    }
+    
+    .review_bottom{
+        display: flex;
+        flex-direction: row;
+        width: 165px;
+        margin-top: auto;
+        margin-bottom: 7.5px;
+        align-items: center;
+        gap: 7.5px;
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+    
+    .names{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .review_nick{
+        @include var.card_text_phone;
+        color: #0C0D0E;
+    }
+    
+    .review_who{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 110%;
+    margin-left: 5px;
+    color: #383838;
+    }
 }
 
 .marquee {
