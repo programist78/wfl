@@ -1,33 +1,109 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
-    width: 1024px;
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        width: 1024px;
+    }
+    
+    .values{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .value{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    
+    .title{
+        @include var.small_title
+    }
+    
+    .text{
+        @include var.dark_text
+    }
 }
 
-.values{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+        width: 100vw;
+    }
+    
+    .values{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .value{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    .sec{
+        flex-direction: column-reverse;
+    }
+    .title{
+        @include var.small_title_tablet
+    }
+    
+    .text{
+        @include var.dark_text_tablet
+    }
 }
 
-.value{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
+@media screen and (max-width: 768px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        width: 100vw;
+    }
+    
+    .values{
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
-.title{
-    @include var.small_title
-}
-
-.text{
-    @include var.dark_text
+    .value{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        img{
+            width: 125px;
+            height: 100%;
+        }
+    }
+    .sec{
+        flex-direction: column-reverse;
+    }
+    .title{
+        @include var.small_title_phone
+    }
+    
+    .text{
+        @include var.dark_text_phone
+    }
 }

@@ -1,44 +1,141 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
-    width: 1024px;
-    margin-bottom: 100px;
-}
 
-
-.box{
-    display: flex;
-    flex-direction: column;
-    gap: 125px;
-}
-
-.title{
-    @include var.small_title
-}
-
-.part{
-    display: flex;
-    flex-direction: row;
-  align-items: center;
-}
-
-.texts{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    p{
-        @include var.dark_text;
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        width: 1024px;
+        margin-bottom: 100px;
+    }
+    
+    
+    .box{
+        display: flex;
+        flex-direction: column;
+        gap: 125px;
+    }
+    
+    .title{
+        @include var.small_title
+    }
+    
+    .part{
         display: flex;
         flex-direction: row;
+      align-items: center;
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
         gap: 10px;
-        span{
-            @include var.blog_small_title;
-            font-size: 24px;
-            color: var.$text_color;
+        p{
+            @include var.dark_text;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            span{
+                @include var.blog_small_title;
+                font-size: 24px;
+                color: var.$text_color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        width: 100vw;
+        margin-bottom: 80px;
+    }
+    
+    
+    .box{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    
+    .title{
+        @include var.small_title_tablet
+    }
+    
+    .part{
+        display: flex;
+        flex-direction: row;
+      align-items: center;
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p{
+            @include var.dark_text_tablet;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            span{
+                @include var.blog_small_title_tablet;
+                font-size: 20px;
+                color: var.$text_color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100vw;
+        margin-bottom: 50px;
+    }
+    
+    
+    .box{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .title{
+        @include var.small_title_phone
+    }
+    
+    .part{
+        display: flex;
+        flex-direction: row;
+      align-items: center;
+      img{
+        width: 136px;
+        height: 136px;
+      }
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+            @include var.dark_text_phone;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            span{
+                @include var.blog_small_title_phone;
+                font-size: 12px;
+                color: var.$text_color;
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ export default function Part3() {
         </div>
         </AnimatedText4>
         <AnimatedText4>
-        <div className={styles.value}>
+        <div className={`${styles.value} ${styles.sec}`}>
             <p className={styles.text}>We offer a range of services, including a user-friendly cryptocurrency wallet, a free robust cryptocurrency exchange, and a suite of smart contract-based financial tools for individuals. </p>
             <Image src="/about_us_ill2.svg" width={250} height={267} alt='wfl'/>
         </div>

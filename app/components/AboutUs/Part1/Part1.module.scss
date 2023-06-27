@@ -1,49 +1,167 @@
 @use "../../../styles/various.module.scss" as var;
-
-.back{
-    width: 1300px;
-    height: 575px;
-    display: flex;
-    align-items: center;
-    margin-top: 150px;
-    // justify-content: center;
-}
-
-.back_image{
-    width: 1300px;
-    height: 575px;
-    object-fit: cover;
-    position: absolute;
-    z-index: 1;
+@media screen and (min-width: 1024px) {
+    .back{
+        width: 90.27vw;
+        height: 575px;
+        display: flex;
+        align-items: center;
+        margin-top: 150px;
+        // justify-content: center;
+    }
+    
+    .back_image{
+        width: 90.27vw;
+        height: 575px;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50px;
+    }
+    
+    .darker_back{
+        width: 90.27vw;
+        height: 575px;
+        position: absolute;
+        z-index: 2;
+        background: #000000;
+    opacity: 0.4;
     border-radius: 50px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .back, .darker_back, .back_image{
+            width: 1300px;
+        }
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        margin-left: 105px;
+    }
+    
+    .title{
+        @include var.small_title;
+        width: 697px;
+        color: white
+    }
+    
+    .text{
+        @include var.dark_text;
+        color: white;
+        width: 707px;
+        margin-left: 60px
+    }
+
 }
 
-.darker_back{
-    width: 1300px;
-    height: 575px;
-    position: absolute;
-    z-index: 2;
-    background: #000000;
-opacity: 0.4;
-border-radius: 50px;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        width: 91.34vw;
+        height: 41.6vw;
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+        // justify-content: center;
+    }
+    
+    .back_image{
+        width: 91.34vw;
+        height: 41.6vw;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        border-radius: 37.5px;
+    }
+    
+    .darker_back{
+        width: 91.34vw;
+        height: 41.6vw;
+        position: absolute;
+        z-index: 2;
+        background: #000000;
+    opacity: 0.4;
+    border-radius: 37.5px;
+    }
+
+    .texts{
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        margin-left: 6vw;
+    }
+    
+    .title{
+        @include var.small_title_tablet;
+        width: 59vw;
+        font-size: 4vw;
+        line-height: 120%;
+        color: white
+    }
+    
+    .text{
+        @include var.dark_text_tablet;
+        color: white;
+        font-size: 2vw;
+        line-height: 120%;
+        width: 66vw;
+        margin-left: 2vw
+    }
+
 }
 
-.texts{
-    display: flex;
-    flex-direction: column;
-    z-index: 3;
-    margin-left: 105px;
-}
+@media screen and (max-width: 768px)  {
+    .back{
+        width: 91.34vw;
+        height: 41.6vw;
+        display: flex;
+        align-items: center;
+        margin-top: 75px;
+        // justify-content: center;
+    }
+    
+    .back_image{
+        width: 91.34vw;
+        height: 41.6vw;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        border-radius: 25px;
+    }
+    
+    .darker_back{
+        width: 91.34vw;
+        height: 41.6vw;
+        position: absolute;
+        z-index: 2;
+        background: #000000;
+    opacity: 0.4;
+    border-radius: 25px;
+    }
 
-.title{
-    @include var.small_title;
-    width: 697px;
-    color: white
-}
+    .texts{
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        margin-left: 6vw;
+    }
+    
+    .title{
+        @include var.small_title_phone;
+        width: 59vw;
+        font-size: 4vw;
+        line-height: 120%;
+        color: white
+    }
+    
+    .text{
+        @include var.dark_text_phone;
+        color: white;
+        font-size: 2vw;
+        line-height: 120%;
+        width: 66vw;
+        margin-left: 2.5vw
+    }
 
-.text{
-    @include var.dark_text;
-    color: white;
-    width: 707px;
-    margin-left: 60px
 }

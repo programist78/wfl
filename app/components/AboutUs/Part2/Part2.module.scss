@@ -1,70 +1,228 @@
 @use "../../../styles/various.module.scss" as var;
 
-
-.back{
-    display: flex;
-    flex-direction: row;
-align-items: center;
-    height: 500px;
-    width: 1100px;
-    justify-content: space-between
-}
-
-.title{
-    @include var.small-title
-}
-
-
-.boxes{
-    display: flex;
-    flex-direction: column;
-    width: 613px;
-    align-items: flex-end;
-    gap: 30px;
-}
-
-.box{
-    width: 500px;
-    height: 150px;
-    position: relative;
-    display: flex;
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: row;
     align-items: center;
+        height: 500px;
+        width: 76vw;
+        justify-content: space-between
+    }
+
+    .title{
+        @include var.small-title
+    }
+    
+    
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        width: 613px;
+        align-items: flex-end;
+        gap: 30px;
+    }
+    
+    .box{
+        width: 500px;
+        height: 150px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .green_box{
+        margin-right: 80px;
+    }
+    
+    .icon_box{
+        left: 0;
+        width: 68px;
+        height: 68px;   
+        position: absolute;
+        border-radius: 50%; 
+        background: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    
+    .green_card{
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .text_part{
+        position: absolute;
+        margin-left: 70px;
+        z-index: 2;
+    }
+    
+    .card_title{
+        @include var.card_title
+    }
+    
+    .card_text{
+        @include var.card_text;
+        color: var.$text-color
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1100px;
+        }
+    }
 }
 
-.green_box{
-    margin-right: 80px;
-}
-
-.icon_box{
-    left: 0;
-    width: 68px;
-    height: 68px;   
-    position: absolute;
-    border-radius: 50%; 
-    background: #FFFFFF;
-    display: flex;
-    justify-content: center;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
     align-items: center;
-    z-index: 2;
+        height: auto;
+        width: 100vw;
+        gap: 30px;
+    }
+
+    .title{
+        @include var.small-title_tablet
+    }
+    
+    
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        // align-items: flex-end;
+        gap: 20px;
+    }
+    
+    .box{
+        width: 503px;
+        height: 156px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .green_box{
+        margin-right: 60px;
+    }
+    
+    .icon_box{
+        left: 0;
+        width: 65px;
+        height: 65px;
+        position: absolute;
+        border-radius: 50%; 
+        background: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    
+    .green_card{
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .text_part{
+        position: absolute;
+        margin-left: 60px;
+        z-index: 2;
+    }
+    
+    .card_title{
+        @include var.card_title_tablet
+    }
+    
+    .card_text{
+        @include var.card_text_tablet;
+        color: var.$text-color
+    }
+
 }
 
-.green_card{
-    position: absolute;
-    left: 0;
-    z-index: 1;
+@media screen and (max-width: 768px)  {
+    .back{
+        display: flex;
+        flex-direction: column;
+    align-items: center;
+        height: auto;
+        width: 100vw;
+        gap: 30px;
+    }
+
+    .title{
+        @include var.small-title_phone
+    }
+    
+    
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        // align-items: flex-end;
+        gap: 10px;
+    }
+    
+    .box{
+        height: 70px;
+        width: 227.692px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .green_box{
+        margin-right: 40px;
+    }
+    
+    .icon_box{
+        left: 0;
+        width: 29.5px;
+        height: 29.5px;
+        position: absolute;
+        border-radius: 50%; 
+        background: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        img{
+            width: 70%;
+            height: 100%;
+        }
+    }
+    
+    .green_card{
+        position: absolute;
+        left: 0;
+        height: 70px;
+        width: 247.692px;
+        z-index: 1;
+    }
+    
+    .text_part{
+        position: absolute;
+        margin-left: 40px;
+        z-index: 2;
+    }
+    
+    .card_title{
+        @include var.card_title_phone
+    }
+    
+    .card_text{
+        @include var.card_text_phone;
+        color: var.$text-color
+    }
+
 }
 
-.text_part{
-    position: absolute;
-    margin-left: 70px;
-    z-index: 2;
-}
 
-.card_title{
-    @include var.card_title
-}
-
-.card_text{
-    @include var.card_text;
-    color: var.$text-color
-}
