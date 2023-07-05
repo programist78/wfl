@@ -91,9 +91,9 @@ const router = useRouter()
             <p onClick={onLogout}>Logout</p>
             </>
             }
-                        <div>
+                       <Link href="/features"><div>
                 <p>Features</p>
-            </div>
+            </div></Link> 
             <div>
                 <p>Pricing</p>
             </div>

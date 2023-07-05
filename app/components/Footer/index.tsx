@@ -30,7 +30,7 @@ export default function Footer() {
     <ul className={styles.menu}>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">Home</a></li>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">About</a></li>
-      <li className={styles.menu__item}><a className={styles.menu__link} href="#">Security</a></li>
+      <Link href="/security"><li className={styles.menu__item}><a className={styles.menu__link} href="#">Security</a></li></Link>
       <li className={styles.menu__item}><a className={styles.menu__link} href="#">Features</a></li>
     </ul>
     <div className={styles.inblock}> 

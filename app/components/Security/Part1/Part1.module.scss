@@ -1,139 +1,241 @@
 $title-size: 3.5rem;
 $text-size: 1.5rem;
 $title-color: #0C0D0E;
-.back{
-    display: flex;
-    flex-direction: row;
-    height: 800px;
-    width: 1440px;
-    padding-top: 275px;
-    box-sizing: border-box;
-    overflow: hidden;
-    align-items: flex-start;
-    justify-content: space-between;
-    // justify-content: center;
-}
 
-.part1{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 810px;
-    // background-color: black;
-    margin-left: 50px;
-    margin-top: -25px;
-}
-// .pre_title{
-//     background-color: red;
-//     width: 570px;
-//     height: 500px;
-//     flex-wrap: wrap;
-//     display: flex;
-// }
-// .title{
-//     font-family: 'Poppins';
-// font-style: normal;
-// font-weight: 700;
-// font-size: $title-size;
-// line-height: 59px;
-// color: $title-color;
-// // height: 115px;
-// width: 569px;
-// width: 19ch;
-// font-family: monospace;
-// white-space: nowrap;
-// flex-wrap: wrap;
-// overflow: hidden;
-// border-right: 4px solid rgb(255, 153, 0);
-// animation: flashing_border 0.75s step-end, printed_text 4s 1 steps(27);
-// }
-.pretitle{
-    width: 700px;
-}
-.title{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: $title-size;
-line-height: 59px;
-color: $title-color;
-// height: 115px;
-width: 26ch;
-font-family: monospace;
-white-space: nowrap;
-flex-wrap: wrap;
-overflow: hidden;
-border-right: 4px solid rgb(255, 153, 0);
-animation-delay: 0s;
-animation: flashing_border 0.75s step-end 4s infinite, printed_text2 2.5s steps(26);
-animation-delay: 0s;
-}
-@keyframes flashing_border {
-    0%{
-        border-color: #ffa500;
-    }
-    25%{
-        border-color: transparent;
-    }
-    75%{
-        border-color: rgb(232, 151, 0);
-    }
-    100%{
-        border-color: transparent;
-        display: none;
-    }
-}
-
-@keyframes printed_text {
-    0%{
-        width: 0;
-    }
-    50%{
-        width: 0;
-    }
-    100%{
-        border-right: none;
-    }
-}
-@keyframes printed_text2 {
-    0%{
-        width: 0;
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: row;
+        height: 800px;
+        width: 100vw;
+        padding-top: 275px;
+        box-sizing: border-box;
+        overflow: hidden;
+        align-items: flex-start;
+        justify-content: space-between;
+        // justify-content: center;
     }
 
-}
-.text{
-    width: 499px;    
-    font-family: 'Poppins';
+    .part1{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 810px;
+        // background-color: black;
+        margin-left: 50px;
+        margin-top: -25px;
+    }
+    .pretitle{
+        width: 700px;
+    }
+    .title{
+        font-family: 'Poppins';
     font-style: normal;
-    font-weight: 300;
-    font-size: $text-size;
-    line-height: 29px;
-    color: rgba(12, 13, 14, 0.75);
-    margin-left: 15px;
-}
-
-.part2{
-    // width: 750px;
-    height: 750px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    // width: 45%;
-    margin-top: 50px;
-}
-
-.white_lock{
-    width: 550px;
-    height: auto;
+    font-weight: 700;
+    font-size: $title-size;
+    line-height: 59px;
+    color: $title-color;
+    // height: 115px;
+    width: 26ch;
+    font-family: monospace;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-right: 4px solid rgb(255, 153, 0);
+    animation-delay: 0s;
+    animation: flashing_border 0.75s step-end 4s infinite, printed_text2 2.5s steps(26);
+    animation-delay: 0s;
+    }
+    
+    .text{
+        width: 499px;    
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: $text-size;
+        line-height: 29px;
+        color: rgba(12, 13, 14, 0.75);
+        margin-left: 15px;
+    }
+    
+    .part2{
+        // width: 750px;
+        height: 750px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        // width: 45%;
+        margin-top: 50px;
+    }
+    
+    .white_lock{
+        width: 550px;
+        height: auto;
+        // position: absolute;
+        margin-top: -175px;
+        margin-right: 50px;
+        float: right;
+        z-index: 100 !important;
+        filter: blur(0px);
+        animation: 1.5s linear 0s alternate animate_shield;
+    }
+    
+    .back_shield_gold{
+        width: 550px;
+        height: 700px;
+        position: absolute;
+        margin-top: -180px;
+        margin-left: 900px;
+        float: right;
+        opacity: .8;
+        z-index: 50 !important;
+    }
+    
+    .black_back{
+        width: 200px;
+    height: 200px;
     // position: absolute;
-    margin-top: -175px;
-    margin-right: 50px;
-    float: right;
-    z-index: 100 !important;
-    filter: blur(0px);
-    animation: 1.5s linear 0s alternate animate_shield;
+    z-index: 1 !important;
+    margin-left: 335px;
+    margin-top: 25px;
+    background: #1E1F25;
+    filter: blur(45.6396px);
+    border-radius: 45.6396px;
+    }
+
+
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+    }
+    @keyframes flashing_border {
+        0%{
+            border-color: #ffa500;
+        }
+        25%{
+            border-color: transparent;
+        }
+        75%{
+            border-color: rgb(232, 151, 0);
+        }
+        100%{
+            border-color: transparent;
+            display: none;
+        }
+    }
+    
+    @keyframes printed_text {
+        0%{
+            width: 0;
+        }
+        50%{
+            width: 0;
+        }
+        100%{
+            border-right: none;
+        }
+    }
+    @keyframes printed_text2 {
+        0%{
+            width: 0;
+        }
+    
+    }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding-top: 200px;
+        box-sizing: border-box;
+        overflow: hidden;
+        align-items: flex-start;
+        gap: 50px;
+        justify-content: space-between;
+        // justify-content: center;
+    }
+
+    .part1{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 90vw;
+        // background-color: black;
+        margin-left: 50px;
+        margin-top: -25px;
+    }
+    .pretitle{
+        width: 80vw;
+    }
+    .title{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 59px;
+    color: $title-color;
+    // height: 115px;
+    width: 80vw;
+    font-family: monospace;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    }
+    
+    .text{
+        width: 80vw;    
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: rgba(12, 13, 14, 0.75);
+        margin-left: 15px;
+    }
+    
+    .part2{
+        // width: 750px;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        // width: 45%;
+    }
+    
+    .white_lock{
+        width: 550px;
+        height: auto;
+        // position: absolute;
+        z-index: 100 !important;
+        filter: blur(0px);
+        animation: 1.5s linear 0s alternate animate_shield;
+    }
+    
+    .back_shield_gold{
+        width: 550px;
+        height: 700px;
+        position: absolute;
+        margin-top: 20px;
+        float: right;
+        opacity: .8;
+        z-index: 50 !important;
+    }
+    
+
+
+
+}
+
+
+
+
+
+
 
 @keyframes animate_shield {
     from{
@@ -144,25 +246,3 @@ animation-delay: 0s;
     }
 }
 
-.back_shield_gold{
-    width: 550px;
-    height: 700px;
-    position: absolute;
-    margin-top: -180px;
-    margin-left: 900px;
-    float: right;
-    opacity: .8;
-    z-index: 50 !important;
-}
-
-.black_back{
-    width: 200px;
-height: 200px;
-// position: absolute;
-z-index: 1 !important;
-margin-left: 335px;
-margin-top: 25px;
-background: #1E1F25;
-filter: blur(45.6396px);
-border-radius: 45.6396px;
-}

@@ -31,7 +31,7 @@ console.log(`people: ${people}`)
     <>
       {/* <Header /> */}
       <>
-        {/* <NavBar /> */}
+        <NavBar />
         {children}
         <Footer />
       </>
