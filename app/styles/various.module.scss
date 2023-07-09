@@ -3,7 +3,11 @@ $text-color: #383838;
 $text-color-light: #ffffff;
 $smallTitle-color: #232323;
 $title-fontSize: 100px;
+$title-fontSize_tablet: 80px;
+$title-fontSize_phone: 50px;
 $text-fontSize: 24px;
+$text-fontSize_tablet: 22px;
+$text-fontSize_phone: 12px;
 $smallTitle-fontSize: 56px;
 
 @mixin feature_title {

@@ -1,45 +1,130 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    display: flex;
-    flex-direction: column;
-    width: 1600px;
-    height: 900px;
-    gap: 50px;
-}
-
-.title{
-    @include var.small_title;
-    margin-left: 225px;
-}
-
-.info{
-    display: flex;
-    flex-direction: row;
-    gap: 25px
-}
-
-.text{
-    @include var.dark_text;
-    margin-left: 180px;
-    width: 374px;
-height: 508px;
-}
-
-.images{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .phone{
-        position: absolute;
-        margin-right: 200px;
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 900px;
+        gap: 50px;
+    }
+    
+    .title{
+        @include var.small_title;
+        margin-left: 225px;
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: row;
+        gap: 25px
+    }
+    
+    .text{
+        @include var.dark_text;
+        margin-left: 180px;
+        width: 374px;
+    height: 508px;
+    }
+    
+    .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .phone{
+            position: absolute;
+            margin-right: 200px;
+        }
+    }
+    
+    .link_button{
+        // @include var.gold_button;
+        // @include var.blue_button;
+        @include var.green_button;
+        margin-left: 250px;
+        margin-top: -75px;
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1600px;
+        }
     }
 }
 
-.link_button{
-    // @include var.gold_button;
-    // @include var.blue_button;
-    @include var.green_button;
-    margin-left: 250px;
-    margin-top: -75px;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: 35px;
+        align-items: center
+    }
+    
+    .title{
+        @include var.small_title_tablet;
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 25px
+    }
+    
+    .text{
+        @include var.dark_text_tablet;
+
+        width: 80vw;
+    }
+    
+    .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .phone{
+            position: absolute;
+        }
+    }
+    
+    .link_button{
+        @include var.green_button_tablet;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: 25px;
+        align-items: center
+    }
+    
+    .title{
+        @include var.small_title_phone;
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 15px
+    }
+    
+    .text{
+        @include var.dark_text_phone;
+
+        width: 80vw;
+    }
+    
+    .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .phone{
+            position: absolute;
+        }
+    }
+    
+    .link_button{
+        @include var.green_button_phone;
+    }
 }

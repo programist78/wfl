@@ -1,50 +1,152 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    display: flex;
-    flex-direction: column;
-    width: 1600px;
-    height: 900px;
-    gap: 25px;
-}
-
-.title{
-    @include var.small_title;
-    margin-left: 180px;
-
-}
-
-.info{
-    display: flex;
-    flex-direction: row;
-    img{
-        position: absolute;
-        margin-left: 125px;
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 900px;
+        gap: 25px;
+    }
+    
+    .title{
+        @include var.small_title;
+        margin-left: 180px;
+    
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: row;
+        img{
+            position: absolute;
+            margin-left: 125px;
+        }
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1050px;
+        width: 340px;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        gap: 25px;
+        @include var.dark_text;
+        button{
+            background: #7C12E5;
+    box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+    @include var.light-text;
+    border: none;
+    transition: .25s;
+        }
+        button:hover{
+            background: #7c12e5b7;
+            transition: .25s;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1600px;
+        }
     }
 }
 
-.texts{
-    display: flex;
-    flex-direction: column;
-    margin-left: 1050px;
-    width: 340px;
-    justify-content: center;
-    align-items: center;
-    height: 550px;
-    gap: 25px;
-    @include var.dark_text;
-    button{
-        background: #7C12E5;
-box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
-border-radius: 10px;
-width: 200px;
-height: 60px;
-@include var.light-text;
-border: none;
-transition: .25s;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: 25px;
+        align-items: center
     }
-    button:hover{
-        background: #7c12e5b7;
-        transition: .25s;
+    
+    .title{
+        @include var.small_title_tablet;
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        @include var.dark_text_tablet;
+        button{
+            background: #7C12E5;
+    box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
+    border-radius: 10px;
+    width: 175px;
+    height: 40px;
+    @include var.light-text_tablet;
+    border: none;
+    transition: .25s;
+        }
+        button:hover{
+            background: #7c12e5b7;
+            transition: .25s;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1600px;
+        }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: 15px;
+        align-items: center
+    }
+    
+    .title{
+        @include var.small_title_phone;
+    }     
+    
+    .info{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        @include var.dark_text_phone;
+        button{
+            background: #7C12E5;
+    box-shadow: 0px 0px 25px rgba(124, 18, 229, 0.5);
+    border-radius: 7.5px;
+    width: 100px;
+    height: 20px;
+    @include var.light-text_phone;
+    border: none;
+    transition: .25s;
+        }
+        button:hover{
+            background: #7c12e5b7;
+            transition: .25s;
+        }
+    }
+    
+}
+

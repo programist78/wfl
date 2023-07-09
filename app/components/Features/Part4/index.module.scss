@@ -1,35 +1,96 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    display: flex;
-    flex-direction: column;
-    width: 1440px;
-    gap: 125px;
-}
-
-.title{
-    @include var.small_title;
-    margin-left: 123px;
-}
-
-.texts{
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    p{
-        @include var.dark_text;
-        width: 1000px;
-        span{
-            @include var.small_title
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: 125px;
+    }
+    
+    .title{
+        @include var.small_title;
+        margin-left: 123px;
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        p{
+            @include var.dark_text;
+            width: 1000px;
+            span{
+                @include var.small_title
+            }
+        }
+    }
+    
+    .text1{
+        margin-left: 290px;
+    
+    }
+    
+    .text2{
+        margin-left: 150px;
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
         }
     }
 }
 
-.text1{
-    margin-left: 290px;
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        gap: 85px;
+    }
+    
+    .title{
+        @include var.small_title_tablet;
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        p{
+            @include var.dark_text_tablet;
+            width: 85vw;
+            span{
+                @include var.small_title_tablet
+            }
+        }
+    }
 }
 
-.text2{
-    margin-left: 150px;
+@media screen and (max-width: 768px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .title{
+        @include var.small_title_phone;
+    }
+    
+    .texts{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        p{
+            @include var.dark_text_phone;
+            width: 85vw;
+            span{
+                @include var.small_title_phone
+            }
+        }
+    }
 }

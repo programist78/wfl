@@ -1,15 +1,16 @@
 @use "../../../styles/various.module.scss" as var;
-
-.preback{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-
-.back{
+@media screen and (min-width: 1024px) {
+    
+    .preback{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .back{
     display: flex;
     flex-direction: column;
-    width: 1600px;
+    width: 100vw;
     height: auto;
     gap: 50px;
 }
@@ -42,7 +43,7 @@
 .text3{
     @include var.dark-text;
     width: 772px;
-height: 262px;
+    height: 262px;
 margin-left: 582px;
 }
 
@@ -73,8 +74,8 @@ margin-left: 582px;
 
 .gray{
     width: 200vw;
-height: 160px;
-background: #D3D6E9;
+    height: 160px;
+    background: #D3D6E9;
 opacity: 1;
 }
 
@@ -88,3 +89,10 @@ opacity: 1;
     margin-left: 150px;
     margin-top: 325px;
 }
+@media screen and (min-width: 1440px) {
+    .back{
+        width: 1600px;
+    }
+}
+}
+

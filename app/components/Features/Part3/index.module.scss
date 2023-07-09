@@ -1,56 +1,173 @@
 @use "../../../styles/various.module.scss" as var;
 
-.back{
-    display: flex;
-    flex-direction: column;
-    width: 1440px;
-    height: 900px;
-    gap: 75px;
-}
-
-.title{
-    @include var.small_title;
-    margin-left: 380px;
-}
-
-.dashboard{
-    transform: rotate(9.46deg);
-    width: 1140px;
-    height: 660px;
-    margin-left: 150px;
-display: flex;
-justify-content: center;
-align-items: center;
-border: 1px solid #FFFFFF;
-background-color: rgba(135, 0, 255, 0.05);
-border-radius: 30px;
-transform: rotate(-5.71deg);
-padding: 20px;
-img{
-    border-radius: 20px
-}
-}
-
-.text{
-    @include var.dark_text;
+@media screen and (min-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 900px;
+        gap: 75px;
+    }
+    
+    .title{
+        @include var.small_title;
+        margin-left: 380px;
+    }
+    
+    .dashboard{
+        transform: rotate(9.46deg);
+        width: 1140px;
+        height: 660px;
+        margin-left: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-padding: 20px;
-position: absolute;
-width: 686px;
-background: rgba(128, 0, 255, 0.05);
-border: 1px solid #FFFFFF;
-backdrop-filter: blur(7.5px);
--webkit-backdrop-filter: blur(7.5px);
-border-radius: 20px;
-margin-left: 700px;
-margin-top: -650px;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(135, 0, 255, 0.05);
+    border-radius: 30px;
+    transform: rotate(-5.71deg);
+    padding: 20px;
+    img{
+        border-radius: 20px
+    }
+    }
+    
+    .text{
+        @include var.dark_text;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    padding: 20px;
+    position: absolute;
+    width: 686px;
+    background: rgba(128, 0, 255, 0.05);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+    margin-left: 700px;
+    margin-top: -650px;
+    }
+    
+    .link_button{
+        @include var.purple_button;
+        position: absolute;
+        margin-left: 935px;
+        margin-top: -250px;
+    }
+    @media screen and (min-width: 1440px) {
+        .back{
+            width: 1440px;
+        }
+    }
 }
 
-.link_button{
-    @include var.purple_button;
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        height: 800px;
+        gap: 75px;
+    }
+    
+    .title{
+        @include var.small_title_tablet;
+    }
+    
+    .dashboard{
+        transform: rotate(9.46deg);
+        width: 80vw;
+        height: 47vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(135, 0, 255, 0.05);
+    border-radius: 22.5px;
+    transform: rotate(-5.71deg);
+    padding: 15px;
+    img{
+        border-radius: 15px
+    }
+    }
+    
+    .text{
+        @include var.dark_text_tablet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    padding: 15px;
     position: absolute;
-    margin-left: 935px;
-    margin-top: -250px;
+    width: 70vw;
+    background: rgba(128, 0, 255, 0.05);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+    margin-top: -50vw;
+    }
+    
+    .link_button{
+        @include var.purple_button_tablet;
+        position: absolute;
+        margin-top: -20vw;
+    }
 }
+
+@media screen and (max-width: 768px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        // height: 800px;
+        align-items: center;
+        gap: 37.5px;
+    }
+    
+    .title{
+        @include var.small_title_phone;
+    }
+    
+    .dashboard{
+        transform: rotate(9.46deg);
+        width: 80vw;
+        height: 47vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(135, 0, 255, 0.05);
+    border-radius: 15px;
+    transform: rotate(-5.71deg);
+    padding: 10px;
+    img{
+        border-radius: 10px
+    }
+    }
+    
+    .text{
+        @include var.dark_text_phone;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    padding: 10px;
+    position: absolute;
+    width: 70vw;
+    background: rgba(128, 0, 255, 0.05);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 15px;
+    margin-top: -50vw;
+    }
+    
+    .link_button{
+        @include var.purple_button_phone;
+        position: absolute;
+        margin-top: -20vw;
+    }
+}
+
