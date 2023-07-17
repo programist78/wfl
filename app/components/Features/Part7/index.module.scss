@@ -96,3 +96,176 @@ opacity: 1;
 }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .preback{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .back{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    height: auto;
+    gap: 40px;
+}
+
+.title{
+    @include var.small-title_tablet;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text1{
+    @include var.dark-text_tablet;
+    width: 75vw;
+    height: auto;
+}
+
+.text2{
+    @include var.dark-text_tablet;
+    width: 75vw;
+    height: auto;
+}
+
+.text3{
+    @include var.dark-text_tablet;
+    width: 75vw;
+    height: auto;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+    img{
+        z-index: 5;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+.line_group{
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-30deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.white{
+    width: 100vw;
+    background-color: white;
+    height: 380px;
+}
+
+.gray{
+    width: 100vw;
+    height: 160px;
+    background: #D3D6E9;
+opacity: 1;
+}
+
+
+
+.link_button{
+    // @include var.gold_button;
+    // @include var.blue_button;
+    @include var.green_button_tablet;
+}
+}
+
+@media screen and (max-width: 768px) {
+    
+    .preback{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .back{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    height: auto;
+    gap: 25px;
+}
+
+.title{
+    @include var.small-title_phone;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 12.5px;
+}
+
+.text1{
+    @include var.dark-text_phone;
+    width: 80vw;
+    height: auto;
+}
+
+.text2{
+    @include var.dark-text_phone;
+    width: 80vw;
+    height: auto;
+}
+
+.text3{
+    @include var.dark-text_phone;
+    width: 80vw;
+    height: auto;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        z-index: 5;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+.line_group{
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-30deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.white{
+    width: 100vw;
+    background-color: white;
+    height: 190px;
+}
+
+.gray{
+    width: 100vw;
+    height: 80px;
+    background: #D3D6E9;
+opacity: 1;
+}
+
+
+
+.link_button{
+    // @include var.gold_button;
+    // @include var.blue_button;
+    @include var.green_button_phone;
+}
+}
+

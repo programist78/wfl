@@ -1,4 +1,6 @@
 @use "../../../styles/various.module.scss" as var;
+@media screen and (min-width: 1024px) {
+    
 
 .back{
     display: flex;
@@ -23,6 +25,71 @@
 .text{
     @include var.dark_text;
 
-    width: 1135px;
+    width: 85vw;
     margin-top: -50px;
 }
+@media screen and (min-width: 1440px) {
+    .text{
+        width: 1135px;
+    }
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .part1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            @include var.small_title_tablet;
+    
+        }
+        img{
+            width: 50vw;
+            height: auto
+        }
+    }
+    
+    .text{
+        @include var.dark_text_tablet;
+    
+        width: 85vw;
+    }
+    }
+
+
+@media screen and (max-width: 768px) {
+    .back{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .part1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            @include var.small_title_phone;
+    
+        }
+        img{
+            width: 60vw;
+            height: auto
+        }
+    }
+    
+    .text{
+        @include var.dark_text_phone;
+    
+        width: 90vw;
+    }
+    }

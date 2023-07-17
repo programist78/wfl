@@ -1,18 +1,21 @@
 $title-size: 3.5rem;
 $text-size: 1.5rem;
 $title-color: #0C0D0E;
-.back{
+
+@media screen and (min-width: 1024px) {
+  .back{
     display: flex;
     flex-direction: column;
     // min-height: 1500px;
     height: auto;
-    width: 1440px;
+    width: 100vw;
     box-sizing: border-box;
     overflow: hidden;
     justify-content: flex-start;
     align-items: center;
    
 }
+
 
 .preback{
   width: 100%;
@@ -46,6 +49,118 @@ $title-color: #0C0D0E;
     background-size: 400% 400%;
 
 }
+
+
+@media screen and (min-width: 1440px) {
+  .back{
+    width: 1440px;
+}
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .back{
+    display: flex;
+    flex-direction: column;
+    // min-height: 1500px;
+    height: auto;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+
+
+.preback{
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  margin-top: 25px;
+  // background-color: #383E56;
+  background-color: rgba(160, 167, 215, 0.5);
+
+  // background-color: rgb(93, 101, 135);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+}
+
+.part1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.video{
+    border-radius: 15px;
+    padding: 5px;
+    position: relative;
+    // animation: for_video 2s ease infinite;
+    background: linear-gradient(to right, #7F6EE9, #009688);
+    background-size: 400% 400%;
+
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .back{
+    display: flex;
+    flex-direction: column;
+    // min-height: 1500px;
+    height: auto;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+
+
+.preback{
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  margin-top: 25px;
+  // background-color: #383E56;
+  background-color: rgba(160, 167, 215, 0.5);
+
+  // background-color: rgb(93, 101, 135);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+}
+
+.part1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.video{
+    border-radius: 10px;
+    padding: 3px;
+    position: relative;
+    // animation: for_video 2s ease infinite;
+    background: linear-gradient(to right, #7F6EE9, #009688);
+    background-size: 400% 400%;
+
+}
+
+
+}
+
 
 @keyframes for_video {
     0% {
