@@ -72,13 +72,17 @@
     .info{
         display: flex;
         flex-direction: row;
-        
+        align-items: center;
+        img{
+            width: 40vw;
+            height: 100%;
+        }
     }
     
     .texts{
         display: flex;
         flex-direction: column;
-        width: 80vw;
+        width: 55vw;
         justify-content: center;
         align-items: center;
         gap: 25px;
@@ -98,11 +102,6 @@
             transition: .25s;
         }
     }
-    @media screen and (min-width: 1440px) {
-        .back{
-            width: 1600px;
-        }
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -120,9 +119,15 @@
     
     .info{
         display: flex;
-        flex-direction: row;
-        
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 90vw;
+            height: 100%;
+        }
     }
+
+    
     
     .texts{
         display: flex;

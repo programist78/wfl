@@ -46,7 +46,7 @@ export default function Part1() {
     <div className={styles.preback} ref={ref}>
        <div >
         {/* {inView ? */}
-      <Scene1 /> 
+        <Scene1 inView={inView} />
       {/* : ""} */}
     </div>
       <div className={styles.gradient} />

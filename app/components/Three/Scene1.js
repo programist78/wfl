@@ -6,14 +6,18 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Mesh, MeshStandardMaterial } from 'three';
 import { useAnimations } from '@react-three/drei';
 
-const Planet1 = memo(({ containerSize }) => {
+const Planet1 = memo(({ containerSize, inView }) => {
   const ref = useRef();
   const gltf = useLoader(GLTFLoader, '/three/planet/scene.gltf');
 
   const { actions } = useAnimations(gltf.animations, ref);
   useEffect(() => {
-    actions['Take 01'].play();
-  }, [actions]);
+    if (!inView) {
+      actions['Take 01'].stop()
+    } else {
+      actions['Take 01'].play()
+    }
+  }, [actions, inView])
 
   const memoizedCallback = useCallback(() => {
     const scale = containerSize < 768 ? 1.5 : 2.3;
@@ -38,7 +42,7 @@ const Planet1 = memo(({ containerSize }) => {
 });
 const MemoizedPlanet1 = memo(Planet1);
 
-export default function Scene1() {
+export default function Scene1({inView}) {
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
 
   const memoizedHandleResize = useCallback(() => {
@@ -59,7 +63,7 @@ export default function Scene1() {
       <Canvas shadows style={{  background: 'none', height: '750px', width: '100vw' }}>
         <Suspense fallback={null}>
           <pointLight color="#26A69A" intensity={1} position={[-2, 15, 0]} />
-          <MemoizedPlanet1 containerSize={containerSize.width} />
+          <MemoizedPlanet1 inView={inView} containerSize={containerSize.width} />
           <pointLight color="white" intensity={1} position={[-2, -15, 0]} />
         </Suspense>
       </Canvas>

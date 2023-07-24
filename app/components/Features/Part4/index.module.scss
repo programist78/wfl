@@ -57,7 +57,7 @@
     .texts{
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 45px;
         p{
             @include var.dark_text_tablet;
             width: 85vw;

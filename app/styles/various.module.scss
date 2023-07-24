@@ -269,7 +269,7 @@ color: #FCFCFC;
     font-family: 'Poppins';
 font-style: normal;
 font-weight: 300;
-font-size: $title-fontSize;
+font-size: $title-fontSize_tablet;
 line-height: 150px;
 color: $title-color;
 }
@@ -525,7 +525,7 @@ color: #FCFCFC;
     font-family: 'Poppins';
 font-style: normal;
 font-weight: 300;
-font-size: $title-fontSize;
+font-size: $title-fontSize_phone;
 line-height: 150px;
 color: $title-color;
 }
