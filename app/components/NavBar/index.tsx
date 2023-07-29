@@ -46,7 +46,7 @@ const router = useRouter()
 
 
   const part2Styles = useSpring({
-    transform: isScrollUp ? 'translateY(-160%)' : 'translateY(0%)',
+    transform: isScrollUp ? 'translateY(-200%)' : 'translateY(0%)',
     opacity: isScrollUp ? 1 : 1
   })
 

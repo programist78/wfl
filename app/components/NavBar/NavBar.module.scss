@@ -54,7 +54,7 @@
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
-            font-size: 32px;
+            font-size: 2vw;
             line-height: 45px;
             // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
             // background: #009688;
@@ -127,7 +127,92 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    @mixin flex-inline {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    $font-logo: 1.5rem;
+    $text-font: 14px;
+    
+    .back{
+        @include flex-inline;
+        align-items: center;
+        justify-content: space-between;
+        // gap: 300px;
+        position: fixed;
+        
+        background-color: #ec5a5a31;
+        //TODO variant1
+        backdrop-filter: blur(5px);
+            //TODO variant2
+        backdrop-filter: blur(15px);
+        // border-bottom: 1px solid white;
+         width: 100%;
+        height: 10vw;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-right: 70px;
+        margin-top: 6.5vw;
+        color: #232323;
+        z-index: 1000;
+    }
+    .back1{
+        position: fixed;
+        color: rgb(255, 255, 255);
+        width: 100vw;
+        height: auto;
+        display: flex;
+        z-index: 1000;
+        justify-content: center;
+        background: linear-gradient(270.04deg, rgba(117, 22, 222, 0.75) 0.04%, rgba(36, 71, 250, 0.8) 49.33%, #00aeff 100.95%);
+        background-size: cover;
+        p{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 3vw;
+            width: 90vw;
+            flex-wrap: wrap;
+            text-align: center;
+            line-height: 110%;
+        }
+    }
+    .logo{
+        @include flex-inline;
+    align-items: center;
+    gap: 7.5px;
+    img{
+        width: 4vw;
+        height: 4vw;
+    }
+    // color: default;
+        p{
+            font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3vw;
+    line-height: 17.5px;
+    // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    // background: #009688;
+    
+    background: linear-gradient(180deg, #15D1C0 35%, #80CBC4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+        }
+    }
+    .part2{
+        display: none;
+    }
+    .part3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
     @mixin flex-inline {
         display: flex;
         flex-direction: row;
@@ -154,7 +239,7 @@
         padding-left: 10%;
         padding-right: 10%;
         margin-right: 70px;
-        margin-top: 8vw;
+        margin-top: 34px;
         color: #232323;
         z-index: 1000;
     }
@@ -172,7 +257,7 @@
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
-            font-size: 3.7vw;
+            font-size: 16px;
             width: 90vw;
             flex-wrap: wrap;
             text-align: center;
